@@ -1,0 +1,130 @@
+What?
+
+    Modern approach to (web / enterprise) architecture that's similar to C4 in complexity while being more oriented toward different kinds of models.
+
+Kinds of models?
+
+    people
+        users & administrators
+        actors
+        personas
+
+    events
+        event storming
+        event driven architecture
+        CQRS
+        processes
+        messages
+
+    facts
+        fact based modeling
+        information modeling
+            data
+            syntax
+            semantics
+            information
+        tlm
+        schemas
+        rules
+
+    components
+        layers of abstraction
+            C4
+                context
+                container
+                component
+                class
+                system
+            OSI layers
+                physical
+                network
+                applications
+        cloud
+        connections
+
+    stories
+        scenarios
+        journeys
+        use cases
+        epics
+        "+1"
+        gherkin
+
+    UI
+        Interface
+        Wireframes
+        UX
+        Design
+
+Name/bacronym
+    P E F C
+    U E F C
+    A E F C
+    A E F S
+    A E M C
+    P E I C
+    U E F C
+    U E F C
+    P E I S
+    P E F S
+
+    S P E F
+    S U E F
+
+
+    A E F C S
+
+    F E C A S
+    S A C E F
+
+    A S U F E C
+    A S I F E C
+    A S W F E C
+    C A S E U M
+
+Lean on existing approaches
+    Components
+        C4
+    Actors
+        Caseum 
+    Stories
+        Gherkin
+    Events
+        Event Storming
+    UI
+        Wireframes
+    Models
+        TLM
+        ORM
+        UML
+        ER
+
+design criteria
+    usable at different stages
+        whiteboarding/brainstorming
+        designing
+        presenting
+        implementing
+        documenting
+        reverse engineering
+    high level vs details
+    friendly vs factual
+    different usage in different interactions
+        sales/customer
+        developer/operator
+        developer/product manager
+        architect/developer
+        analist/developer
+        developer/developer
+        developer
+    color
+        accessible
+            color blind friendly
+            high contrast
+        bright & bold
+        C4 (blue...) compatible
+        print and screen compatible
+        optional
+        see colors/
+    works with free/open source tools
+    
