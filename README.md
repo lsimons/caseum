@@ -6,7 +6,7 @@ Caseum is a lightweight approach to software architecture using multiple views.
 
 ## Multiple views
 
-Caseums combines these views:
+Caseum combines these views:
 * **C**omponents using C4
 * **A**ctors using personas
 * **S**tories using Gherkin
@@ -20,13 +20,13 @@ Not all projects need all views.
 
 ## Lightweight approach
 
-Caseum is for incremental, "just enough" architecture. It has stages:
+Caseum is for doing just enough architecture. It has three stages:
 
 1. brainstorming & whiteboarding
 2. diagrams & decision records
 3. models as code & executable specifications
 
-Many projects only need stage 1. Many other projects only need stages 1 and 2.
+Not all projects need all stages.
 
 See the [guide on stages of architecture](docs/guides/stages.md).
 
