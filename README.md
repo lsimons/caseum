@@ -7,14 +7,14 @@ Caseum is a modern lightweight approach to software architecture using multiple 
 ## Multiple views
 
 Caseums combines these views:
-* C4 for **C**omponents using C4
+* **C**omponents using C4
 * **A**ctors using personas
 * **S**tories using Gherkin
 * **E**vents using event storming
 * **U**I using wireframes
 * **M**odels using TLM
 
-to fully describe a software system.
+Together these views fully describe a software system.
 
 Not all projects need all views.
 
@@ -43,9 +43,11 @@ See the [guide on recording decisions](guides/records.md).
 The primary tools used by Caseum are:
 
 * Whiteboards, markers, and sticky notes
-* Draw.io
-* Markdown text files
-* Model specification in text formats (Structurizr C4, Gherkin, TLMD, CloudEvents)
+* Draw.io for digital diagrams
+* Markdown text files for decision records
+* Model specification in structured text formats (Structurizr C4, Gherkin, TLMD and CloudEvents JSON)
+
+See the guides on [whiteboarding architecture](guides/whiteboarding.md) and on [using draw.io for architecture](guides/drawio.md).
 
 Different tools are available per view per stage:
 
