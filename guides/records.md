@@ -34,13 +34,18 @@ If you don't need the formality, keep things simpler. If you don't know if you n
 
 A good sign that you need this kind of structure is if there is too much information that people are actually spending a lot of time looking for decision records, or looking for the right version of a decision record. That is more common on projects that last for more than 9 months, include more than 7 people, or have more than 50 diagrams.
 
-## Avoid RFDs, RFCs, Enhancement Proposals, and Detailed Design Documents
+## Consider Requests For Discussions (RFDs)
+
+Sometimes the approach for making decisions is a little more formalized, using [Requests For Discussions (RFDs)](https://oxide.computer/blog/rfd-1-requests-for-discussion).
+
+You can combine RFDs with Caseum, but be careful: the same formal focus that comes with ADRs can come with RFDSs. RFDs work best when your team or organization has established a strong culture of healthy discussion.
+
+## Avoid RFCs, Enhancement Proposals, and Detailed Design Documents
 
 Large, complex or safety crtical systems often use decision records that are more formal, using standardized processes to make the decisions. Do not use Caseum for such systems.
 
 Such approaches include
 
-* Discussion papers such as thosed used to design computers: [Requests for Discussion (RFDs)](https://oxide.computer/blog/rfd-1-requests-for-discussion)
 * RFCs such as those used to design the internet: [IETF RFCs](https://www.ietf.org/standards/rfcs/)
 * Enhancement Proposals such as those used to design programming languages [Python](https://peps.python.org/pep-0001/)
 * Formal design descriptions such as thosed used to design military systems: [DOD System Design Descriptions (SDD)](https://www.standards.doe.gov/standards-documents/3000/3024-astd-2011) 
