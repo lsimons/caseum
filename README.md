@@ -59,3 +59,9 @@ Different tools are available per view per stage:
 | **Events**          | [Event Storming](events/event-storming.md)      | [ES Draw.io Library](events/event-template.md)            | [CloudEvents](events/cloudevents-code.md) |
 | **UI**              | [Boxes & lines](ui/ui-whiteboarding.md)         | [Wireframes Draw.io Library](ui/ui-template.md)           | -                                         |
 | **Models**          | [Circles & lines](models/fact-whiteboarding.md)   | [TLM Draw.io Library](models/tlm-template.md)             | [TLMD](models/tlm-code.md)                |
+
+## License
+
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Caseum</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/lsimons/caseum" property="cc:attributionName" rel="cc:attributionURL">Leo Simons</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+
+See [LICENSE.txt](LICENSE.txt) for a plain text copy of the Creative Commons Attribution 4.0 International License.
