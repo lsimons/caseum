@@ -1,28 +1,59 @@
-![Caseum Logo](docs/design/logo/logo.png)
+<img src="docs/design/logo/logo.png" width="200" align="right" margin="10" alt="Caseum logo">
 
-Caseum is a modern lightweight approach for software architecture. It combines aspects:
-* C4 for **C**omponents
-* personas for **A**ctors
-* gherkin for **S**tories
-* wireframes for **U**I
-* event storming for **E**vents
-* TLM for **M**odels
+# Caseum
+
+Caseum is a modern lightweight approach to software architecture using multiple views.
+
+## Multiple views
+
+Caseums combines these views:
+* C4 for **C**omponents using C4
+* **A**ctors using personas
+* **S**tories using Gherkin
+* **E**vents using event storming
+* **U**I using wireframes
+* **M**odels using TLM
 
 to fully describe a software system.
 
-Caseum is an iterative, "just enough" architecture. It has phases:
+Not all projects need all views.
+
+## Lightweight
+
+Caseum is for incremental, "just enough" architecture. It has stages:
 
 1. brainstorming & whiteboarding
 2. diagrams & decision records
 3. models as code & executable specifications
 
-Different tools are available per aspect per phase:
+Many projects only need stage 1. Many other projects only need stages 1 and 2.
+
+See the [guide on stages of architecture](guides/stages.md).
+
+## Recording decisions
+
+<img src="guides/records-slack-example.png" width="200" align="right" margin="10" alt="Screenshot of a slack channel being used to record decisions">
+
+Architecture records the important design decisions for a software system. The records are for communicating with current and future people working on and with the software.
+
+See the [guide on recording decisions](guides/records.md).
+
+## Tools
+
+The primary tools used by Caseum are:
+
+* Whiteboards, markers, and sticky notes
+* Draw.io
+* Markdown text files
+* Model specification in text formats (Structurizr C4, Gherkin, TLMD, CloudEvents)
+
+Different tools are available per view per stage:
 
 |                     | **Brainstorming & Whiteboarding**               | **Diagrams & Decision Records**                           | **Models & Executable Specifications**    |
 |---------------------|-------------------------------------------------|-----------------------------------------------------------|-------------------------------------------|
 | **Components**      | [Boxes & lines](components/c4-whiteboarding.md) | [C4 Draw.io Library](components/c4-template.md)           | [C4 as Code](components/c4-code.md)       |
-| **Actors**          | [Names & needs](actors/actor-whiteboarding.md)  | [Persona Markdown Template](actors/persona-template.md)   | -                                         |
-| **Stories**         | [Goals](stories/story-whiteboarding.md)         | [User Story Markdown Template](stories/story-template.md) | [Gherkin](stories/gherkin-code.md)        |
-| **UI**              | [Boxes & lines](ui/ui-whiteboarding.md)         | [Wireframes Draw.io Library](ui/ui-template.md)           | -                                         |
+| **Actors**          | [Roles & needs](actors/actor-whiteboarding.md)  | [Persona Markdown Template](actors/persona-template.md)   | -                                         |
+| **Stories**         | [Goals & epics  ](stories/story-whiteboarding.md)         | [User Story Markdown Template](stories/story-template.md) | [Gherkin](stories/gherkin-code.md)        |
 | **Events**          | [Event Storming](events/event-storming.md)      | [ES Draw.io Library](events/event-template.md)            | [CloudEvents](events/cloudevents-code.md) |
+| **UI**              | [Boxes & lines](ui/ui-whiteboarding.md)         | [Wireframes Draw.io Library](ui/ui-template.md)           | -                                         |
 | **Models**          | [Circles & lines](models/fact-whiteboarding.md)   | [TLM Draw.io Library](models/tlm-template.md)             | [TLMD](models/tlm-code.md)                |
