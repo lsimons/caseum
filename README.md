@@ -23,7 +23,7 @@ Not all projects need all views.
 Caseum is for doing just enough architecture. It has three stages:
 
 1. brainstorming & whiteboarding
-2. diagrams & decision records
+2. digital diagrams & decision records
 3. models as code & executable specifications
 
 Not all projects need all stages.
@@ -55,7 +55,7 @@ Different tools are available per view per stage:
 |---------------------|-------------------------------------------------|-----------------------------------------------------------|-------------------------------------------|
 | **Components**      | [Boxes & lines](docs/components/c4-whiteboarding.md) | [C4 Draw.io Library](docs/components/c4-template.md)           | [C4 as Code](docs/components/c4-code.md)       |
 | **Actors**          | [Roles & needs](docs/actors/actor-whiteboarding.md)  | [Persona Markdown Template](docs/actors/persona-template.md)   | -                                         |
-| **Stories**         | [Goals & epics  ](docs/stories/story-whiteboarding.md)         | [User Story Markdown Template](docs/stories/story-template.md) | [Gherkin](stories/gherkin-code.md)        |
+| **Stories**         | [Goals & epics](docs/stories/story-whiteboarding.md)         | [User Story Markdown Template](docs/stories/story-template.md) | [Gherkin](docs/stories/gherkin-code.md)        |
 | **Events**          | [Event Storming](docs/events/event-storming.md)      | [ES Draw.io Library](docs/events/event-template.md)            | [CloudEvents](docs/events/cloudevents-code.md) |
 | **UI**              | [Boxes & lines](docs/ui/ui-whiteboarding.md)         | [Wireframes Draw.io Library](docs/ui/ui-template.md)           | -                                         |
 | **Models**          | [Circles & lines](docs/models/fact-whiteboarding.md)   | [TLM Draw.io Library](docs/models/tlm-template.md)             | [TLMD](docs/models/tlm-code.md)                |
