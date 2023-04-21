@@ -1,4 +1,4 @@
-<img src="docs/design/logo/logo.png" width="200" align="right" margin="10" alt="Caseum logo">
+<img src="docs/design/logo/logo.png" width="200" align="right" style="margin-left: 10px" alt="Caseum logo">
 
 # Caseum
 
@@ -14,6 +14,8 @@ Caseum combines these views:
 * **U**I using wireframes
 * **M**odels using TLM
 
+<img src="docs/guides/stages-example.png" width="200" align="right" style="margin-left: 10px" alt="Several screenshots of architecture views">
+
 Together these views fully describe a software system.
 
 Not all projects need all views.
@@ -22,7 +24,7 @@ Not all projects need all views.
 
 Caseum is for doing just enough architecture. It has three stages:
 
-1. brainstorming & whiteboarding
+1. whiteboarding & dialogue
 2. digital diagrams & decision records
 3. models as code & executable specifications
 
@@ -32,13 +34,15 @@ See the [guide on stages of architecture](docs/guides/stages.md).
 
 ## Recording decisions
 
-<img src="docs/guides/records-slack-example.png" width="200" align="right" margin="10" alt="Screenshot of a slack channel being used to record decisions">
+<img src="docs/guides/records-slack-example.png" width="200" align="right" style="margin-left: 10px" alt="Screenshot of a slack channel being used to record decisions">
 
 Architecture records the important design decisions for a system. The records are for communicating with current and future people working on and with the software.
 
 See the [guide on recording decisions](docs/guides/records.md).
 
 ## Tools
+
+<img src="docs/models/tlm-model-example.png" width="200" align="right" style="margin-left: 10px" alt="Partial Type-Link-Model diagram">
 
 The primary tools used by Caseum are:
 
@@ -51,7 +55,7 @@ See the guides on [whiteboarding architecture](docs/guides/whiteboarding.md) and
 
 Different tools are available per view per stage:
 
-|                     | **Brainstorming & Whiteboarding**               | **Diagrams & Decision Records**                           | **Models & Executable Specifications**    |
+|                     | **Whiteboarding & Dialogue**               | **Diagrams & Decision Records**                           | **Models & Executable Specifications**    |
 |---------------------|-------------------------------------------------|-----------------------------------------------------------|-------------------------------------------|
 | **Components**      | [Boxes & lines](docs/components/c4-whiteboarding.md) | [C4 Draw.io Library](docs/components/c4-template.md)           | [C4 as Code](docs/components/c4-code.md)       |
 | **Actors**          | [Roles & needs](docs/actors/actor-whiteboarding.md)  | [Persona Markdown Template](docs/actors/persona-template.md)   | -                                         |
@@ -62,6 +66,6 @@ Different tools are available per view per stage:
 
 ## License
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; margin:5px; float: left" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Caseum</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/lsimons/caseum" property="cc:attributionName" rel="cc:attributionURL">Leo Simons</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" align="left" style="border: 0;margin-right: 10px" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Caseum</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://caseum.org" property="cc:attributionName" rel="cc:attributionURL">Leo Simons</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
 See [LICENSE.txt](LICENSE.txt) for a plain text copy of the Creative Commons Attribution 4.0 International License.

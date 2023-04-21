@@ -1,8 +1,10 @@
 # Architecture stages
 
-Caseum has three stages of architecture to help do just enough architecture: don't go to the next stage unless you need it.
+**Caseum has three stages of architecture to help do just enough architecture: don't go to the next stage unless you need it.**
 
-Prefer working software over comprehensive documentation, so do as little software architecture as results in good working software.
+**Prefer working software over comprehensive documentation, so do as little software architecture as results in good working software.**
+
+![Several screenshots of architecture views at different stages](stages-example.png)
 
 Simple small systems should have simple small architectures. Single teams should have informal architectures. When small systems get bigger their architectures grow with them. When teams get bigger and split into multiple teams their design processes grow with them.
 

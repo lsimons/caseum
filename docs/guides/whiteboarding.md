@@ -1,6 +1,10 @@
 # Whiteboarding guide
 
+**The goal of whiteboarding is a dialogue after which everyone has a common understanding of the software architecture, not to draw the best pictures.**
+
 **It helps to be serious about whiteboarding. Prepare your whiteboarding sessions, practice your skills.**
+
+![Photo of a whiteboard containing an architecture diagram](whiteboarding-C4-example.png)
 
 ## Preparing for whiteboarding
 
@@ -69,3 +73,23 @@ Practice whiteboarding with colors:
 * practice keeping multiple markers in your hands and switching between them as you draw
 
 Once you are used to drawing with multiple colors it will help make the output of your brainstorming sessions look better.
+
+## Talking through designs together
+
+The whiteboard is a tool you use to make a design. The design is a tool you use to communicate how to make software. Effective communication is more important than the picture that ends up on the whiteboard.
+
+### Start with an empty board and go slowly
+
+Just like a powerpoint slide with 20 bullets is overwhelming, a huge whiteboard filled with 20 different boxes and lines between them is overwhelming too. When sharing a design on a whiteboard, start with an empty whiteboard, and take the time to explain each element as you draw it on the board. Make sure your listeners are still following before drawing another box or another line. Go slow, pause, be open for questions and suggestions.
+
+### Drawing together: blue pen, green pen, red pen, no pen
+
+When designing together, someone should start and draw _something_. Drawing the first concept on a blank canvas can be a bit intimidating for some. It is nice to have someone that goes first. Even if the first idea is not fully fledged, at least we got started. This might be someone using a blue pen.
+
+Others may not start the concept, but once something is on the board they are very good at saying "yes, and..." to add to the initial idea to expand it and make it better. This might be someone using a green pen.
+
+Still others are very comfortable saying "no, because..." to reduce an idea to the important essence or to challenge the group to come up with a better alternative to the initial idea. This might be someone using a red pen.
+
+Finally there are those that may not do any of the drawing themselves but they can ask the group good open "what about ..." questions to move the design forward. This person does't need a pen!
+
+To draw a good design together as a group, all of these contributions are needed. It is useful to get good at each style of contribution, and to know when which contribution is needed. It can be a good exercise for people in a team to deliberately take one of these roles, even if they would normally take a different one. You can also rotate between these roles in a way similar to [pair programming](https://www.agilealliance.org/glossary/pairing/) or [mob programming](https://www.agilealliance.org/glossary/mob-programming/).
