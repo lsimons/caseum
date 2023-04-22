@@ -1,0 +1,1 @@
+![Processed photo of a whiteboard containing actors](actor-whiteboarding-example.jpg)

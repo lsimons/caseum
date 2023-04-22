@@ -4,7 +4,7 @@
 
 **It helps to be serious about whiteboarding. Prepare your whiteboarding sessions, practice your skills.**
 
-![Photo of a whiteboard containing an architecture diagram](whiteboarding-C4-example.png)
+![Processed photo of a whiteboard containing architecture diagrams](whiteboarding-example.jpg)
 
 ## Preparing for whiteboarding
 
