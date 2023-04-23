@@ -18,12 +18,15 @@ There are great free mobile apps that help process whiteboard pictures. Try Micr
 
 There are also great mobile apps for keeping digital records. If you use Slack, have the slack app on your phone. If you use SharePoint, have the onedrive app on your phone. Log into the apps beforehand and try uploading some pictures with them.
 
-### Have lots of materials
+### Have lots of good materials
 
-* It is great to have lots of whiteboards (7 is a good number). Even better is a room where all the walls are whiteboards. On a budget you can get whiteboard stickers to put on walls or windows.
-* Have enough markers in multiple colors (black, blue, green, red).
-* Have dry-wipe cloth plus whiteboard cleaning spray to clean the whiteboards. Cheap cloths often work better than whiteboard eraser blocks.
-* Have enough decent quality sticky notes. The adhesive on old or cheap sticky notes gets worse and then the notes may come down off the board. Have multiple colors (for event storming, orange, purple, blue, green).
+* It is great to have lots of whiteboards (7 is a good number). Even better is a big room where all the walls are whiteboards. On a budget you can get whiteboard stickers to put on walls or windows.
+* Have enough dry-erase markers in multiple colors (black, blue, green, red), several times more than the number of participants.
+* Have several dry-erase wipers.
+* Have dry-wipe cloth plus whiteboard cleaning spray to fully clean the whiteboards. Cheap cloths often work better than whiteboard eraser blocks.
+* Have enough decent quality sticky notes. The adhesive on old or cheap sticky notes gets worse and then the notes may come down off the board. Have multiple colors (for [event storming](../events/event-storming.md): orange, purple, blue, green).
+
+Get high-quality materials.
 
 ## Practicing whiteboarding
 
@@ -51,7 +54,7 @@ Practice simple drawing on a whiteboard:
 * draw lots of ovals and circles.
 * draw simple symbols for people.
 
-You can find a lot of specific drawing exercies online, but you don't need to learn creative drawing. Just do a lot of drawing and actively try to do a good job at it and you will improve.
+You can find a lot of specific drawing exercises online, but you don't need to learn creative drawing. Just do a lot of drawing and actively try to do a good job at it and you will improve.
 
 ### Draw to take photos
 
@@ -90,6 +93,42 @@ Others may not start the concept, but once something is on the board they are ve
 
 Still others are very comfortable saying "no, because..." to reduce an idea to the important essence or to challenge the group to come up with a better alternative to the initial idea. This might be someone using a red pen.
 
-Finally there are those that may not do any of the drawing themselves but they can ask the group good open "what about ..." questions to move the design forward. This person does't need a pen!
+Finally there are those that may not do any of the drawing themselves but they can ask the group good open "what about ..." questions to move the design forward. This person doesn't need a pen!
 
 To draw a good design together as a group, all of these contributions are needed. It is useful to get good at each style of contribution, and to know when which contribution is needed. It can be a good exercise for people in a team to deliberately take one of these roles, even if they would normally take a different one. You can also rotate between these roles in a way similar to [pair programming](https://www.agilealliance.org/glossary/pairing/) or [mob programming](https://www.agilealliance.org/glossary/mob-programming/).
+
+## Alternatives to whiteboards
+
+No whiteboard? No problem! Well, actually, bit of a problem. Can't you go and buy a bunch of whiteboards?
+
+### Digital whiteboards is worse for communication
+
+If you have a fully remote team using physical whiteboards may be impractical. In that case consider drawing on paper and sharing the designs using video conference software. You can also use online digital whiteboard software like [excalidraw](https://excalidraw.com/).
+
+Be careful of switching to a fancy diagramming or modeling tool just because you are working remotely!
+
+If you have the option, then physical whiteboarding is more effective because the communication is better.
+
+In a hybrid team that meets in an office one day a week, you could use a couple of hours of such a day for Caseum-style whiteboarding, then take some whiteboard photos home with you for the rest of the week.
+
+On a fully remote team you can also skip directly to [the next stage](stages.md).
+
+### Black boards
+
+There's nothing about architecture that requires a whiteboard instead of a blackboard. A lecture theatre with lots of large black boards also works great for Caseum. Having only one or two small black boards does not work as well, though: you need a lot of drawing space.
+
+### Brown paper instead of a whiteboard
+
+If you only have 1 or 2 whiteboards, whiteboard stickers are too expensive, or you cannot get them to stick to your walls, you can use a combination of cheap brown paper you tape to a wall, plus sticky notes that you put on the paper.
+
+Such brownpaper sessions can sometimes work well, especially for work closer to requirements than to design, like when using [event storming](../events/event-storming.md).
+
+Compared to whiteboards, brownpaper:
+
+* supports more detail (if you write small on normal-size sticky notes)
+* is cheaper to scale up for very large groups
+* makes it easier to move things around (moving a sticky vs redrawing a box)
+* focuses more on things (written on stickies) than the links between them (lines drawn between stickies)
+* focuses more on words (written on stickies) than on visuals (shapes drawn by hand)
+
+This last point is why brownpaper sessions don't work as well for [ui design](../ui/ui-whiteboarding.md).

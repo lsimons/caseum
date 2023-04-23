@@ -10,7 +10,7 @@ Simple small systems should have simple small architectures. Single teams should
 
 ## Designing a new system
 
-This description is about starting from scratch. Most architecture work is not for completely new ("greenfield") software systems but starting from scartch is the easiest way to learn Caseum. The steps you take for existing systems are described later as additions to this process.
+This description is about starting from scratch. Most architecture work is not for completely new ("greenfield") software systems but starting from scratch is the easiest way to learn Caseum. The steps you take for existing systems are described later as additions to this process.
 
 ### Stage 0: no need for Caseum
 
@@ -18,7 +18,7 @@ Small systems of 2000 lines of code or less or those built by 3 people or less d
 
 Only once the software system doesn't fit in everyone's head should you consider starting with Caseum.
 
-Likewise, if you are or will be working something that is completely new where even the problem space is not clear yet, do not start with software architecture and so do not start with Caseum. Something like a [design sprint](https://www.thesprintbook.com/) may be a better start. Once you have built and validated one or a couple of prototypes you may be ready for architecture work.
+Likewise, if you are or will be working on something that is completely new where even the problem space is not clear yet, do not start with software architecture and so do not start with Caseum. Something like a [design sprint](https://www.thesprintbook.com/) may be a better start. Once you have built and validated one or a couple of prototypes you may be ready for architecture work.
 
 ### Stage 1: structured brainstorming & whiteboarding
 
@@ -63,7 +63,7 @@ You can use the general [guide on whiteboarding](whiteboarding.md).
    * If it is important to decide now what technology to use for some of components then write the technology used under the name.
    * You can use the [guide on whiteboarding C4](../components/c4-whiteboarding.md).
 6. **Models**:
-   * Draw circles for the main types that make up the the main events.
+   * Draw circles for the main types that make up the main events.
    * Add links between those main types as arrows and label the kind of link.
    * If a type or link is not obvious to everyone then add some example facts. 
    * Add additional important facts about each type that needs to be in the software system using additional facts and links.
@@ -107,14 +107,6 @@ If the team has less experience, the user needs are less clear, the system archi
 
 If you've spent more than a day a week doing architecture work, and this is not enough to know what to build during the rest of the week, spend some more time! This is one good indicator to start capturing designs more carefully - you may need to move to stage 2.
 
-#### Digital whiteboards are "ok"
-
-If you have a fully remote team using physical whiteboards may be impractical. In that case consider drawing on paper and sharing the designs using video conference software. You can also use online digital whiteboard software like [excalidraw](https://excalidraw.com/).
-
-Be careful of switching to a fancy diagramming or modeling tool just because you are working remotely!
-
-If you have the option, then physical whiteboarding is more effective. In a hybrid team that meets in an office one day a week, you could use a couple of hours of such a day for Caseum-style whiteboarding, then take some whiteboard photos home with you for the rest of the week.
-
 ### Stage 2: digital diagrams and decision records
 
 During stage 2, you may still use whiteboards sometimes, but you also create and maintain a digital version of your designs.
@@ -127,9 +119,9 @@ Other Caseum views work best as visual diagrams. Caseum recommends draw.io for d
 
 You want to stay in stage 1 if you can.
 
-Do not start immediately with step 2, for most new projects maintaining a set of digital diagrams is too much structure too quickly. At best doing all that work will slow you down. What happens more often is that you stop maintaining or improving your design, and the designs grow stale, no longer matching the software system that is being built. It is better to have up to date designs in medium detail on a whitebaord, than to have out-of-date designs being ignored on a wiki.
+Do not start immediately with step 2, for most new projects maintaining a set of digital diagrams is too much structure too quickly. At best doing all that work will slow you down. What happens more often is that you stop maintaining or improving your design, and the designs grow stale, no longer matching the software system that is being built. It is better to have up to date designs in medium detail on a whiteboard, than to have out-of-date designs being ignored on a wiki.
 
-But on the other hand if you do find yourself redrawing the same picture a lot, or explaining the same concepts over and over again, then it is time to move from phase 1 to phase 2.
+On the other hand if you do find yourself redrawing the same picture a lot, or explaining the same concepts over and over again, then it is time to move from phase 1 to phase 2.
 
 There's other times where your team is _usually_ fine with whiteboarding, but you need some high quality digital artifacts for some other reason (like an important presentation or a compliance audit). If that's the case, by all means produce the digital diagrams. But after the event, throw the files away!
 

@@ -14,7 +14,7 @@ Architecture should be as simple as possible, as high level as possible, as info
 
 Use tools to help communicate simply and effectively. Using fewer, simpler, and more informal tools works well with Caseum.
 
-When everyone working on the software is regularly in the same physical place, the walls of that place are a good place for the the architecture record. In all other cases, use a digital communication system, that everyone can use. The system should keep a permanent record and support images and other files. Use the system already in place if possible. Good systems include chat systems such as Slack or e-mail groups such as Office Teams/SharePoint groups.
+When everyone working on the software is regularly in the same physical place, the walls of that place are a good place for the architecture record. In all other cases, use a digital communication system, that everyone can use. The system should keep a permanent record and support images and other files. Use the system already in place if possible. Good systems include chat systems such as Slack or e-mail groups such as Office Teams/SharePoint groups.
 
 When working on projects for multiple months, create a digital library. Good systems include wikis such as Confluence or online drives such as Office Teams/SharePoint drives. Use the system already in place if possible When making digital diagrams another tool can be integrated/linked with the library, such as the draw.io Confluence diagramming plugin.
 
@@ -42,13 +42,13 @@ You can combine RFDs with Caseum, but be careful: the same formal focus that com
 
 ## Avoid RFCs, Enhancement Proposals, and Detailed Design Documents
 
-Large, complex or safety crtical systems often use decision records that are more formal, using standardized processes to make the decisions. Do not use Caseum for such systems.
+Large, complex safety critical systems often use decision records that are more formal, using standardized processes to make the decisions. Do not use Caseum for such systems.
 
 Such approaches include
 
 * RFCs such as those used to design the internet: [IETF RFCs](https://www.ietf.org/standards/rfcs/)
 * Enhancement Proposals such as those used to design programming languages [Python](https://peps.python.org/pep-0001/)
-* Formal design descriptions such as thosed used to design military systems: [DOD System Design Descriptions (SDD)](https://www.standards.doe.gov/standards-documents/3000/3024-astd-2011) 
+* Formal design descriptions such as those used to design military systems: [DOD System Design Descriptions (SDD)](https://www.standards.doe.gov/standards-documents/3000/3024-astd-2011) 
 * Standardized formal design processes such as those used to design space systems: [ESA PSS-05-0](http://microelectronics.esa.int/vhdl/pss/PSS-05-0.pdf) and [ECSS-E-ST-40C](https://ecss.nl/standard/ecss-e-st-40c-software-general-requirements/)
 
 ## Avoid UML, ArchiMate, RUP, TOGAF, IEEE 1016
