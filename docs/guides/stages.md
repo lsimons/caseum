@@ -136,8 +136,8 @@ After you complete the first version of the digital views, review them. You may 
 #### Caseum digital designs step by step
 
 1. **Actors**:
-   * fill out a persona description for each of your actors.
-   * You can use the [persona template](../actors/persona-template.md).
+   * fill out a role description for each of your actors.
+   * You can use the [role template](../actors/role-template.md).
 2. **Stories**:
    * break down all your epics and activities into clear user stories.
    * You can use the [story template](../stories/story-template.md).
@@ -147,7 +147,7 @@ After you complete the first version of the digital views, review them. You may 
    * You can use the [event template](../events/event-template.md).
 4. **Components**:
    * Create digital versions of all your existing C4 diagrams.
-   * Make sure all your actor personas are in the C4 context diagram.
+   * Make sure all your actor roles are in the C4 context diagram.
    * Make sure all your event domains are in the C4 diagrams.
    * Create the C4 container diagram if you didn't have one yet.
    * You can use the [C4 template](../components/c4-template.md).
@@ -224,7 +224,7 @@ Rather than just switch from stage 2 to stage 3, do some experiments. Create som
    * If you have a lot of system-to-system events, you may already be using lower-level technical specifications, like Swagger for REST APIs or Avro for messaging systems. If so, there is little value in codifying the event view.
    * Otherwise, you can use the [cloudevents coding guide](../events/event-template.md).
 5. **Actors**:
-   * There's no executable specification for actors. Maintain the persona descriptions as text, like in phase 2.
+   * There's no executable specification for actors. Maintain the role descriptions as text, like in phase 2.
 6. **UI**:
    * There's no executable specification for UI.
    * If you have a large team working on a large software system that includes UI then you probably have dedicated UI designers. Let them maintain the UI views and link to it from your architecture documentation.
