@@ -9,7 +9,7 @@ Caseum is for designing a software system, not the organization that uses the sy
 Here's a markdown template for capturing roles:
 
 ```markdown
-<img alt="icon for an actor" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/user.svg" width="30" align="left" style="margin-right: 5px; margin-top: 5px; filter: invert(11%) sepia(95%) saturate(1462%) hue-rotate(204deg) brightness(94%) contrast(93%)">
+<img alt="icon for an actor" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/user.svg" width="30" align="left" style="margin-right: 20px">
 
 ### Role: {role name}
 {Short role description.}
@@ -28,7 +28,7 @@ Do not write a complete list of goals, needs and responsibilities. Focus only on
 
 Here are some example role descriptions:
 
-<img alt="icon for an actor" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/user-doctor.svg" width="30" align="left" style="margin-right: 5px; margin-top: 5px; filter: invert(11%) sepia(95%) saturate(1462%) hue-rotate(204deg) brightness(94%) contrast(93%)">
+<img alt="icon for an actor" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/user-doctor.svg" width="30" align="left" style="margin-right: 20px;">
 
 ### Role: veterinarian
 Medical professional who cares for animals at the Pet Clinic. "Vet" for short.
@@ -40,7 +40,7 @@ Medical professional who cares for animals at the Pet Clinic. "Vet" for short.
 * Look up key information before or during an appointment
 * Save key medical information about a pet during or right after an appointment
 
-<img alt="icon for an actor" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/user-pen.svg" width="30" align="left" style="margin-right: 5px; margin-top: 5px; filter: invert(11%) sepia(95%) saturate(1462%) hue-rotate(204deg) brightness(94%) contrast(93%)">
+<img alt="icon for an actor" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/user.svg" width="30" align="left" style="margin-right: 20px;">
 
 ### Role: pet clinic receptionist
 Professional with an administrative support role in the Pet Clinic. "Receptionist" for short.
@@ -55,7 +55,7 @@ Professional with an administrative support role in the Pet Clinic. "Receptionis
 * Remind pet owners of upcoming appointments
 * Schedule recurring check-in appoinments
 
-<img alt="icon for an actor" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/user.svg" width="30" align="left" style="margin-right: 5px; margin-top: 5px; filter: invert(11%) sepia(95%) saturate(1462%) hue-rotate(204deg) brightness(94%) contrast(93%)">
+<img alt="icon for an actor" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/user.svg" width="30" align="left" style="margin-right: 20px;">
 
 ### Role: pet owner (non-actor)
 Pet owners interact with the receptionist and the vet but not the Pet Clinic admin system.
