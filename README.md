@@ -2,7 +2,7 @@
 
 # Caseum
 
-Caseum is a lightweight approach to software architecture using multiple views.
+Caseum is a simple approach to software architecture that combines multiple views to boost understanding and empathy across roles. 
 
 ## Multiple views
 
