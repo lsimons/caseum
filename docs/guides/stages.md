@@ -8,11 +8,11 @@
 
 Simple small systems should have simple small architectures. Single teams should have informal architectures. When small systems get bigger their architectures grow with them. When teams get bigger and split into multiple teams their design processes grow with them.
 
-## Designing a new system
+## Design a new system to learn Caseum
 
-This description is about starting from scratch. Most architecture work is not for completely new ("greenfield") software systems but starting from scratch is the easiest way to learn Caseum. The steps you take for existing systems are described later as additions to this process.
+This guide is for starting from scratch. Most architecture work is not for completely new software systems but starting from scratch is the easiest way to learn Caseum. See the [guide on as-is and to-be](as-is-to-be.md) for working on existing systems.
 
-### Stage 0: no need for Caseum
+## Stage 0: no need for Caseum
 
 Small systems of 2000 lines of code or less or those built by 3 people or less do not need to use Caseum or any other specific approach to architecture. This stays true while all people on the team understand the whole system and the system quality remains high.
 
@@ -20,7 +20,7 @@ Only once the software system doesn't fit in everyone's head should you consider
 
 Likewise, if you are or will be working on something that is completely new where even the problem space is not clear yet, do not start with software architecture and so do not start with Caseum. Something like a [design sprint](https://www.thesprintbook.com/) may be a better start. Once you have built and validated one or a couple of prototypes you may be ready for architecture work.
 
-### Stage 1: structured brainstorming & whiteboarding
+## Stage 1: structured brainstorming & whiteboarding
 
 When you have more than 3 people working on a system that is getting bigger, you can start brainstorming and whiteboarding together in a planned manner using Caseum step 1.
 
@@ -28,7 +28,7 @@ It does not really matter in which order you make the different Caseum views. Ju
 
 You can use the general [guide on whiteboarding](whiteboarding.md).
 
-#### Caseum whiteboarding step by step
+### Caseum whiteboarding step by step
 
 "Everything all at once" is not always easy to do. If you need more structure, try this order:
 
@@ -76,7 +76,7 @@ Some advice while working through this order:
 * During a later step you may discover other important information on previous steps, so go back and add it.
 * If it seems like your group disagrees about a particular detail, slow down a bit. First figure out what the disagreement is. Write down a question. Then have a brief discussion. If consent on an answer is not quickly found, capture it as a topic to detail later. If you use [ADRs or RFDs](records.md), this may be a good topic for such a document.
 
-#### Focusing in on specific concerns
+### Focusing in on specific concerns
 
 Even though Caseum has 6 different views there can be yet other concerns that need more focus. For example, you may want to
 * review the designs for security
@@ -91,7 +91,7 @@ For most of these reviews you do not need to complete the Models view. You do ne
 
 To do so, draw the designs as you otherwise would. Then do an additional round to annotate the whiteboards based on those other issues. During the review write the issues on notes on the board, but do not immediately try to solve the issues. After you capture all the issues, prioritize them. Discuss only the important ones in more detail, and only as much as time allows.
 
-#### Iterating during stage 1
+### Iterating during stage 1
 
 After you have whiteboarded initial versions of all the views, stop designing and implement some parts of the system. During implementation you will learn a lot more which will inform your next iteration of the architecture. After you have implemented some software, make sure to test it, ideally by getting an initial production system in the hands of end users. When you do this you will learn a lot more.
 
@@ -99,7 +99,7 @@ After your first iteration, evaluate whether your implementation is very differe
 
 During Caseum stage 1, do not worry too much about capturing the architecture permanently. There is a lot of value in just wiping (some of) the whiteboards and redrawing the design. Each time you redraw a picture you are likely to focus in more on what is important, leaving out the details that don't need to be in the picture. Each time you do this is an opportunity to discuss the design together further and create a better shared understanding of what to do. It is also an opportunity to practice drawing and designing. This may sound inefficient, but it is very effective. Try it!
 
-#### Time budget for architecture
+### Time budget for architecture
 
 Experienced teams that have clear user goals & needs, and have built similar systems before, using similar technology, may only need to spend only about 5% of their time creating and maintaining their design, i.e. about half a day at the beginning of a two-week sprint. Sometimes only a few of the people on the team need to do the design and the rest of the team can implement it.
 
@@ -107,7 +107,7 @@ If the team has less experience, the user needs are less clear, the system archi
 
 If you've spent more than a day a week doing architecture work, and this is not enough to know what to build during the rest of the week, spend some more time! This is one good indicator to start capturing designs more carefully - you may need to move to stage 2.
 
-### Stage 2: digital diagrams and decision records
+## Stage 2: digital diagrams and decision records
 
 During stage 2, you may still use whiteboards sometimes, but you also create and maintain a digital version of your designs.
 
@@ -115,7 +115,7 @@ Some of the Caseum views work best as text documents. Caseum recommends Markdown
 
 Other Caseum views work best as visual diagrams. Caseum recommends draw.io for diagrams and provides templates and libraries.
 
-#### Actively try to avoid stage 2
+### Actively try to avoid stage 2
 
 You want to stay in stage 1 if you can.
 
@@ -127,13 +127,13 @@ There's other times where your team is _usually_ fine with whiteboarding, but yo
 
 Ok, so perhaps you won't actually throw the diagrams away, fine. It's ok to print them out and stick them on your whiteboards. But what you should _not_ do is start investing the effort to keep the fancy digital pictures up-to-date if you have no real need for them.
 
-#### Make digital versions of your stage 1 views
+### Make digital versions of your stage 1 views
 
 Your first step is to digitize everything. As you switch to a digital form, it is natural to be more precise and add more detail. Take the time to get the detail right. Usually that involves looking at the actual software system so you don't fill in the detail based on your memory but based on the current reality.
 
 After you complete the first version of the digital views, review them. You may see things you want to change or improve in the system. Make a list, prioritize it, and perhaps plan to make the improvements.
 
-#### Caseum digital designs step by step
+### Caseum digital designs step by step
 
 1. **Actors**:
    * fill out a role description for each of your actors.
@@ -162,13 +162,13 @@ After you complete the first version of the digital views, review them. You may 
    * If you do not have such digital designs, you can use the [UI template](../ui/ui-template.md) to make digital wireframes.
    * You can also choose to maintain your UI designs on paper or on whiteboards while you digitize the other views.
 
-#### Keep more detailed records
+### Keep more detailed records
 
 See the [guide on keeping records](records.md).
 
 During step 1 you may have not kept detailed records. If so, during step 2 it is worth to start doing so. This is also a good time to consider the use of ADRs or RFDs.
 
-#### Iterating during step 2
+### Iterating during step 2
 
 The more architecture views you have to maintain, the more useful it becomes to work on them a little bit regularly. If you only do a "big bang" architecture update every few months, there are long periods when your architecture is not so useful since it is too out-of-date to use.
 
@@ -176,7 +176,7 @@ You could make updating the diagrams part of your [definition-of-ready](https://
 
 Alternatively you could update the diagrams periodically, like at the beginning or end of a 2-week sprint.
 
-#### Time budget for architecture
+### Time budget for architecture
 
 Creating the initial digital versions of all the architecture views can be a significant a one-off investment, perhaps up to a couple of weeks of effort if you managed to stay in stage 1 for as long as is recommended.
 
@@ -186,11 +186,17 @@ If you find you do not have time for maintaining the diagrams, as a first step, 
 
 If you have many stories, events, components or models, it may become more efficient to maintain them as code instead of as visual diagrams. That efficiency is the main reason to switch to Caseum stage 3.
 
-### Stage 3: models as code and executable specifications
+### Handling non-functional requirements
+
+Many software architectures focus too much on interesting technical requirements and as a result systems become more rigid and complex than needed. To help combat this, Caseum focuses on working iteratively, keeping users and their needs in mind throughout the design process.
+
+However, for larger systems the non-functional requirements may become relatively more and more challenging to meet. Such needs are often not easy to visualize either. Instead, consider keeping more detailed [records](records.md) such as Architecture Decision Records (ADRs) or Requests For Discussion (RFDs) that explain how the non-functional requirements are being met.
+
+## Stage 3: models as code and executable specifications
 
 During stage 3 you define and maintain your Caseum architecture not using informal visuals and text documents, but with structured models as code and with executable specifications. You may generate some parts of your software from those models, or generate some of those models from your software.
 
-#### Actively try to avoid stage 3
+### Actively try to avoid stage 3
 
 Many engineers like the idea of models-as-code in theory. It appeals to them because they like coding, so then coding the architecture also makes sense. There is also a promise of higher consistency. But such a technical approach can have serious downsides too:
 
@@ -202,11 +208,11 @@ The larger and more complex a software system, the more likely there is value in
 
 Note that if you created a great software design, you can end up with many independent small systems maintained by small teams that have limited interaction. In that case even for very large software landscapes, you still do not ever need stage 3!
 
-#### Experiment!
+### Experiment!
 
 Rather than just switch from stage 2 to stage 3, do some experiments. Create some initial prototype versions of structured models and specifications. Measure how much time it takes to do so. Then maintain those prototypes for some period (perhaps 3 2-week sprints) and see how much time that takes. Evaluate whether you save time compared to maintaining the visual diagrams. If so, great! Otherwise, are there enough other benefits?
 
-#### Caseum models as code step by step
+### Caseum models as code step by step
 
 1. **Stories**:
    * Start writing your stories in Gherkin format.
@@ -228,3 +234,15 @@ Rather than just switch from stage 2 to stage 3, do some experiments. Create som
 6. **UI**:
    * There's no executable specification for UI.
    * If you have a large team working on a large software system that includes UI then you probably have dedicated UI designers. Let them maintain the UI views and link to it from your architecture documentation.
+
+## Beyond stage 3
+
+For very large systems of systems you may need to go beyond Caseum.
+
+### Platforms
+
+If you have many developer teams you may consider a platform team that focuses on providing a platform layer to the other developer teams. See the [guide on platforms](platforms.md) for how to use Caseum in that situation.
+
+### Formal (enterprise) standards
+
+If you are building very large systems you may consider a more formal architecture approach. Do not use Caseum to design space shuttles or nuclear power plants.
