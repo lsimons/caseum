@@ -53,7 +53,7 @@ Professional with an administrative support role in the Pet Clinic. "Receptionis
 * Manage the appointment schedule
 * Plan and re-plan appointments
 * Remind pet owners of upcoming appointments
-* Schedule recurring check-in appoinments
+* Schedule recurring check-in appointments
 
 <img alt="icon for an actor" src="https://raw.githubusercontent.com/FortAwesome/Font-Awesome/6.x/svgs/solid/user.svg" width="30" align="left" style="margin-right: 20px;">
 

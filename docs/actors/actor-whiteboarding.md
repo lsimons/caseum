@@ -2,7 +2,7 @@
 
 **Always consider a system its customers, users, and stakeholders. Also consider external systems that connect to the systems. Together, these are the _actors_.**
 
-When designing software only used by other systems, consider the customers, users and stakeholders of thoses systems.
+When designing software only used by other systems, consider the customers, users and stakeholders of those systems.
 
 When designing software it helps to always keep these actors in mind, so in most views it helps to always draw them and to draw them first. Rather than design the system for a generic user, be clear about which users use the system.
 
@@ -46,7 +46,7 @@ For systems where the security is "standard" or handled "some standard way", do 
 
 In user experience design, [empathy maps](https://en.wikipedia.org/wiki/Empathy_Map) that describe users pains and gains, what they think and say and do and feel.
 
-Similarly, user experience designers may define fictional characters called [personas](https://en.wikipedia.org/wiki/Persona_(user_experience)) that helps the designer to imagine what to create.
+Similarly, user experience designers may define fictional characters called [personas](https://en.wikipedia.org/wiki/Persona_(user_experience)) that help the designer to imagine what to create.
 
 These are quite a valuable research and design tool. But such empathy maps and personas are not part of Caseum and not quite the same as an actor description.
 

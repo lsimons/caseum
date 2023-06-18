@@ -16,7 +16,7 @@ Reserve time at the end of a whiteboarding session to immediately capture all of
 
 There are great free mobile apps that help process whiteboard pictures. Try Microsoft Lens ([Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officelens), [iOS](https://apps.apple.com/us/app/office-lens/id975925059)) or Adobe Scan ([Android](https://play.google.com/store/apps/details?id=com.adobe.scan.android), [iOS](https://apps.apple.com/us/app/adobe-scan-pdf-ocr-scanner/id1199564834)). Try Post-It ([Android](https://apps.apple.com/us/app/post-it/id920127738), [iOS](https://play.google.com/store/apps/details?id=com.mmm.postit)) if you have a whiteboard full of post-it notes. Have such apps on your phone before the session.
 
-There are also great mobile apps for keeping digital records. If you use Slack, have the slack app on your phone. If you use SharePoint, have the onedrive app on your phone. Log into the apps beforehand and try uploading some pictures with them.
+There are also great mobile apps for keeping digital records. If you use Slack, have the slack app on your phone. If you use SharePoint, have the OneDrive app on your phone. Log into the apps beforehand and try uploading some pictures with them.
 
 ### Have lots of good materials
 

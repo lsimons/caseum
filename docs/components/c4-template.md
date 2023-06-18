@@ -10,7 +10,7 @@ For digital C4 diagrams, Caseum uses draw.io.
 
 Draw.io supports C4 diagrams natively with a Shape library that you can use. You can also use these drawing tools to match the Caseum color scheme:
 
-* [Caseum-C4.xml](Caseum-C4.xml): a [draw.io](https://www.diagrams.net/) modified C4 shape library with C4 elements using the Caseum colors. [User guide](https://desk.draw.io/support/solutions/articles/16000067790).
+* [Caseum-C4.xml](Caseum-C4.xml): a [draw.io](https://www.diagrams.net/) modified C4 shape library with C4 elements using the [Caseum colors](../design/colors/colors.md). [User guide](https://desk.draw.io/support/solutions/articles/16000067790).
 * [C4.drawio](C4.drawio): a draw.io stencil containing the elements in the custom shape library.
 
 ## Keep it accessible

@@ -101,7 +101,7 @@ During Caseum stage 1, do not worry too much about capturing the architecture pe
 
 #### Time budget for architecture
 
-Experienced teams that have clear user goals & needs, and have built similar systems before, using similar technologies, may only need to spend only about 5% of their time creating and maintaining their design, i.e. about half a day at the beginning of a two-week sprint. Sometimes only a few of the people on the team need to do the design and the rest of the team can implement it.
+Experienced teams that have clear user goals & needs, and have built similar systems before, using similar technology, may only need to spend only about 5% of their time creating and maintaining their design, i.e. about half a day at the beginning of a two-week sprint. Sometimes only a few of the people on the team need to do the design and the rest of the team can implement it.
 
 If the team has less experience, the user needs are less clear, the system architecture is very new, or the implementation technology is new, it can be worthwhile to spend more time on architecture and design, up to perhaps about 20% of all the time available, or about 2 afternoons a week.
 
@@ -222,7 +222,7 @@ Rather than just switch from stage 2 to stage 3, do some experiments. Create som
 4. **Events**:
    * You can consider using a formal standard for defining and maintaining event definitions.
    * If you have a lot of system-to-system events, you may already be using lower-level technical specifications, like Swagger for REST APIs or Avro for messaging systems. If so, there is little value in codifying the event view.
-   * Otherwise, you can use the [cloudevents coding guide](../events/event-template.md).
+   * Otherwise, you can use the [CloudEvents coding guide](../events/event-template.md).
 5. **Actors**:
    * There's no executable specification for actors. Maintain the role descriptions as text, like in phase 2.
 6. **UI**:

@@ -35,7 +35,7 @@ When specific detail is important to the design you should add it, in the form o
 * **Given** I'm logged in to the Pet Clinic Admin
 * **When** I select the Vet Admin
 * **And** I select the Add Vet function
-* **When** I submmit details of a new Vet
+* **When** I submit details of a new Vet
 * **Then** a new Vet should be added to the system
 
 ## Organizing stories

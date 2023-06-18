@@ -72,7 +72,7 @@ workspace {
             autoLayout
         }
         
-        container petClinic PetclinicContainer {
+        container petClinic PetClinicContainer {
             include *
             autoLayout
         }
