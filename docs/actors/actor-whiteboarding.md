@@ -1,3 +1,4 @@
+<!--suppress HtmlDeprecatedAttribute, CheckImageSize -->
 # Whiteboarding actors
 
 **Always consider a system its customers, users, and stakeholders. Also consider external systems that connect to the systems. Together, these are the _actors_.**
@@ -24,11 +25,11 @@ For non-human actors, capture at least:
 * **category name**: a descriptive label that applies to all similar software systems that use the system.
 * **purpose**: why the external system is connecting to this system.
 
-You don't have to capture all the non-human actors, only the important ones that you specifically design for. For example, when designing a web site you often don't need to draw the web browsers users will use to access the site.
+You don't have to capture all the non-human actors, only the important ones that you specifically design for. For example, when designing a website you often don't need to draw the web browsers users will use to access the site.
 
 <img src="actor-whiteboarding-lines.png" width="100" align="right" style="margin-left: 10px" alt="A drawing of a circle on top of a flat rectangle representing an actor">
 
-Draw each actors with an icon. See the [this FontAwesome collection of users](https://fontawesome.com/icons/categories/users-people?f=classic&s=regular) for some icons you might try to draw, but don't get too fancy: it's important to keep them simple so you and others working on the design can draw them easily and similarly many times. A simple way to draw an actor is as a circle for their head with a rectangle just underneath it for their upper torso. Then, write their role underneath to make clear which actor it is.
+Draw each actor with an icon. See [this FontAwesome collection of users](https://fontawesome.com/icons/categories/users-people?f=classic&s=regular) for some icons you might try to draw, but don't get too fancy: it's important to keep them simple so you and others working on the design can draw them easily and similarly many times. A simple way to draw an actor is as a circle for their head with a rectangle just underneath it for their upper torso. Then, write their role underneath to make clear which actor it is.
 
 ## Non-actors
 
@@ -40,7 +41,7 @@ For example, a software system in a hospital may very patient-centric but not ev
 
 It can sometimes help to be clear about people that should not interact with the software system but will try to do so anyway. This is especially important if the software is a security system or if security is a major feature of the system.
 
-For systems where the security is "standard" or handled "some standard way", do not include these actors in the main view. Instead you may later draw some specific security views that have these bad actors included.
+For systems where the security is "standard" or handled "some standard way", do not include these actors in the main view. Instead, you may later draw some specific security views that have these bad actors included.
 
 ## User-centric design vs actors
 

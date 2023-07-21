@@ -1,3 +1,4 @@
+<!--suppress HtmlDeprecatedAttribute, CheckImageSize -->
 # Describing actors with a role description
 
 **Keep a short, clear list of actor role descriptions.**

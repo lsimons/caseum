@@ -1,3 +1,4 @@
+<!--suppress HtmlDeprecatedAttribute, CheckImageSize -->
 <img src="docs/design/logo/logo.png" width="200" align="right" style="margin-left: 10px" alt="Caseum logo">
 
 # Caseum
@@ -55,14 +56,14 @@ See the guides on [whiteboarding architecture](docs/guides/whiteboarding.md) and
 
 Different tools are available per view per stage:
 
-|                     | **Whiteboarding & Dialogue**               | **Diagrams & Decision Records**                           | **Models & Executable Specifications**    |
-|---------------------|-------------------------------------------------|-----------------------------------------------------------|-------------------------------------------|
-| **Components**      | [Boxes & lines](docs/components/c4-whiteboarding.md) | [C4 Draw.io Library](docs/components/c4-template.md)           | [C4 as Code](docs/components/c4-code.md)       |
-| **Actors**          | [Roles & needs](docs/actors/actor-whiteboarding.md)  | [Role Markdown Template](docs/actors/role-template.md)   | -                                         |
-| **Stories**         | [Goals & epics](docs/stories/story-whiteboarding.md)         | [User Story Markdown Template](docs/stories/story-template.md) | [Gherkin](docs/stories/gherkin-code.md)        |
-| **Events**          | [Event Storming](docs/events/event-storming.md)      | [ES Draw.io Library](docs/events/event-template.md)            | [CloudEvents](docs/events/cloudevents-code.md) |
-| **UI**              | [Boxes & lines](docs/ui/ui-whiteboarding.md)         | [Wireframes Draw.io Library](docs/ui/ui-template.md)           | -                                         |
-| **Models**          | [Circles & lines](docs/models/fact-whiteboarding.md)   | [TLM Draw.io Library](docs/models/tlm-template.md)             | [TLMD](docs/models/tlm-code.md)                |
+|                | **Whiteboarding & Dialogue**                         | **Diagrams & Decision Records**                                | **Models & Executable Specifications**         |
+|----------------|------------------------------------------------------|----------------------------------------------------------------|------------------------------------------------|
+| **Components** | [Boxes & lines](docs/components/c4-whiteboarding.md) | [C4 Draw.io Library](docs/components/c4-template.md)           | [C4 as Code](docs/components/c4-code.md)       |
+| **Actors**     | [Roles & needs](docs/actors/actor-whiteboarding.md)  | [Role Markdown Template](docs/actors/role-template.md)         | -                                              |
+| **Stories**    | [Goals & epics](docs/stories/story-whiteboarding.md) | [User Story Markdown Template](docs/stories/story-template.md) | [Gherkin](docs/stories/gherkin-code.md)        |
+| **Events**     | [Event Storming](docs/events/event-storming.md)      | [ES Draw.io Library](docs/events/event-template.md)            | [CloudEvents](docs/events/cloudevents-code.md) |
+| **UI**         | [Boxes & lines](docs/ui/ui-whiteboarding.md)         | [Wireframes Draw.io Library](docs/ui/ui-template.md)           | -                                              |
+| **Models**     | [Circles & lines](docs/models/fact-whiteboarding.md) | [TLM Draw.io Library](docs/models/tlm-template.md)             | [TLMD](docs/models/tlm-code.md)                |
 
 ## License
 

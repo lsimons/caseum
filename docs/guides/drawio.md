@@ -10,14 +10,14 @@
 
 The following Caseum templates are available for draw.io:
 
-| **View**            | **Draw.io Library**                                            |
-|---------------------|----------------------------------------------------------------|
-| **Components**      | [C4 Draw.io Library](../components/c4-template.md)           |
-| **Actors**          | _use markdown_                                                 |
-| **Stories**         | _use markdown_                                                 |
-| **Events**          | [ES Draw.io Library](../events/event-template.md)            |
-| **UI**              | [Wireframes Draw.io Library](../ui/ui-template.md)           |
-| **Models**          | [TLM Draw.io Library](../models/tlm-template.md)             |
+| **View**       | **Draw.io Library**                                |
+|----------------|----------------------------------------------------|
+| **Components** | [C4 Draw.io Library](../components/c4-template.md) |
+| **Actors**     | _use markdown_                                     |
+| **Stories**    | _use markdown_                                     |
+| **Events**     | [ES Draw.io Library](../events/event-template.md)  |
+| **UI**         | [Wireframes Draw.io Library](../ui/ui-template.md) |
+| **Models**     | [TLM Draw.io Library](../models/tlm-template.md)   |
 
 ## Storing draw.io diagrams
 

@@ -14,7 +14,7 @@ This guide is for starting from scratch. Most architecture work is not for compl
 
 ## Stage 0: no need for Caseum
 
-Small systems of 2000 lines of code or less or those built by 3 people or less do not need to use Caseum or any other specific approach to architecture. This stays true while all people on the team understand the whole system and the system quality remains high.
+Small systems of 2000 lines of code or less or those built by 3 people or fewer do not need to use Caseum or any other specific approach to architecture. This stays true while all people on the team understand the whole system and the system quality remains high.
 
 Only once the software system doesn't fit in everyone's head should you consider starting with Caseum.
 
@@ -24,7 +24,7 @@ Likewise, if you are or will be working on something that is completely new wher
 
 When you have more than 3 people working on a system that is getting bigger, you can start brainstorming and whiteboarding together in a planned manner using Caseum step 1.
 
-It does not really matter in which order you make the different Caseum views. Just make all the views that make sense, all at the same time, and keep going until you think you have all the important information or you are almost out of time.
+It does not really matter in which order you make the different Caseum views. Just make all the views that make sense, all at the same time, and keep going until you think you have all the important information, or you are almost out of time.
 
 You can use the general [guide on whiteboarding](whiteboarding.md).
 
@@ -43,7 +43,7 @@ You can use the general [guide on whiteboarding](whiteboarding.md).
    * You can use the [guide on whiteboarding stories](../stories/story-whiteboarding.md).
 3. **UI**:
    * Sketch some basic wireframes of the UI the actors will use, if any.
-   * If actors will use CLIs or APIs or get e-mails or reports, then sketch out some of those.
+   * If actors use CLIs or APIs or get e-mails or reports, then sketch out some of those.
    * You can use the [guide on whiteboarding wireframes](../ui/ui-whiteboarding.md).
 4. **Events**:
    * define the commands the actors will issue through these UIs to start on their activities.
@@ -60,7 +60,7 @@ You can use the general [guide on whiteboarding](whiteboarding.md).
    * Keep adding components until all the important components are sketched out.
    * If you have a lot of components, group them into stacks of closely related components and make a C4 container diagram.
    * If you have a lot of stacks, group them together into several distinct systems and make a C4 system landscape diagram.
-   * If it is important to decide now what technology to use for some of components then write the technology used under the name.
+   * If it is important to decide now what technology to use for some of the components then write the technology used under the name.
    * You can use the [guide on whiteboarding C4](../components/c4-whiteboarding.md).
 6. **Models**:
    * Draw circles for the main types that make up the main events.
@@ -93,7 +93,7 @@ To do so, draw the designs as you otherwise would. Then do an additional round t
 
 ### Iterating during stage 1
 
-After you have whiteboarded initial versions of all the views, stop designing and implement some parts of the system. During implementation you will learn a lot more which will inform your next iteration of the architecture. After you have implemented some software, make sure to test it, ideally by getting an initial production system in the hands of end users. When you do this you will learn a lot more.
+After you have whiteboarded initial versions of all the views, stop designing and implement some parts of the system. During implementation, you will learn a lot more which will inform your next iteration of the architecture. After you have implemented some software, make sure to test it, ideally by getting an initial production system in the hands of end users. When you do this you will learn a lot more.
 
 After your first iteration, evaluate whether your implementation is very different from your architecture. If the designs mostly match your results, and you all sort-of know the next steps to take to implement the next iteration, you may not need to do more design yet.
 
@@ -119,17 +119,17 @@ Other Caseum views work best as visual diagrams. Caseum recommends draw.io for d
 
 You want to stay in stage 1 if you can.
 
-Do not start immediately with step 2, for most new projects maintaining a set of digital diagrams is too much structure too quickly. At best doing all that work will slow you down. What happens more often is that you stop maintaining or improving your design, and the designs grow stale, no longer matching the software system that is being built. It is better to have up to date designs in medium detail on a whiteboard, than to have out-of-date designs being ignored on a wiki.
+Do not start immediately with step 2, for most new projects maintaining a set of digital diagrams is too much structure too quickly. At best doing all that work will slow you down. What happens more often is that you stop maintaining or improving your design, and the designs grow stale, no longer matching the software system that is being built. It is better to have up-to-date designs in medium detail on a whiteboard, than to have out-of-date designs being ignored on a wiki.
 
 On the other hand if you do find yourself redrawing the same picture a lot, or explaining the same concepts over and over again, then it is time to move from phase 1 to phase 2.
 
-There's other times where your team is _usually_ fine with whiteboarding, but you need some high quality digital artifacts for some other reason (like an important presentation or a compliance audit). If that's the case, by all means produce the digital diagrams. But after the event, throw the files away!
+There's other times when your team is _usually_ fine with whiteboarding, but you need some high quality digital artifacts for some other reason (like an important presentation or a compliance audit). If that's the case, by all means produce the digital diagrams. But after the event, throw the files away!
 
 Ok, so perhaps you won't actually throw the diagrams away, fine. It's ok to print them out and stick them on your whiteboards. But what you should _not_ do is start investing the effort to keep the fancy digital pictures up-to-date if you have no real need for them.
 
 ### Make digital versions of your stage 1 views
 
-Your first step is to digitize everything. As you switch to a digital form, it is natural to be more precise and add more detail. Take the time to get the detail right. Usually that involves looking at the actual software system so you don't fill in the detail based on your memory but based on the current reality.
+Your first step is to digitize everything. As you switch to a digital form, it is natural to be more precise and add more detail. Take the time to get the detail right. Usually that involves looking at the actual software system, so you don't fill in the detail based on your memory but based on the current reality.
 
 After you complete the first version of the digital views, review them. You may see things you want to change or improve in the system. Make a list, prioritize it, and perhaps plan to make the improvements.
 
@@ -153,7 +153,7 @@ After you complete the first version of the digital views, review them. You may 
    * You can use the [C4 template](../components/c4-template.md).
 5. **Models**:
    * Do _not_ directly create digital versions of your model diagrams.
-   * Instead create your model diagrams based on the model definitions in your software systems (like your domain model or your SQL database definition scripts).
+   * Instead, create your model diagrams based on the model definitions in your software systems (like your domain model or your SQL database definition scripts).
    * Object-oriented or table-oriented modeling is more common than the fact-based modeling that Caseum recommends. You can [read why fact-based modeling is great](../models/fact-modeling.md) and decide to try it, or, you can use a modeling approach you already know.
    * If you decide to use fact-based modeling, you can use the [tlm template](../models/tlm-template.md).
 6. **UI**:
@@ -216,15 +216,15 @@ Rather than just switch from stage 2 to stage 3, do some experiments. Create som
 
 1. **Stories**:
    * Start writing your stories in Gherkin format.
-   * You can consider using BDD and do automated testing using the Gherkin stories, which is a great benefit of Gherkin, which is why Stories are a good view to start Caseum stage 3 with.
+   * You can consider using BDD and automate testing using the Gherkin stories, which is a great benefit of Gherkin, which is why Stories are a good view to start Caseum stage 3 with.
    * You can use the [gherkin coding guide](../stories/gherkin-code.md).
 2. **Components**:
    * C4 has a great textual format in Structurizr that is worth using if you have a lot of components.
    * You can use the [C4 coding guide](../components/c4-code.md).
 3. **Models**:
-   * If you use advanced fact-based modeling there are good bi-directional mappings between software systems and textual specifications and you should consider them.
+   * If you use advanced fact-based modeling there are good bidirectional mappings between software systems and textual specifications, and you should consider them.
    * For example, if you adopted TLM, you can use the [tlm coding guide](../models/tlm-template.md).
-   * On the other hand, if you use UML or other object-oriented modeling techniques, do not use automated bi-directional mapping tools, they produce low-quality code. In this case it is better to work "code first", and write source code and generate the model definitions from your code.
+   * On the other hand, if you use UML or other object-oriented modeling techniques, do not use automated bidirectional mapping tools, they produce low-quality code. In this case it is better to work "code first", and write source code and generate the model definitions from your code.
 4. **Events**:
    * You can consider using a formal standard for defining and maintaining event definitions.
    * If you have a lot of system-to-system events, you may already be using lower-level technical specifications, like Swagger for REST APIs or Avro for messaging systems. If so, there is little value in codifying the event view.

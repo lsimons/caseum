@@ -28,7 +28,7 @@ When specific detail is important to the design you should add it, in the form o
 
 ### Add vet to Pet Clinic
 * **As a** pet clinic receptionist
-* **I want** to add a new vet to the Pet CLinic
+* **I want** to add a new vet to the Pet Clinic
 * **so that** appointments can be planned for this vet
 
 #### Scenario:

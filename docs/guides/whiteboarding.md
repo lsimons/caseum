@@ -12,11 +12,11 @@ Like any activity whiteboarding sessions go better when you prepare for them wel
 
 ### Plan to capture your whiteboard outputs
 
-Reserve time at the end of a whiteboarding session to immediately capture all of the content you produced in a permanent form and [record it](records.md). Taking photos with your cell phone and uploading them works well.
+Reserve time at the end of a whiteboarding session to immediately capture all the content you produced in a permanent form and [record it](records.md). Taking photos with your cell phone and uploading them works well.
 
 There are great free mobile apps that help process whiteboard pictures. Try Microsoft Lens ([Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officelens), [iOS](https://apps.apple.com/us/app/office-lens/id975925059)) or Adobe Scan ([Android](https://play.google.com/store/apps/details?id=com.adobe.scan.android), [iOS](https://apps.apple.com/us/app/adobe-scan-pdf-ocr-scanner/id1199564834)). Try Post-It ([Android](https://apps.apple.com/us/app/post-it/id920127738), [iOS](https://play.google.com/store/apps/details?id=com.mmm.postit)) if you have a whiteboard full of post-it notes. Have such apps on your phone before the session.
 
-There are also great mobile apps for keeping digital records. If you use Slack, have the slack app on your phone. If you use SharePoint, have the OneDrive app on your phone. Log into the apps beforehand and try uploading some pictures with them.
+There are also great mobile apps for keeping digital records. If you use Slack, have the Slack app on your phone. If you use SharePoint, have the OneDrive app on your phone. Log into the apps beforehand and try uploading some pictures with them.
 
 ### Have lots of good materials
 
@@ -32,7 +32,7 @@ Get high-quality materials.
 
 Drawing is a skill you get better at through practice. So, practice!
 
-### Get comfortable with writing on whiteboards
+### Get comfortable writing on whiteboards
 
 Practice your writing on a whiteboard:
 * Try to write more slowly, drawing nice letters instead of scribbling ugly ones.
@@ -43,9 +43,9 @@ Practice your writing on a whiteboard:
 
 Evaluate your own writing by looking at the board at a distance. Then wipe it out and do better. If there are certain letters you can't write well, practice just those letters.
 
-Your handwriting does not need to be pretty but it should be readable.
+Your handwriting does not need to be pretty, but it should be readable.
 
-### Get comfortable with drawing on whiteboards
+### Get comfortable drawing on whiteboards
 
 Practice simple drawing on a whiteboard:
 * draw lots of rectangles of different sizes.
@@ -83,7 +83,7 @@ The whiteboard is a tool you use to make a design. The design is a tool you use 
 
 ### Start with an empty board and go slowly
 
-Just like a powerpoint slide with 20 bullets is overwhelming, a huge whiteboard filled with 20 different boxes and lines between them is overwhelming too. When sharing a design on a whiteboard, start with an empty whiteboard, and take the time to explain each element as you draw it on the board. Make sure your listeners are still following before drawing another box or another line. Go slow, pause, be open for questions and suggestions.
+Just like a PowerPoint slide with 20 bullets is overwhelming, a huge whiteboard filled with 20 different boxes and lines between them is overwhelming too. When sharing a design on a whiteboard, start with an empty whiteboard, and take the time to explain each element as you draw it on the board. Make sure your listeners are still following before drawing another box or another line. Go slow, pause, be open for questions and suggestions.
 
 ### Drawing together: blue pen, green pen, red pen, no pen
 
@@ -93,13 +93,13 @@ Others may not start the concept, but once something is on the board they are ve
 
 Still others are very comfortable saying "no, because..." to reduce an idea to the important essence or to challenge the group to come up with a better alternative to the initial idea. This might be someone using a red pen.
 
-Finally there are those that may not do any of the drawing themselves but they can ask the group good open "what about ..." questions to move the design forward. This person doesn't need a pen!
+Finally, there are those that may not do any of the drawing themselves, but they can ask the group good open "what about ..." questions to move the design forward. This person doesn't need a pen!
 
 To draw a good design together as a group, all of these contributions are needed. It is useful to get good at each style of contribution, and to know when which contribution is needed. It can be a good exercise for people in a team to deliberately take one of these roles, even if they would normally take a different one. You can also rotate between these roles in a way similar to [pair programming](https://www.agilealliance.org/glossary/pairing/) or [mob programming](https://www.agilealliance.org/glossary/mob-programming/).
 
 ## Alternatives to whiteboards
 
-No whiteboard? No problem! Well, actually, bit of a problem. Can't you go and buy a bunch of whiteboards?
+No whiteboard? No problem! Well, actually, a bit of a problem. Can't you go and buy a bunch of whiteboards?
 
 ### Digital whiteboards is worse for communication
 

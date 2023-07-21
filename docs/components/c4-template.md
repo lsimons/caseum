@@ -1,3 +1,4 @@
+<!--suppress HtmlDeprecatedAttribute, CheckImageSize -->
 # Describing components with C4 diagrams
 
 **Use [C4 diagrams](https://c4model.com/) to describe the components of your system.**
