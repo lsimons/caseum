@@ -70,3 +70,11 @@ Different tools are available per view per stage:
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" align="left" style="border: 0;margin-right: 10px" src="https://i.creativecommons.org/l/by/4.0/88x31.png"></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Caseum</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://caseum.org" property="cc:attributionName" rel="cc:attributionURL">Leo Simons</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
 See [LICENSE.txt](LICENSE.txt) for a plain text copy of the Creative Commons Attribution 4.0 International License.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to Caseum.
+
+## Code of conduct
+
+See [Code of Conduct](CODE_OF_CONDUCT.md) for details on how to participate in the Caseum community.
