@@ -1,3 +1,4 @@
+<!--suppress CheckImageSize, HtmlDeprecatedAttribute -->
 # Whiteboarding components with C4 diagrams
 
 **Use [C4-style diagrams](https://c4model.com/) to draw the components of your system on a whiteboard.**
@@ -43,3 +44,11 @@ If you skipped making the container diagram, once there are more components to a
 ## Keep it accessible
 
 Note that while the C4 website recommends using [models as code](c4-code.md), Caseum recommends using a whiteboard initially and for as long as possible, and to also consider [digital diagrams](c4-template.md) before making models using code.
+
+## Avoid drawing huge diagrams on whiteboards
+
+C4 originally defined only Context, Container, Component, and Class Diagrams (with the last one auto-generated from code, not hand-drawn). It has since added some other diagram types such as the system landscape diagram and the deployment diagram. You tend to need these once your system gets larger or more complex, at which point it often also makes sense to switch from whiteboarding to [digital diagrams](c4-template.md).
+
+## Don't focus too much on components
+
+Many users of C4 use the component-based view as their only or at least their dominant view. Caseum recommends to also use all the other views. Some designs are best detailed using [events](../events/event-storming.md), while others are best modelled using [facts](../models/fact-modeling.md).

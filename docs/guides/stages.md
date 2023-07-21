@@ -51,7 +51,7 @@ You can use the general [guide on whiteboarding](whiteboarding.md).
    * Outline how the system will react to those events.
    * If you have a lot of events, try and group them into domains.
    * If you can, define coarse-grained events connecting the domains.
-   * If a command, event, or reaction is not obvious to everyone then add some examples.
+   * If a command, event, or reaction is not obvious to everyone, then add some examples.
    * You can use the [guide on event storming](../events/event-storming.md).
 5. **Components**:
    * Make a C4 context diagram showing the actors and their activities interacting with the system.

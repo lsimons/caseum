@@ -25,7 +25,7 @@ Here's a markdown template for capturing roles:
 
 Do not write a complete list of goals, needs and responsibilities. Focus only on the information that influences how they will use the software, plus perhaps some basic info that helps everyone understand the nature of the role.
 
-## Role examples:
+## Role examples
 
 Here are some example role descriptions:
 
