@@ -1,9 +1,8 @@
-<!--suppress HtmlDeprecatedAttribute, CheckImageSize -->
 # Designing platforms
 
-<img src="platforms.png" width="300" align="right" style="margin-left: 10px" alt="C4 Landscape Diagram showing layered systems">
+**For large systems it can be helpful to have a standardized platform on top of which the rest of the software is built. The platform may provide libraries, frameworks, shared services, or a hosting environment.**
 
-For large systems it can be helpful to have a standardized platform on top of which the rest of the software is built. The platform may provide libraries, frameworks, shared services, or a hosting environment.
+<img src="platforms.png" alt="C4 Landscape Diagram showing layered systems">
 
 Do not describe this platform in detail as part of the Caseum documentation that also describes your end user system, You can document it as a distinct software system where the users are the developers.
 

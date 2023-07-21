@@ -1,6 +1,8 @@
 # As-is and to-be designs
 
-The most important architecture description of the existing system as it currently exists, "as-is". Learning, agreeing, knowing how things actually are is very important. Too many teams focus only on what should be or what could be, "to-be". This is a mistake. When you work with individual assumptions of how things are instead of a shared understanding, you will build the wrong thing the wrong way slowly.
+**The most important architecture description of the existing system is the one as it currently exists, "as-is".**
+
+Learning, agreeing, knowing how things actually are is very important. Too many teams focus only on what should be or what could be, "to-be". This is a mistake. When you work with individual assumptions of how things are instead of a shared understanding, you will build the wrong thing the wrong way slowly.
 
 ## Finding facts
 
@@ -20,7 +22,7 @@ As you understand more, use [fact-based whiteboarding](../models/fact-whiteboard
 
 ### Event storming to find facts
 
-An [event storming](../events/event-storming.md) workshop is a great way to find these as-is facts especially if you have access to business stakeholders. Especially for long-running systems their current use can be very different from the original intent, and this is important to capture.
+An [event storming](../events/event-storming.md) workshop is a great way to find these as-is facts especially if you have access to business stakeholders. Especially for long-running systems, their current use can be very different from the original intent, and this is important to capture.
 
 ### Working backwards
 
@@ -57,4 +59,10 @@ In such a situation the to-be system can be designed as a completely new system 
 
 Once the new to-be system is imagined, design many small step-by-step migrations from the as-is situation to the to-be situation. Keep a sequence of [records](records.md) that move the current system incrementally to the new situation. If you cannot design such a sequence, change the to-be design so that the incremental migration becomes possible.
 
-The larger and older the existing system, the longer the migration path seems, and the higher the temptation becomes to consider a big bang change...and the lower the chance of success of such big-bang change becomes.
+The larger and older the existing system, the longer the migration path seems, and the higher the temptation becomes to consider a big bang change...the lower the chance of success of such big-bang change becomes.
+
+## Other terminology
+
+'Ist' is the German term for as-is, and 'Soll' is the German term for to-be, so in German you can speak of 'Ist und Soll' to describe the current and future situation.
+
+The steps to take to go from as-is to to-be architecture are crossing a gap, so you can speak of 'gap analysis' to describe part of the design work of crossing the gap, a popular phrase in business language. Note that beyond just doing the analysis, you should explicitly design the migration path, as described above.

@@ -31,7 +31,7 @@ Caseum is for doing just enough architecture. It has three stages:
 
 Not all projects need all stages.
 
-See the [guide on stages of architecture](docs/guides/stages.md).
+See the [guide on stages of architecture](docs/guides/stages.md). See the [guide on as-is and to-be designs](docs/guides/as-is-to-be.md) for working on existing projects.
 
 ## Recording decisions
 

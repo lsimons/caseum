@@ -87,7 +87,7 @@ Even though Caseum has 6 different views there can be yet other concerns that ne
 * analyze the designs for architecture characteristics like cohesion or modularity
 * perform an [AWS well-architected review](https://aws.amazon.com/architecture/well-architected/) or another similar structured design review process
 
-For most of these reviews you do not need to complete the Models view. You do need to Components view, and to have a good Components view you should have the other views to some level of detail as well.
+For most of these reviews you do not need to complete the Models view. You do need the Components view, and to have a good Components view you should have the other views to some level of detail as well.
 
 To do so, draw the designs as you otherwise would. Then do an additional round to annotate the whiteboards based on those other issues. During the review write the issues on notes on the board, but do not immediately try to solve the issues. After you capture all the issues, prioritize them. Discuss only the important ones in more detail, and only as much as time allows.
 
@@ -97,7 +97,7 @@ After you have whiteboarded initial versions of all the views, stop designing an
 
 After your first iteration, evaluate whether your implementation is very different from your architecture. If the designs mostly match your results, and you all sort-of know the next steps to take to implement the next iteration, you may not need to do more design yet.
 
-During Caseum stage 1, do not worry too much about capturing the architecture permanently. There is a lot of value in just wiping (some of) the whiteboards and redrawing the design. Each time you redraw a picture you are likely to focus in more on what is important, leaving out the details that don't need to be in the picture. Each time you do this is an opportunity to discuss the design together further and create a better shared understanding of what to do. It is also an opportunity to practice drawing and designing. This may sound inefficient, but it is very effective. Try it!
+During Caseum stage 1, do not worry too much about capturing the architecture permanently. There is a lot of value in just wiping (some of) the whiteboards and redrawing the design. Each time you redraw a picture you are likely to focus in more on what is important, leaving out the details that don't need to be in the picture. Each time you do this is an opportunity to discuss the design further and create a better shared understanding of what to do. It is also an opportunity to practice drawing and designing. This may sound inefficient, but it is very effective. Try it!
 
 ### Time budget for architecture
 
@@ -200,7 +200,7 @@ During stage 3 you define and maintain your Caseum architecture not using inform
 
 Many engineers like the idea of models-as-code in theory. It appeals to them because they like coding, so then coding the architecture also makes sense. There is also a promise of higher consistency. But such a technical approach can have serious downsides too:
 
-* Requiring coding skills to work on the architecture excluding some team members
+* Requiring coding skills to work on the architecture, excluding some team members
 * Rigid inflexible technical tools making it hard to flexibly express the architecture of the system in the most clear way
 * Spending effort on dealing with technical tools and frameworks instead of communicating design decisions and building working software
 
@@ -224,7 +224,7 @@ Rather than just switch from stage 2 to stage 3, do some experiments. Create som
 3. **Models**:
    * If you use advanced fact-based modeling there are good bidirectional mappings between software systems and textual specifications, and you should consider them.
    * For example, if you adopted TLM, you can use the [tlm coding guide](../models/tlm-template.md).
-   * On the other hand, if you use UML or other object-oriented modeling techniques, do not use automated bidirectional mapping tools, they produce low-quality code. In this case it is better to work "code first", and write source code and generate the model definitions from your code.
+   * On the other hand, if you use UML or other object-oriented modeling techniques, do not use automated bidirectional mapping tools, because they produce low-quality code. In this case it is better to work "code first": write source code and then generate the model definitions from your code.
 4. **Events**:
    * You can consider using a formal standard for defining and maintaining event definitions.
    * If you have a lot of system-to-system events, you may already be using lower-level technical specifications, like Swagger for REST APIs or Avro for messaging systems. If so, there is little value in codifying the event view.

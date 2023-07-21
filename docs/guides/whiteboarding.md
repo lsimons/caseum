@@ -72,7 +72,7 @@ When you plan to take a photo of a whiteboard later you will often make a nicer 
 ### Draw with colors
 
 Practice whiteboarding with colors:
-* study the Caseum color scheme and try to make drawings on the whiteboard in the same or a similar color scheme
+* study the [Caseum color scheme](../design/colors/colors.md) and try to make drawings on the whiteboard in the same or a similar color scheme
 * practice keeping multiple markers in your hands and switching between them as you draw
 
 Once you are used to drawing with multiple colors it will help make the output of your brainstorming sessions look better.
@@ -101,7 +101,7 @@ To draw a good design together as a group, all of these contributions are needed
 
 No whiteboard? No problem! Well, actually, a bit of a problem. Can't you go and buy a bunch of whiteboards?
 
-### Digital whiteboards is worse for communication
+### Digital whiteboards are worse for communication
 
 If you have a fully remote team using physical whiteboards may be impractical. In that case consider drawing on paper and sharing the designs using video conference software. You can also use online digital whiteboard software like [excalidraw](https://excalidraw.com/).
 
@@ -111,9 +111,9 @@ If you have the option, then physical whiteboarding is more effective because th
 
 In a hybrid team that meets in an office one day a week, you could use a couple of hours of such a day for Caseum-style whiteboarding, then take some whiteboard photos home with you for the rest of the week.
 
-On a fully remote team you can also skip directly to [the next stage](stages.md).
+On a fully remote team you can also skip directly to [the next stage](stages.md) and work with digital files.
 
-### Black boards
+### Blackboards
 
 There's nothing about architecture that requires a whiteboard instead of a blackboard. A lecture theatre with lots of large black boards also works great for Caseum. Having only one or two small black boards does not work as well, though: you need a lot of drawing space.
 

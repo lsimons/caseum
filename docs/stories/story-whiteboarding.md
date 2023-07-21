@@ -20,8 +20,8 @@ Teams used to using stories with backlogs in agile development processes may loo
 
 ## Storming stories
 
-It can be effective in bigger groups to split the story writing into small groups. There are many possibilities. For example, you may use a variant of the [1-2-4-All Liberating Structure](https://www.liberatingstructures.com/1-1-2-4-all/) for example:
+It can be effective in bigger groups to split the story writing into small groups. There are many possibilities. For example, you may use a variant of the [1-2-4-All Liberating Structure](https://www.liberatingstructures.com/1-1-2-4-all/):
 * have everyone sit individually for up to 5 minutes writing stories on sticky notes. Ask them to consider each actor.
 * add all the stories to the whiteboard grouped by actor. Take a moment to consider overlap, and have shared stories grouped with their main actor.
-* divide the team into subgroups per actor. Have the subteams take 10 minutes to re-write all the stories, combining and integrating the different inputs, and adding new ones.
+* divide the team into subgroups per actor. Have the subteams take 10 minutes to rewrite all the stories, combining and integrating the different inputs, and adding new ones.
 * have subteams take two minutes each to describe the revised stories to the whole team.

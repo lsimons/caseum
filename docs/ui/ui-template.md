@@ -1,6 +1,6 @@
-Caseum designs can include some UI design.
+# Creating UI designs with draw.io
 
-Caseum UI designs focus on functionality. Caseum does not include high quality visuals.
+**Caseum designs can include some UI design. Caseum UI designs focus on functionality. Caseum does not include high quality visuals.**
 
 Designs are made with wireframes using a mockup visual style.
 
