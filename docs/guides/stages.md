@@ -143,7 +143,7 @@ After you complete the first version of the digital views, review them. You may 
    * You can use the [story template](../stories/story-template.md).
 3. **Events**:
    * group your events by domain, if you did not do so yet. Give the domains clear names.
-   * create an event diagram for each domain.
+   * create a description for each event.
    * You can use the [event template](../events/event-template.md).
 4. **Components**:
    * Create digital versions of all your existing C4 diagrams.
@@ -227,8 +227,8 @@ Rather than just switch from stage 2 to stage 3, do some experiments. Create som
    * On the other hand, if you use UML or other object-oriented modeling techniques, do not use automated bidirectional mapping tools, because they produce low-quality code. In this case it is better to work "code first": write source code and then generate the model definitions from your code.
 4. **Events**:
    * You can consider using a formal standard for defining and maintaining event definitions.
-   * If you have a lot of system-to-system events, you may already be using lower-level technical specifications, like Swagger for REST APIs or Avro for messaging systems. If so, there is little value in codifying the event view.
-   * Otherwise, you can use the [CloudEvents coding guide](../events/event-template.md).
+   * If you have a lot of system-to-system events, you may already be using detailed technical specifications for the APIs, like Swagger for REST APIs or Avro for messaging systems. If so, there is little value in codifying the event view separately.
+   * Otherwise, you can use the [AsyncAPI coding guide](../events/asyncapi-code.md).
 5. **Actors**:
    * There's no executable specification for actors. Maintain the role descriptions as text, like in phase 2.
 6. **UI**:

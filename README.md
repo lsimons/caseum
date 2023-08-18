@@ -50,7 +50,7 @@ The primary tools used by Caseum are:
 * Whiteboards, markers, and sticky notes
 * Draw.io for digital diagrams
 * Markdown text files for decision records
-* Model specification in structured text formats (Structurizr C4, Gherkin, TLMD and CloudEvents JSON)
+* Model specification in structured text formats (Structurizr C4, Gherkin, TLMD and AsyncAPI JSON)
 
 See the guides on [whiteboarding architecture](docs/guides/whiteboarding.md) and on [using draw.io for architecture](docs/guides/drawio.md).
 
@@ -61,7 +61,7 @@ Different tools are available per view per stage:
 | **Components** | [Boxes & lines](docs/components/c4-whiteboarding.md) | [C4 Draw.io Library](docs/components/c4-template.md)           | [C4 as Code](docs/components/c4-code.md)       |
 | **Actors**     | [Roles & needs](docs/actors/actor-whiteboarding.md)  | [Role Markdown Template](docs/actors/role-template.md)         | -                                              |
 | **Stories**    | [Goals & epics](docs/stories/story-whiteboarding.md) | [User Story Markdown Template](docs/stories/story-template.md) | [Gherkin](docs/stories/gherkin-code.md)        |
-| **Events**     | [Event Storming](docs/events/event-storming.md)      | [ES Draw.io Library](docs/events/event-template.md)            | [CloudEvents](docs/events/cloudevents-code.md) |
+| **Events**     | [Event Storming](docs/events/event-storming.md)      | [ES Draw.io Library](docs/events/event-template.md)            | [AsyncAPI](docs/events/asyncapi-code.md) |
 | **UI**         | [Boxes & lines](docs/ui/ui-whiteboarding.md)         | [Wireframes Draw.io Library](docs/ui/ui-template.md)           | -                                              |
 | **Models**     | [Circles & lines](docs/models/fact-whiteboarding.md) | [TLM Draw.io Library](docs/models/tlm-template.md)             | [TLMD](docs/models/tlm-code.md)                |
 
