@@ -26,27 +26,29 @@ You probably won't have such models-as-code for small systems since those don't 
 
 On the other end, for large systems that are worked on by multiple teams in parallel you need loose coupling between subsystems so the teams can work somewhat independently. In this case you need to decouple the domain model for a subsystem from the event/API representations of the entities that are communicated with that subsystem. You then end up with significant duplication in architecture and implementation, and ongoing effort to maintain a mapping between internal models and external event specifications.
 
-There is no perfect way to completely avoid this mapping effort. There are many approaches to creating and maintaining model mappings. Caseum makes no recommendations on this topic, beyond the general advice to plan for it deliberately and to then record the design decisions you take on it.
+There is no perfect way to avoid this mapping effort. There are many approaches to creating and maintaining model mappings. Caseum makes no recommendations on this topic, beyond the general advice to plan for it deliberately and to then record the design decisions you take on it.
 
 ## Alternatives to JSON Schema
 
 These are reasonable alternatives worth considering:
 
-* [OData](https://www.odata.org/) is more prescriptive. If it's constraints fit your needs then accepting them allows you to use the OData tooling ecosystem and get functionality for free. OData is used by Microsoft Azure, Dynamics, and Office 365. While it is an open standard with many implementations,tThe best OData tool support is in the Microsoft ecosystem, specifically in .Net and Visual Studio.
+* [OData](https://www.odata.org/) is more prescriptive. If it fits your needs then you can use the OData tooling ecosystem and get functionality for free. OData is used by Microsoft Azure, Dynamics, and Office 365. While it is an open standard with many implementations, the best OData tool support is in the Microsoft ecosystem, specifically in .Net and Visual Studio.
 
-* [GraphQL](https://graphql.org/) is a powerful approach to create flexible APIs that are *just right* for the consumer of that API. This is often the case when building user interfaces, especially mobile applications. For very large systems you may have GraphQL APIs between frontend and backend systems, and OpenAPI or AsyncAPI schemas for use among backend systems.
+* [GraphQL](https://graphql.org/) is a powerful approach to create flexible APIs that are *just right* for the *consumer* of that API. This is often worth the investment when building user interfaces, especially mobile applications. For very large systems you may have GraphQL APIs between frontend and backend systems, and OpenAPI or AsyncAPI schemas for use among backend systems.
 
-* [Apache Avro](https://avro.apache.org/), [Apache Thrift](https://thrift.apache.org/), [GRPC](https://grpc.io/) with [Protocol Buffers](https://protobuf.dev/), [Cap'n Proto](https://capnproto.org/), [ZeroMQ](https://zeromq.org/) with [ABNF](https://en.wikipedia.org/wiki/Augmented_Backus%E2%80%93Naur_form), or one of many other such more specific technology choices. If one of these is the right choice for your application, and you define a schema for it, then try to avoid duplicating those schema definitions.
+* [Apache Avro](https://avro.apache.org/), [Apache Thrift](https://thrift.apache.org/), [GRPC](https://grpc.io/) with [Protocol Buffers](https://protobuf.dev/), [Cap'n Proto](https://capnproto.org/), [ZeroMQ](https://zeromq.org/) with [ABNF](https://en.wikipedia.org/wiki/Augmented_Backus%E2%80%93Naur_form), or one of many other such more specific technology choices. If one of these is the right choice for your application, and you define a schema for it, avoid duplicating those schema definitions in JSON Schema.
 
 ## Alternatives to using an open standard
 
-You can consider not using any standard or schema for your event definitions. This may couple your architecture to a specific (commercial) technology. That is not always a bad choice! For example it may save you significant time and effort and result in a simpler smaller solution. Many architects and developers intuitively don't like such choices, since they are afraid of the loss of flexibility. Making this tradeoff is an important architecture choice. So, take some time to make this decision and [record](../guides/records.md) it.
+You can work without any standard or schema for your event definitions. This may couple your architecture to a specific (commercial) technology. That is not always bad! For example it may save you significant time and effort and result in a simpler and smaller solution. Many architects and developers intuitively don't like such choices, since they are afraid of the loss of flexibility. Making this tradeoff is an important architecture choice. So, take some time to make this decision and [record](../guides/records.md) it.
 
-The choice between open standard and proprietary technology is not all-or-nothing. For example you can consider doing schema mapping only in architecture, and not in code. If you depend on a specific commercial technology it may come its own schema language. For example, TIBCO BusinessWorks uses a proprietary schema language for its XML-based message formats. In this case you can use the TIBCO schema language for your event definitions, and then use tooling to convert between TIBCO schema and JSON Schema. You may still tie most of your system to the TIBCO schema and protocol, but know that you have a route to start introducing adapters to JSON Schema if that becomes important.
+Choosing between open standards and proprietary technology is not all-or-nothing. For example, you can map schemas in architecture but not in code.
+
+Specific commercial technology may come with its own reasonable schema language. For example, TIBCO BusinessWorks uses a proprietary schema language for its XML-based message formats. You can use the TIBCO schema language for your event definitions, and then use tooling to convert between TIBCO schema and JSON Schema. You still tie most of your system to the TIBCO schema and protocol. You do have a route toward interoperability by introducing adapters to JSON Schema if that becomes important.
 
 ## Industry standards should influence architecture choices
 
-The choice of schema language may also depend on the business domain you are working in. There are various industries with extensive standard schema definitions and these are often worth using.
+The choice of schema language can depend on the business domain you are working in. There are various industries with extensive standard schema definitions and these are often worth using.
 
 For example, the [HL7](https://www.hl7.org/) v3 and CDA standards for healthcare data exchange are based on XML Schema. These standards and probably more widely deployed in 2023 than the newer [HL7 FHIR](https://hl7.org/fhir) which supports JSON Schema.
 
