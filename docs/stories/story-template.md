@@ -40,7 +40,7 @@ When specific detail is important to the design you should add it, in the form o
 
 ## Organizing stories
 
-When there are a few stories (20 or less) they can all be combined into a document. When there are more, combine them into one document per actor role. When _that_ becomes unwieldy, create one document per story, with a folder of section per actor. When _that_ becomes unwieldy (100 or more stories), consider switching to the next [stage](../guides/stages.md) and start writing [Gherkin code](gherkin-code.md) for acceptance tests.
+When there are a few stories (20 or less) they can all be combined into a document. When there are more, combine them into one document per actor role. When _that_ becomes unwieldy, create one document per story, with a folder or section per actor. When _that_ becomes unwieldy (100 or more stories), consider switching to the next [stage](../guides/stages.md) and start writing [Gherkin code](gherkin-code.md) for acceptance tests.
 
 ## Stories to structure software development
 
