@@ -81,7 +81,7 @@ Some advice while working through this order:
 Even though Caseum has 6 different views there can be yet other concerns that need more focus. For example, you may want to
 * review the designs for security
 * check the designs for consistency with some standard
-* analyze the designs for non-functional requirements
+* analyze the designs for quality attributes (non-functional requirements)
 * analyze the designs for technology/platform choices
 * analyze the designs for lower-level/infrastructure needs
 * analyze the designs for architecture characteristics like cohesion or modularity
