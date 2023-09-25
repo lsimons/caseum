@@ -34,7 +34,9 @@ If a type has a single primary identifier in the business domain, write it insid
 
 ## Avoid specifying all facts on the whiteboard
 
-The whiteboard is a tool for thinking, not for recording. It is not necessary to specify all facts on the whiteboard. Instead, focus on the facts that are important to the software design.
+The whiteboard is a tool for thinking. It is not necessary to specify all facts on the whiteboard. Instead, focus on the facts that are most important to the software design.
+
+While you can draw [TLM or ORM diagrams](tlm-template.md) diagrams on a whiteboard, the addition of formal syntax and semantics makes it harder to contribute for those not trained in the technique. It is often better to stick to simpler diagrams and focus on the conversation of what the key facts are and how the software should support such facts.
 
 ## Add examples of facts
 
