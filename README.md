@@ -5,6 +5,10 @@
 
 Caseum is a simple approach to software architecture that combines multiple views to boost understanding and empathy across roles. 
 
+## Video introduction
+
+https://github.com/lsimons/caseum/raw/main/docs/presentations/caseum-introduction-360p.m4v
+
 ## Multiple views
 
 Caseum combines these views:
