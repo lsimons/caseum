@@ -7,7 +7,7 @@ Caseum is a simple approach to software architecture that combines multiple view
 
 ## Video introduction
 
-https://github.com/lsimons/caseum/raw/main/docs/presentations/caseum-introduction-360p.m4v
+[](docs/presentations/caseum-introduction-360p.mp4)
 
 ## Multiple views
 
