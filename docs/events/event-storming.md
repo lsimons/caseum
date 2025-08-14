@@ -1,5 +1,5 @@
 <!--suppress CheckImageSize, HtmlDeprecatedAttribute -->
-# Whiteboarding Events
+# Whiteboarding events
 
 **Use [event storming](https://www.eventstorming.com/) to describe the events of your business domain.**
 

@@ -35,6 +35,7 @@ Drawing is a skill you get better at through practice. So, practice!
 ### Get comfortable writing on whiteboards
 
 Practice your writing on a whiteboard:
+
 * Try to write more slowly, drawing nice letters instead of scribbling ugly ones.
 * Try to write in a straight line.
 * Try to write vertically.
@@ -48,6 +49,7 @@ Your handwriting does not need to be pretty, but it should be readable.
 ### Get comfortable drawing on whiteboards
 
 Practice simple drawing on a whiteboard:
+
 * draw lots of rectangles of different sizes.
 * draw lots of squares of different sizes.
 * draw lots of straight lines of every angle.
@@ -59,6 +61,7 @@ You can find a lot of specific drawing exercises online, but you don't need to l
 ### Draw to take photos
 
 Practice whiteboarding to capture the result:
+
 * make a simple diagram on a whiteboard with boxes, lines, and text
 * take a photo of the diagram with your phone
 * look at the photo
@@ -72,6 +75,7 @@ When you plan to take a photo of a whiteboard later you will often make a nicer 
 ### Draw with colors
 
 Practice whiteboarding with colors:
+
 * study the [Caseum color scheme](../design/colors/colors.md) and try to make drawings on the whiteboard in the same or a similar color scheme
 * practice keeping multiple markers in your hands and switching between them as you draw
 

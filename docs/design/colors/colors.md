@@ -3,39 +3,41 @@ Caseum uses the following color scheme:
 ![picture showing the below colors in use](colors.png)
 
 ### Color usage
+
 * Black: text (on white or light background), lines
 * White: text (against main colors and dark colors)
 * Main:
-  * Blue: primary
-  * Green: secondary
-  * Brown: tertiary
-  * Magenta: highlight/alert
-  * Grey: faded/background/disabled/external
+    * Blue: primary
+    * Green: secondary
+    * Brown: tertiary
+    * Magenta: highlight/alert
+    * Grey: faded/background/disabled/external
 * Dark colors: special/focus
 * Light colors: accent/background/selection/grouping
 
 ### Color numbers
+
 * main
-  * Blue: #29467F — (41,70,128)
-  * Green: #3C6320 — (60.99,32)
-  * Magenta: #7F294B — (128,41,75)
-  * Brown: #7F5529 — (127,85,41)
+    * Blue: #29467F — (41,70,128)
+    * Green: #3C6320 — (60.99,32)
+    * Magenta: #7F294B — (128,41,75)
+    * Brown: #7F5529 — (127,85,41)
 * dark
-  * Dark Blue: #122A59 — (18,42,89)
-  * Dark Green: #213D0C — (33,61,12)
-  * Dark Magenta: #59122E — (89,18,46)
-  * Dark Brown: #593612 — (89,54,18)
+    * Dark Blue: #122A59 — (18,42,89)
+    * Dark Green: #213D0C — (33,61,12)
+    * Dark Magenta: #59122E — (89,18,46)
+    * Dark Brown: #593612 — (89,54,18)
 * light
-  * Light Blue: #8B98B2 — (139,152,178)
-  * Light Green: #A1B28B — (161,178,139)
-  * Light Magenta: #B28B9B — (178,139,155)
-  * Light Brown: #B29F8B — (178,159,139)
+    * Light Blue: #8B98B2 — (139,152,178)
+    * Light Green: #A1B28B — (161,178,139)
+    * Light Magenta: #B28B9B — (178,139,155)
+    * Light Brown: #B29F8B — (178,159,139)
 * grayscale
-  * Black: #000000 — (0,0,0)
-  * Dark Grey: #595959 — (89,89,89)
-  * Grey: #808080 — (128,128,128)
-  * Light Grey: #B2B2B2 — (178,178,178)
-  * White: #FFFFFF — (255,255,255)
+    * Black: #000000 — (0,0,0)
+    * Dark Grey: #595959 — (89,89,89)
+    * Grey: #808080 — (128,128,128)
+    * Light Grey: #B2B2B2 — (178,178,178)
+    * White: #FFFFFF — (255,255,255)
 
 ### Background
 

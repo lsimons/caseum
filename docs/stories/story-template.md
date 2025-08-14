@@ -7,6 +7,7 @@ Caseum adopts the typical format of user stories common in many agile methods:
 
 ```markdown
 ### {story title}
+
 * **As a** {actor role}
 * **I want** {goal of the story}
 * **so that** {reason of the story}
@@ -16,6 +17,7 @@ When specific detail is important to the design you should add it, in the form o
 
 ```markdown
 #### Scenario:
+
 * **Given** {context}
 * (**And** {more context...})
 * **When** {action}
@@ -27,11 +29,13 @@ When specific detail is important to the design you should add it, in the form o
 ## Story example
 
 ### Add vet to Pet Clinic
+
 * **As a** pet clinic receptionist
 * **I want** to add a new vet to the Pet Clinic
 * **so that** appointments can be planned for this vet
 
 #### Scenario:
+
 * **Given** I'm logged in to the Pet Clinic Admin
 * **When** I select the Vet Admin
 * **And** I select the Add Vet function

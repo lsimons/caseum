@@ -33,44 +33,45 @@ You can use the general [guide on whiteboarding](whiteboarding.md).
 "Everything all at once" is not always easy to do. If you need more structure, try this order:
 
 1. **Actors**:
-   * name the roles of the key actors using the software system.
-   * write their needs for which they use the systems.
-   * You can use the [guide on whiteboarding actors](../actors/actor-whiteboarding.md).
+    * name the roles of the key actors using the software system.
+    * write their needs for which they use the systems.
+    * You can use the [guide on whiteboarding actors](../actors/actor-whiteboarding.md).
 2. **Stories**:
-   * Write the main goals the actors have that they use the software system for.
-   * Break bigger goals down into coarse-grained scenarios called "epics", from "epic story"
-   * Describe the epics in terms of activities by the actors for which they use the system.
-   * You can use the [guide on whiteboarding stories](../stories/story-whiteboarding.md).
+    * Write the main goals the actors have that they use the software system for.
+    * Break bigger goals down into coarse-grained scenarios called "epics", from "epic story"
+    * Describe the epics in terms of activities by the actors for which they use the system.
+    * You can use the [guide on whiteboarding stories](../stories/story-whiteboarding.md).
 3. **UI**:
-   * Sketch some basic wireframes of the UI the actors will use, if any.
-   * If actors use CLIs or APIs or get e-mails or reports, then sketch out some of those.
-   * You can use the [guide on whiteboarding wireframes](../ui/ui-whiteboarding.md).
+    * Sketch some basic wireframes of the UI the actors will use, if any.
+    * If actors use CLIs or APIs or get e-mails or reports, then sketch out some of those.
+    * You can use the [guide on whiteboarding wireframes](../ui/ui-whiteboarding.md).
 4. **Events**:
-   * define the commands the actors will issue through these UIs to start on their activities.
-   * Outline how the commands turn into different events that happen in the system.
-   * Outline how the system will react to those events.
-   * If you have a lot of events, try and group them into domains.
-   * If you can, define coarse-grained events connecting the domains.
-   * If a command, event, or reaction is not obvious to everyone, then add some examples.
-   * You can use the [guide on event storming](../events/event-storming.md).
+    * define the commands the actors will issue through these UIs to start on their activities.
+    * Outline how the commands turn into different events that happen in the system.
+    * Outline how the system will react to those events.
+    * If you have a lot of events, try and group them into domains.
+    * If you can, define coarse-grained events connecting the domains.
+    * If a command, event, or reaction is not obvious to everyone, then add some examples.
+    * You can use the [guide on event storming](../events/event-storming.md).
 5. **Components**:
-   * Make a C4 context diagram showing the actors and their activities interacting with the system.
-   * Make a C4 component diagram of the key components that make up the system so that all the different events reach a component.
-   * Add the components needed to make those other components work. Give them a clear name. Add a description if it's not obvious to everyone.
-   * Keep adding components until all the important components are sketched out.
-   * If you have a lot of components, group them into stacks of closely related components and make a C4 container diagram.
-   * If you have a lot of stacks, group them together into several distinct systems and make a C4 system landscape diagram.
-   * If it is important to decide now what technology to use for some of the components then write the technology used under the name.
-   * You can use the [guide on whiteboarding C4](../components/c4-whiteboarding.md).
+    * Make a C4 context diagram showing the actors and their activities interacting with the system.
+    * Make a C4 component diagram of the key components that make up the system so that all the different events reach a component.
+    * Add the components needed to make those other components work. Give them a clear name. Add a description if it's not obvious to everyone.
+    * Keep adding components until all the important components are sketched out.
+    * If you have a lot of components, group them into stacks of closely related components and make a C4 container diagram.
+    * If you have a lot of stacks, group them together into several distinct systems and make a C4 system landscape diagram.
+    * If it is important to decide now what technology to use for some of the components then write the technology used under the name.
+    * You can use the [guide on whiteboarding C4](../components/c4-whiteboarding.md).
 6. **Models**:
-   * Draw circles for the main types that make up the main events.
-   * Add links between those main types as arrows and label the kind of link.
-   * If a type or link is not obvious to everyone then add some example facts. 
-   * Add additional important facts about each type that needs to be in the software system using additional facts and links.
-   * Keep adding facts until enough of the types are sketched out that it is clear enough what all the events look like.
-   * You can use the [guide on whiteboarding facts](../models/fact-whiteboarding.md).
+    * Draw circles for the main types that make up the main events.
+    * Add links between those main types as arrows and label the kind of link.
+    * If a type or link is not obvious to everyone then add some example facts. 
+    * Add additional important facts about each type that needs to be in the software system using additional facts and links.
+    * Keep adding facts until enough of the types are sketched out that it is clear enough what all the events look like.
+    * You can use the [guide on whiteboarding facts](../models/fact-whiteboarding.md).
 
 Some advice while working through this order:
+
 * Focus on capturing the most important design decisions. It is not important to be complete or have all the details.
 * Try to go fast through each step. When you start slowing down during one of these steps, just move to the next one.
 * During a later step you may discover other important information on previous steps, so go back and add it.
@@ -79,6 +80,7 @@ Some advice while working through this order:
 ### Focusing in on specific concerns
 
 Even though Caseum has 6 different views there can be yet other concerns that need more focus. For example, you may want to
+
 * review the designs for security
 * check the designs for consistency with some standard
 * analyze the designs for quality attributes (non-functional requirements)
@@ -136,31 +138,31 @@ After you complete the first version of the digital views, review them. You may 
 ### Caseum digital designs step by step
 
 1. **Actors**:
-   * fill out a role description for each of your actors.
-   * You can use the [role template](../actors/role-template.md).
+    * fill out a role description for each of your actors.
+    * You can use the [role template](../actors/role-template.md).
 2. **Stories**:
-   * break down all your epics and activities into clear user stories.
-   * You can use the [story template](../stories/story-template.md).
+    * break down all your epics and activities into clear user stories.
+    * You can use the [story template](../stories/story-template.md).
 3. **Events**:
-   * group your events by domain, if you did not do so yet. Give the domains clear names.
-   * create a description for each event.
-   * You can use the [event template](../events/event-template.md).
+    * group your events by domain, if you did not do so yet. Give the domains clear names.
+    * create a description for each event.
+    * You can use the [event template](../events/event-template.md).
 4. **Components**:
-   * Create digital versions of all your existing C4 diagrams.
-   * Make sure all your actor roles are in the C4 context diagram.
-   * Make sure all your event domains are in the C4 diagrams.
-   * Create the C4 container diagram if you didn't have one yet.
-   * You can use the [C4 template](../components/c4-template.md).
+    * Create digital versions of all your existing C4 diagrams.
+    * Make sure all your actor roles are in the C4 context diagram.
+    * Make sure all your event domains are in the C4 diagrams.
+    * Create the C4 container diagram if you didn't have one yet.
+    * You can use the [C4 template](../components/c4-template.md).
 5. **Models**:
-   * Do _not_ directly create digital versions of your model diagrams.
-   * Instead, create your model diagrams based on the model definitions in your software systems (like your domain model or your SQL database definition scripts).
-   * Object-oriented or table-oriented modeling is more common than the fact-based modeling that Caseum recommends. You can [read why fact-based modeling is great](../models/fact-modeling.md) and decide to try it, or, you can use a modeling approach you already know.
-   * If you decide to use fact-based modeling, you can use the [tlm template](../models/tlm-template.md).
+    * Do _not_ directly create digital versions of your model diagrams.
+    * Instead, create your model diagrams based on the model definitions in your software systems (like your domain model or your SQL database definition scripts).
+    * Object-oriented or table-oriented modeling is more common than the fact-based modeling that Caseum recommends. You can [read why fact-based modeling is great](../models/fact-modeling.md) and decide to try it, or, you can use a modeling approach you already know.
+    * If you decide to use fact-based modeling, you can use the [tlm template](../models/tlm-template.md).
 6. **UI**:
-   * Maintaining digital UI designs is relatively a lot of effort that may not be worth it for you just for your architecture.
-   * If you are using a modern design tool like Figma already, you can use those designs instead.
-   * If you do not have such digital designs, you can use the [UI template](../ui/ui-template.md) to make digital wireframes.
-   * You can also choose to maintain your UI designs on paper or on whiteboards while you digitize the other views.
+    * Maintaining digital UI designs is relatively a lot of effort that may not be worth it for you just for your architecture.
+    * If you are using a modern design tool like Figma already, you can use those designs instead.
+    * If you do not have such digital designs, you can use the [UI template](../ui/ui-template.md) to make digital wireframes.
+    * You can also choose to maintain your UI designs on paper or on whiteboards while you digitize the other views.
 
 ### Keep more detailed records
 
@@ -215,25 +217,25 @@ Rather than just switch from stage 2 to stage 3, do some experiments. Create som
 ### Caseum models as code step by step
 
 1. **Stories**:
-   * Start writing your stories in Gherkin format.
-   * You can consider using BDD and automate testing using the Gherkin stories, which is a great benefit of Gherkin, which is why Stories are a good view to start Caseum stage 3 with.
-   * You can use the [Gherkin coding guide](../stories/gherkin-code.md).
+    * Start writing your stories in Gherkin format.
+    * You can consider using BDD and automate testing using the Gherkin stories, which is a great benefit of Gherkin, which is why Stories are a good view to start Caseum stage 3 with.
+    * You can use the [Gherkin coding guide](../stories/gherkin-code.md).
 2. **Components**:
-   * C4 has a great textual format in Structurizr that is worth using if you have a lot of components.
-   * You can use the [C4 coding guide](../components/c4-code.md).
+    * C4 has a great textual format in Structurizr that is worth using if you have a lot of components.
+    * You can use the [C4 coding guide](../components/c4-code.md).
 3. **Models**:
-   * If you use advanced fact-based modeling, there are good bidirectional mappings between software systems and textual specifications, and you should consider them.
-   * For example, if you adopted TLM, you can use the [TLM coding guide](../models/tlm-template.md).
-   * On the other hand, if you use UML or other object-oriented modeling techniques, do not use automated bidirectional mapping tools, because they produce low-quality code. In this case it is better to work "code first": write source code and then generate the model definitions from your code.
+    * If you use advanced fact-based modeling, there are good bidirectional mappings between software systems and textual specifications, and you should consider them.
+    * For example, if you adopted TLM, you can use the [TLM coding guide](../models/tlm-template.md).
+    * On the other hand, if you use UML or other object-oriented modeling techniques, do not use automated bidirectional mapping tools, because they produce low-quality code. In this case it is better to work "code first": write source code and then generate the model definitions from your code.
 4. **Events**:
-   * You can consider using a formal standard for defining and maintaining event definitions.
-   * If you have a lot of system-to-system events, you may already be using detailed technical specifications for the APIs, like Swagger for REST APIs or Avro for messaging systems. If so, there is little value in codifying the event view separately.
-   * Otherwise, you can use the [AsyncAPI coding guide](../events/asyncapi-code.md).
+    * You can consider using a formal standard for defining and maintaining event definitions.
+    * If you have a lot of system-to-system events, you may already be using detailed technical specifications for the APIs, like Swagger for REST APIs or Avro for messaging systems. If so, there is little value in codifying the event view separately.
+    * Otherwise, you can use the [AsyncAPI coding guide](../events/asyncapi-code.md).
 5. **Actors**:
-   * There's no executable specification for actors. Maintain the role descriptions as text, like in phase 2.
+    * There's no executable specification for actors. Maintain the role descriptions as text, like in phase 2.
 6. **UI**:
-   * There's no executable specification for UI.
-   * If you have a large team working on a large software system that includes UI, then you probably have dedicated UI designers. Let them maintain the UI views and link to it from your architecture documentation.
+    * There's no executable specification for UI.
+    * If you have a large team working on a large software system that includes UI, then you probably have dedicated UI designers. Let them maintain the UI views and link to it from your architecture documentation.
 
 ## Beyond stage 3
 

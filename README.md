@@ -1,9 +1,9 @@
 <!--suppress HtmlDeprecatedAttribute, CheckImageSize -->
-<img src="docs/design/logo/logo.png" width="200" align="right" style="margin-left: 10px" alt="Caseum logo">
+<img src="docs/design/logo/logo.png" width="250" align="right" style="margin-left: 10px" alt="Caseum logo">
 
 # Caseum
 
-Caseum is a simple approach to software architecture that combines multiple views to boost understanding and empathy across roles. 
+[Caseum](http://lsimons.github.io/caseum/) is a simple approach to software architecture that combines multiple views to boost understanding and empathy across roles. 
 
 ## Video introduction
 
@@ -14,6 +14,7 @@ https://github.com/lsimons/caseum/assets/47133/890185f5-cc6f-42d5-887b-34939f807
 ## Multiple views
 
 Caseum combines these views:
+
 * **C**omponents using C4
 * **A**ctors using roles
 * **S**tories using Gherkin
@@ -62,7 +63,7 @@ See the guides on [whiteboarding architecture](docs/guides/whiteboarding.md) and
 
 Different tools are available per view per stage:
 
-|                | **Whiteboarding & Dialogue**                         | **Diagrams & Decision Records**                                | **Models & Executable Specifications**         |
+|                | **Whiteboarding &<br/> Dialogue**                         | **Diagrams &<br/> Decision Records**                                | **Models &<br/> Executable Specifications**         |
 |----------------|------------------------------------------------------|----------------------------------------------------------------|------------------------------------------------|
 | **Components** | [Boxes & lines](docs/components/c4-whiteboarding.md) | [C4 Draw.io Library](docs/components/c4-template.md)           | [C4 as Code](docs/components/c4-code.md)       |
 | **Actors**     | [Roles & needs](docs/actors/actor-whiteboarding.md)  | [Role Markdown Template](docs/actors/role-template.md)         | -                                              |

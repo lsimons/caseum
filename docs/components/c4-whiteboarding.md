@@ -14,6 +14,7 @@ The context diagram is the highest-level diagram in C4. It shows the software sy
 Do not skip the context diagram when drawing architecture on the whiteboard. The context diagram grounds the architecture story in the business context. It connects the [actors](../actors/actor-whiteboarding.md) and [stories](../stories/story-whiteboarding.md) to the component architecture.
 
 If you don't know where to start, follow this process:
+
 * First, draw the actors, at the top of the whiteboard.
 * Next, draw the software systems in the middle of the whiteboard.
 * Then, draw the connections between the actors and the software systems.
@@ -28,6 +29,7 @@ When designing small systems you can skip the container diagram initially.
 The container diagram connects the C4 context to the C4 components. It shows the high-level parts of the software system and how they connect.
 
 If you don't know where to start, follow this process:
+
 * First, draw the actors, at the top of the whiteboard.
 * Next, draw any databases or other low-level containers at the bottom of the whiteboard.
 * Then, draw the sofware systems in the middle of the whiteboard.

@@ -22,6 +22,7 @@ The following Caseum templates are available for draw.io:
 ## Storing draw.io diagrams
 
 Store your diagrams where you store your architecture documentation:
+
 * If you use Confluence, use the [draw.io plugin for confluence](https://marketplace.atlassian.com/apps/1210933/draw-io-diagrams-whiteboards).
 * If you use SharePoint, download the desktop version and save the files in SharePoint.
 * If you use GitHub, store the files in your GitHub repository.
