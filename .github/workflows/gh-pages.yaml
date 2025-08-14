@@ -23,7 +23,7 @@ jobs:
           activate-environment: true
       - run: uv sync
       - run: uv run publish_index.py
-      - run: uv run mkdocs gh-deploy
+      - run: uv run mkdocs gh-deploy --force
 
   deploy_mkdocs:
     needs: build_mkdocs
