@@ -1,0 +1,47 @@
+site_name: Caseum
+site_url: https://lsimons.github.io/caseum/
+site_author: Leo Simons
+site_copyright: Copyright 2023-2025 Leo Simons
+repo_url: https://github.com/lsimons/caseum
+theme: readthedocs
+edit_uri: edit/main/docs/
+use_directory_urls: false
+nav:
+  - Home: index.md
+  - Guides:
+      - Architecture stages: guides/stages.md
+      - As-is and to-be: guides/as-is-to-be.md
+      - Recording decisions: guides/records.md
+      - Whiteboarding architecture: guides/whiteboarding.md
+      - Draw.io for architecture: guides/drawio.md
+      - Designing platforms: guides/platforms.md
+  - Components using C4:
+      - Component whiteboarding: components/c4-whiteboarding.md
+      - Component template: components/c4-template.md
+      - Component architecture-as-code: components/c4-code.md
+  - Actors using roles:
+      - Actor whiteboarding: actors/actor-whiteboarding.md
+      - Role template: actors/role-template.md
+  - Stories using Gherkin:
+      - Story whiteboarding: stories/story-whiteboarding.md
+      - Story template: stories/story-template.md
+      - Gherkin specs-as-code: stories/gherkin-code.md
+  - Events using event storming:
+      - Event whiteboarding: events/event-storming.md
+      - Event template: events/event-template.md
+      - AsyncAPI specs-as-code: events/asyncapi-code.md
+  - UI using whiteboarding:
+      - UI whiteboarding: ui/ui-whiteboarding.md
+      - UI template: ui/ui-template.md
+  - Models using TLM:
+      - Fact-based modeling: models/fact-modeling.md
+      - Fact whiteboarding: models/fact-whiteboarding.md
+      - TLM template: models/tlm-template.md
+      - TLM models-as-code: models/tlm-code.md
+  - Misc:
+      - Code of conduct: CODE_OF_CONDUCT.md
+      - Contributing to Caseum: CONTRIBUTING.md
+      - License: LICENSE.txt
+      - Caseum fonts: design/fonts.md
+      - Caseum colors: design/colors/colors.md
+      - Introduction slides (PDF): presentations/introduction.pdf

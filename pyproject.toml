@@ -1,0 +1,9 @@
+[project]
+name = "caseum"
+version = "1.0.0"
+description = "A simple approach to software architecture."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "mkdocs>=1.6.1",
+]
