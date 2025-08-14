@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Leo Simons" /><link rel="canonical" href="https://lsimons.github.io/caseum/components/c4-code.html" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Component architecture-as-code - Caseum</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Component architecture-as-code";
+        var mkdocs_page_input_path = "components/c4-code.md";
+        var mkdocs_page_url = "/caseum/components/c4-code.html";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Caseum
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/stages.html">Architecture stages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/as-is-to-be.html">As-is and to-be</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/records.html">Recording decisions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/whiteboarding.html">Whiteboarding architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/drawio.html">Draw.io for architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/platforms.html">Designing platforms</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Components using C4</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="c4-whiteboarding.html">Component whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="c4-template.html">Component template</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Component architecture-as-code</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#keep-it-accessible">Keep it accessible</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Actors using roles</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../actors/actor-whiteboarding.html">Actor whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../actors/role-template.html">Role template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Stories using Gherkin</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-whiteboarding.html">Story whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-template.html">Story template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/gherkin-code.html">Gherkin specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Events using event storming</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/event-storming.html">Event whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/event-template.html">Event template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/asyncapi-code.html">AsyncAPI specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI using whiteboarding</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-whiteboarding.html">UI whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-template.html">UI template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Models using TLM</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/fact-modeling.html">Fact-based modeling</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/fact-whiteboarding.html">Fact whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/tlm-template.html">TLM template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/tlm-code.html">TLM models-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../CODE_OF_CONDUCT.html">Code of conduct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing to Caseum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LICENSE.txt">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/fonts.html">Caseum fonts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/colors/colors.html">Caseum colors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../presentations/introduction.pdf">Introduction slides (PDF)</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Caseum</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Components using C4</li>
+      <li class="breadcrumb-item active">Component architecture-as-code</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/lsimons/caseum/edit/main/docs/components/c4-code.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="modeling-components-in-code-using-c4-and-structurizr">Modeling components in code using C4 and Structurizr</h1>
+<p><strong>Use <a href="https://structurizr.org/">Structurizr</a> to model the components of your system in code.</strong></p>
+<p><img alt="Example of using Structurizr to make a C4 container diagram" src="c4-code-structurizr-example.png" /></p>
+<p>C4 is perhaps the most popular way to describe the component architecture of software and Caseum adopts it.</p>
+<p>When using C4 models-as-code, Caseum uses Structurizr.</p>
+<p>Structurizr supports using custom styles to match the Caseum color scheme:</p>
+<pre><code>workspace {
+    model {
+        ...
+    }
+
+    views {
+        ...
+
+        styles {
+            element &quot;Software System&quot; {
+                background #122A59
+                color #ffffff
+            }
+            element &quot;Container&quot; {
+                background #29467F
+                color #ffffff
+            }
+            ...
+        }
+    }   
+}
+</code></pre>
+<p>Here's an example C4 model you can paste into the <a href="https://structurizr.com/dsl">Structurizr DSL</a> to get started:</p>
+<pre><code class="language-c4">workspace {
+    model {
+        receptionist = person &quot;Pet Clinic Receptionist&quot; &quot;Plans appointments and welcomes visitors&quot; {
+        }
+
+        petClinic = softwareSystem &quot;Pet Clinic&quot; &quot;Administers the pet clinic.&quot; {
+            customersDb = container &quot;Customers DB&quot; &quot;&quot; &quot;SQLite DB&quot; db
+            vetsDb = container &quot;Vets DB&quot; &quot;&quot; &quot;SQLite DB&quot; db
+            appointmentsDb = container &quot;Appointments DB&quot; &quot;&quot; &quot;SQLite DB&quot; db
+
+            customersSvc = container &quot;Customers Service&quot; &quot;&quot; &quot;Spring Boot App&quot; microservice {
+                -&gt; customersDb &quot;Manages customers&quot; &quot;SQL&quot;
+            }
+            vetsSvc = container &quot;Vets Service&quot; &quot;&quot; &quot;Spring Boot App&quot; microservice {
+                -&gt; vetsDb &quot;Manages vets&quot; &quot;SQL&quot;
+            }
+            appointmentsSvc = container &quot;Appointments Service&quot; &quot;&quot; &quot;Spring Boot App&quot; microservice {
+                -&gt; appointmentsDb &quot;Manages appointments&quot; &quot;SQL&quot;
+            }
+
+            adminUI = container &quot;Pet Clinic Admin UI&quot; &quot;&quot; &quot;Angular.js Application&quot; webapp {
+                -&gt; customersSvc &quot;Manages customers&quot; &quot;REST&quot;
+                -&gt; vetsSvc &quot;Manages vets&quot; &quot;REST&quot;
+                -&gt; appointmentsSvc &quot;Manages appointments&quot; &quot;REST&quot;
+            }
+        }
+
+        receptionist -&gt; adminUI &quot;Manages pet clinic&quot; &quot;HTTPS&quot;
+    }
+
+    views {
+        systemContext petClinic PetClinicContext {
+            include *
+            autoLayout
+        }
+
+        container petClinic PetClinicContainer {
+            include *
+            autoLayout
+        }
+
+        styles {
+            element &quot;Software System&quot; {
+                background #122A59
+                color #ffffff
+            }
+            element &quot;Container&quot; {
+                background #29467F
+                color #ffffff
+            }
+            element &quot;microservice&quot; {
+                shape Hexagon
+            }
+            element &quot;db&quot; {
+                shape Cylinder
+            }
+            element &quot;Person&quot; {
+                shape person
+                background #122A59
+                color #ffffff
+            }
+        }
+    }   
+}
+</code></pre>
+<h2 id="keep-it-accessible">Keep it accessible</h2>
+<p>Note that while the C4 website recommends using models as code, Caseum recommends <a href="c4-whiteboarding.html">using a whiteboard</a> initially and for as long as possible, and to also consider <a href="c4-template.html">digital diagrams</a> before making models using code.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="c4-template.html" class="btn btn-neutral float-left" title="Component template"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../actors/actor-whiteboarding.html" class="btn btn-neutral float-right" title="Actor whiteboarding">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/lsimons/caseum" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="c4-template.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../actors/actor-whiteboarding.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

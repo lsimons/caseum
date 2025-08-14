@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Leo Simons" /><link rel="canonical" href="https://lsimons.github.io/caseum/events/asyncapi-code.html" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>AsyncAPI specs-as-code - Caseum</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "AsyncAPI specs-as-code";
+        var mkdocs_page_input_path = "events/asyncapi-code.md";
+        var mkdocs_page_url = "/caseum/events/asyncapi-code.html";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Caseum
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/stages.html">Architecture stages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/as-is-to-be.html">As-is and to-be</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/records.html">Recording decisions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/whiteboarding.html">Whiteboarding architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/drawio.html">Draw.io for architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/platforms.html">Designing platforms</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Components using C4</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-whiteboarding.html">Component whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-template.html">Component template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-code.html">Component architecture-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Actors using roles</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../actors/actor-whiteboarding.html">Actor whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../actors/role-template.html">Role template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Stories using Gherkin</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-whiteboarding.html">Story whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-template.html">Story template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/gherkin-code.html">Gherkin specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Events using event storming</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="event-storming.html">Event whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="event-template.html">Event template</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">AsyncAPI specs-as-code</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#which-json-schema-specification-is-best">Which JSON Schema specification is best?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#xml-schema">XML Schema</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#model-mapping-is-a-chore">Model mapping is a chore</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#alternatives-to-json-schema">Alternatives to JSON Schema</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#alternatives-to-using-an-open-standard">Alternatives to using an open standard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#industry-standards-should-influence-architecture-choices">Industry standards should influence architecture choices</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI using whiteboarding</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-whiteboarding.html">UI whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-template.html">UI template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Models using TLM</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/fact-modeling.html">Fact-based modeling</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/fact-whiteboarding.html">Fact whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/tlm-template.html">TLM template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/tlm-code.html">TLM models-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../CODE_OF_CONDUCT.html">Code of conduct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing to Caseum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LICENSE.txt">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/fonts.html">Caseum fonts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/colors/colors.html">Caseum colors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../presentations/introduction.pdf">Introduction slides (PDF)</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Caseum</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Events using event storming</li>
+      <li class="breadcrumb-item active">AsyncAPI specs-as-code</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/lsimons/caseum/edit/main/docs/events/asyncapi-code.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="modeling-events-in-code-using-asyncapi">Modeling events in code using AsyncAPI</h1>
+<p><strong>Use a specification based on JSON Schema to model the events of your system in code.</strong></p>
+<p><strong>For an event-heavy system use the <a href="https://www.asyncapi.com/">AsyncAPI specification</a>. For a system with mostly RESTful APIs, use the <a href="https://www.openapis.org/">OpenAPI specification</a> instead.</strong></p>
+<p><img alt="Example of using AsyncAPI Studio to make an event specification" src="asyncapi-code-studio-example.png" /></p>
+<h2 id="which-json-schema-specification-is-best">Which JSON Schema specification is best?</h2>
+<p><a href="https://json-schema.org/">JSON Schema</a> is a modern schema language that is used to define the structure of JSON documents. JSON Schema is embedded in the widely adopted OpenAPI specification to define the structure of RESTful APIs. The somewhat newer AsyncAPI specification is a lot like OpenAPI, but with specific support for event-driven systems.</p>
+<p>Which standard should you use? In mid-2023, if your architecture is mostly based on services and their interactions, go with OpenAPI, since it has more tooling support and is more widely used. If instead you have many asynchronous interactions in your system, or many of the interactions are multi-producer or multi-subscriber, then AsyncAPI is a better choice.</p>
+<h2 id="xml-schema">XML Schema</h2>
+<p>The most powerful schema language in common use today for modeling entity representations in APIs is XML Schema. XML Schema is used by SOAP, the Simple Object Access Protocol, which really is not simple. SOAP also has other problems. SOAP was popular 15 years ago but is not popular today. Perhaps in part because of this, XML Schema and XML are also less popular.</p>
+<p>If you must interface with XML-based systems you might adopt XML Schema <em>in addition</em> to JSON Schema. As of late 2022 the best way to convert between XML Schema and JSON Schema is the commercial product <a href="https://www.altova.com/xmlspy-xml-editor">Altova XMLSpy</a>, which may be worth investing if you have to maintain schemas with 50 elements or more.</p>
+<h2 id="model-mapping-is-a-chore">Model mapping is a chore</h2>
+<p>If you use domain models and fact-based modeling that effort can form the basis of the entity definitions in your JSON Schema. In this case your OpenAPI or AsyncAPI specifications can import those entity definitions. This approach works well for medium-size systems.</p>
+<p>You probably won't have such models-as-code for small systems since those don't need models-as-code architecture. As mentioned in the <a href="../guides/stages.html">Guide on stages</a>, actively try to avoid over-engineering small systems.</p>
+<p>On the other end, for large systems that are worked on by multiple teams in parallel you need loose coupling between subsystems so the teams can work somewhat independently. In this case you need to decouple the domain model for a subsystem from the event/API representations of the entities that are communicated with that subsystem. You then end up with significant duplication in architecture and implementation, and ongoing effort to maintain a mapping between internal models and external event specifications.</p>
+<p>There is no perfect way to avoid this mapping effort. There are many approaches to creating and maintaining model mappings. Caseum makes no recommendations on this topic, beyond the general advice to plan for it deliberately and to then record the design decisions you take on it.</p>
+<h2 id="alternatives-to-json-schema">Alternatives to JSON Schema</h2>
+<p>These are reasonable alternatives worth considering:</p>
+<ul>
+<li>
+<p><a href="https://www.odata.org/">OData</a> is more prescriptive. If it fits your needs then you can use the OData tooling ecosystem and get functionality for free. OData is used by Microsoft Azure, Dynamics, and Office 365. While it is an open standard with many implementations, the best OData tool support is in the Microsoft ecosystem, specifically in .Net and Visual Studio.</p>
+</li>
+<li>
+<p><a href="https://graphql.org/">GraphQL</a> is a powerful approach to create flexible APIs that are <em>just right</em> for the <em>consumer</em> of that API. This is often worth the investment when building user interfaces, especially mobile applications. For very large systems you may have GraphQL APIs between frontend and backend systems, and OpenAPI or AsyncAPI schemas for use among backend systems.</p>
+</li>
+<li>
+<p><a href="https://avro.apache.org/">Apache Avro</a>, <a href="https://thrift.apache.org/">Apache Thrift</a>, <a href="https://grpc.io/">GRPC</a> with <a href="https://protobuf.dev/">Protocol Buffers</a>, <a href="https://capnproto.org/">Cap'n Proto</a>, <a href="https://zeromq.org/">ZeroMQ</a> with <a href="https://en.wikipedia.org/wiki/Augmented_Backus%E2%80%93Naur_form">ABNF</a>, or one of many other such more specific technology choices. If one of these is the right choice for your application, and you define a schema for it, avoid duplicating those schema definitions in JSON Schema.</p>
+</li>
+</ul>
+<h2 id="alternatives-to-using-an-open-standard">Alternatives to using an open standard</h2>
+<p>You can work without any standard or schema for your event definitions. This may couple your architecture to a specific (commercial) technology. That is not always bad! For example it may save you significant time and effort and result in a simpler and smaller solution. Many architects and developers intuitively don't like such choices, since they are afraid of the loss of flexibility. Making this tradeoff is an important architecture choice. So, take some time to make this decision and <a href="../guides/records.html">record</a> it.</p>
+<p>Choosing between open standards and proprietary technology is not all-or-nothing. For example, you can map schemas in architecture but not in code.</p>
+<p>Specific commercial technology may come with its own reasonable schema language. For example, TIBCO BusinessWorks uses a proprietary schema language for its XML-based message formats. You can use the TIBCO schema language for your event definitions, and then use tooling to convert between TIBCO schema and JSON Schema. You still tie most of your system to the TIBCO schema and protocol. You do have a route toward interoperability by introducing adapters to JSON Schema if that becomes important.</p>
+<h2 id="industry-standards-should-influence-architecture-choices">Industry standards should influence architecture choices</h2>
+<p>The choice of schema language can depend on the business domain you are working in. There are various industries with extensive standard schema definitions and these are often worth using.</p>
+<p>For example, the <a href="https://www.hl7.org/">HL7</a> v3 and CDA standards for healthcare data exchange are based on XML Schema. These standards and probably more widely deployed in 2023 than the newer <a href="https://hl7.org/fhir">HL7 FHIR</a> which supports JSON Schema.</p>
+<p>In other domains, JSON and XML are not appropriate technology and then it makes no sense to use their schema languages. For example, if you work on an automotive system using the <a href="https://en.wikipedia.org/wiki/CAN_bus">CAN bus</a>, messages may defined at a lower protocol layer. In such a case you stick to using a text description of the messages instead of a schema language.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="event-template.html" class="btn btn-neutral float-left" title="Event template"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ui/ui-whiteboarding.html" class="btn btn-neutral float-right" title="UI whiteboarding">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/lsimons/caseum" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="event-template.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../ui/ui-whiteboarding.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

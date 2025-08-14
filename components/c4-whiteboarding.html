@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Leo Simons" /><link rel="canonical" href="https://lsimons.github.io/caseum/components/c4-whiteboarding.html" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Component whiteboarding - Caseum</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Component whiteboarding";
+        var mkdocs_page_input_path = "components/c4-whiteboarding.md";
+        var mkdocs_page_url = "/caseum/components/c4-whiteboarding.html";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Caseum
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/stages.html">Architecture stages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/as-is-to-be.html">As-is and to-be</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/records.html">Recording decisions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/whiteboarding.html">Whiteboarding architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/drawio.html">Draw.io for architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/platforms.html">Designing platforms</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Components using C4</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Component whiteboarding</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#context-diagram">Context Diagram</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#container-diagram">Container Diagram</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#component-diagram">Component Diagram</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#keep-it-accessible">Keep it accessible</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#avoid-drawing-huge-diagrams-on-whiteboards">Avoid drawing huge diagrams on whiteboards</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dont-focus-too-much-on-components">Don't focus too much on components</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="c4-template.html">Component template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="c4-code.html">Component architecture-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Actors using roles</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../actors/actor-whiteboarding.html">Actor whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../actors/role-template.html">Role template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Stories using Gherkin</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-whiteboarding.html">Story whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-template.html">Story template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/gherkin-code.html">Gherkin specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Events using event storming</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/event-storming.html">Event whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/event-template.html">Event template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/asyncapi-code.html">AsyncAPI specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI using whiteboarding</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-whiteboarding.html">UI whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-template.html">UI template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Models using TLM</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/fact-modeling.html">Fact-based modeling</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/fact-whiteboarding.html">Fact whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/tlm-template.html">TLM template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/tlm-code.html">TLM models-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../CODE_OF_CONDUCT.html">Code of conduct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing to Caseum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LICENSE.txt">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/fonts.html">Caseum fonts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/colors/colors.html">Caseum colors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../presentations/introduction.pdf">Introduction slides (PDF)</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Caseum</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Components using C4</li>
+      <li class="breadcrumb-item active">Component whiteboarding</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/lsimons/caseum/edit/main/docs/components/c4-whiteboarding.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <!--suppress CheckImageSize, HtmlDeprecatedAttribute -->
+<h1 id="whiteboarding-components-with-c4-diagrams">Whiteboarding components with C4 diagrams</h1>
+<p><strong>Use <a href="https://c4model.com/">C4-style diagrams</a> to draw the components of your system on a whiteboard.</strong></p>
+<p><strong>It isn't important to follow the C4 model exactly. Focus on the story you want to tell with your diagrams.</strong></p>
+<h2 id="context-diagram">Context Diagram</h2>
+<p><img src="c4-context-whiteboarding-example.jpg" width="300" align="right" style="margin-left: 10px" alt="Processed photo of a whiteboard C4 context diagram"></p>
+<p>The context diagram is the highest-level diagram in C4. It shows the software system in context of its environment.</p>
+<p>Do not skip the context diagram when drawing architecture on the whiteboard. The context diagram grounds the architecture story in the business context. It connects the <a href="../actors/actor-whiteboarding.html">actors</a> and <a href="../stories/story-whiteboarding.html">stories</a> to the component architecture.</p>
+<p>If you don't know where to start, follow this process:</p>
+<ul>
+<li>First, draw the actors, at the top of the whiteboard.</li>
+<li>Next, draw the software systems in the middle of the whiteboard.</li>
+<li>Then, draw the connections between the actors and the software systems.</li>
+<li>Avoid drawing system boundaries on the whiteboard, they clutter the board.</li>
+</ul>
+<h2 id="container-diagram">Container Diagram</h2>
+<p>When designing small systems you can skip the container diagram initially.</p>
+<p><img src="c4-container-whiteboarding-example.jpg" width="300" align="right" style="margin-left: 10px" alt="Processed photo of a whiteboard C4 container diagram"></p>
+<p>The container diagram connects the C4 context to the C4 components. It shows the high-level parts of the software system and how they connect.</p>
+<p>If you don't know where to start, follow this process:</p>
+<ul>
+<li>First, draw the actors, at the top of the whiteboard.</li>
+<li>Next, draw any databases or other low-level containers at the bottom of the whiteboard.</li>
+<li>Then, draw the sofware systems in the middle of the whiteboard.</li>
+<li>Finally, draw the connections between the actors and the software systems and between the software systems and the databases.</li>
+</ul>
+<h2 id="component-diagram">Component Diagram</h2>
+<p>The component diagram is the lowest-level C4 diagram to draw on a whiteboard. It shows all the software components that make up a (sub)system and how they connect together. The component diagram is often most useful to developers while deciding how to implement a system, while it can be too detailed for other stakeholders.</p>
+<p>When drawing the component diagram on the whiteboard, focus on the components that are most important to the story you are telling. You don't need to add the full details of all components in the system.</p>
+<p>If you skipped making the container diagram, once there are more components to a system than can fit on one whiteboard, go back and summarize the component diagram as a container diagram.</p>
+<h2 id="keep-it-accessible">Keep it accessible</h2>
+<p>Note that while the C4 website recommends using <a href="c4-code.html">models as code</a>, Caseum recommends using a whiteboard initially and for as long as possible, and to also consider <a href="c4-template.html">digital diagrams</a> before making models using code.</p>
+<h2 id="avoid-drawing-huge-diagrams-on-whiteboards">Avoid drawing huge diagrams on whiteboards</h2>
+<p>C4 originally defined only Context, Container, Component, and Class Diagrams (with the last one auto-generated from code, not hand-drawn). It has since added some other diagram types such as the system landscape diagram and the deployment diagram. You tend to need these once your system gets larger or more complex, at which point it often also makes sense to switch from whiteboarding to <a href="c4-template.html">digital diagrams</a>.</p>
+<h2 id="dont-focus-too-much-on-components">Don't focus too much on components</h2>
+<p>Many users of C4 use the component-based view as their only or at least their dominant view. Caseum recommends also using all the other views. Some designs are best detailed using <a href="../events/event-storming.html">events</a>, while others are best modelled using <a href="../models/fact-modeling.html">facts</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../guides/platforms.html" class="btn btn-neutral float-left" title="Designing platforms"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="c4-template.html" class="btn btn-neutral float-right" title="Component template">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/lsimons/caseum" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../guides/platforms.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="c4-template.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

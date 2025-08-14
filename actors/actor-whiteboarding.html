@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Leo Simons" /><link rel="canonical" href="https://lsimons.github.io/caseum/actors/actor-whiteboarding.html" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Actor whiteboarding - Caseum</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Actor whiteboarding";
+        var mkdocs_page_input_path = "actors/actor-whiteboarding.md";
+        var mkdocs_page_url = "/caseum/actors/actor-whiteboarding.html";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Caseum
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/stages.html">Architecture stages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/as-is-to-be.html">As-is and to-be</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/records.html">Recording decisions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/whiteboarding.html">Whiteboarding architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/drawio.html">Draw.io for architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/platforms.html">Designing platforms</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Components using C4</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-whiteboarding.html">Component whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-template.html">Component template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-code.html">Component architecture-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Actors using roles</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Actor whiteboarding</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#basic-actors">Basic actors</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#non-actors">Non-actors</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bad-actors">Bad actors</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#user-centric-design-vs-actors">User-centric design vs actors</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-color">Using color</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="role-template.html">Role template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Stories using Gherkin</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-whiteboarding.html">Story whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-template.html">Story template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/gherkin-code.html">Gherkin specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Events using event storming</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/event-storming.html">Event whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/event-template.html">Event template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/asyncapi-code.html">AsyncAPI specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI using whiteboarding</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-whiteboarding.html">UI whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-template.html">UI template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Models using TLM</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/fact-modeling.html">Fact-based modeling</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/fact-whiteboarding.html">Fact whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/tlm-template.html">TLM template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/tlm-code.html">TLM models-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../CODE_OF_CONDUCT.html">Code of conduct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing to Caseum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LICENSE.txt">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/fonts.html">Caseum fonts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/colors/colors.html">Caseum colors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../presentations/introduction.pdf">Introduction slides (PDF)</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Caseum</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Actors using roles</li>
+      <li class="breadcrumb-item active">Actor whiteboarding</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/lsimons/caseum/edit/main/docs/actors/actor-whiteboarding.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <!--suppress HtmlDeprecatedAttribute, CheckImageSize -->
+<h1 id="whiteboarding-actors">Whiteboarding actors</h1>
+<p><strong>Always consider a system's customers, users, and stakeholders. Also consider external systems that connect to the system. Together, these are the <em>actors</em>.</strong></p>
+<p>When designing software only used by other systems, consider the customers, users, and stakeholders of those systems.</p>
+<p>When designing software it helps to always keep these actors in mind, so in most views it helps to always draw them and to draw them first. Rather than design the system for a generic user, be clear about which users use the system.</p>
+<p><img alt="Processed photo of a whiteboard containing actors" src="actor-whiteboarding-example.jpg" /></p>
+<p>If you have followed an approach like design thinking you may already have a clear description of the human actors, which you can just summarize for use in Caseum.</p>
+<p>In other cases, it may be quite hard to become clear about which actors the system is for. This can be the case, for example, if stakeholders disagree! If so, that hard work <em>must</em> happen before other designs are made.</p>
+<h2 id="basic-actors">Basic actors</h2>
+<p>For human actors, capture at least:</p>
+<ul>
+<li><strong>role name</strong>: the descriptive label of the role of this actor in the wider context in which the software system is used.</li>
+<li><strong>need</strong>: what actors in this role need to accomplish that they use the software system for.</li>
+</ul>
+<p>For non-human actors, capture at least:</p>
+<ul>
+<li><strong>category name</strong>: a descriptive label that applies to all similar software systems that use the system.</li>
+<li><strong>purpose</strong>: why the external system is connecting to this system.</li>
+</ul>
+<p>You don't have to capture all the non-human actors, only the important ones that you specifically design for. For example, when designing a website, you often don't need to draw the web browsers users will use to access the site.</p>
+<p><img src="actor-whiteboarding-lines.png" width="100" align="right" style="margin-left: 10px" alt="A drawing of a circle on top of a flat rectangle representing an actor"></p>
+<p>Draw each actor with an icon. See <a href="https://fontawesome.com/icons/categories/users-people?f=classic&amp;s=regular">this FontAwesome collection of users</a> for some icons you might try to draw, but don't get too fancy: it's important to keep them simple so you and others working on the design can draw them easily and similarly many times. A simple way to draw an actor is as a circle for their head with a rectangle just underneath it for their upper torso. Then, write their role underneath to make clear which actor it is.</p>
+<h2 id="non-actors">Non-actors</h2>
+<p>It can help to be clear about people that are close to the software system who do not interact with the software system themselves. You might write them down and then mark them as not actors.</p>
+<p>For example, a software system in a hospital may be very patient-centric but not ever used by the patients themselves, instead only being accessible by the medical staff.</p>
+<h2 id="bad-actors">Bad actors</h2>
+<p>It can sometimes help to be clear about people who should not interact with the software system but will try to do so anyway. This is especially important if the software is a security system or if security is a major feature of the system.</p>
+<p>For systems where the security is "standard" or handled "in some standard way", do not include these actors in the main view. Instead, you may later draw some specific security views that have these bad actors included.</p>
+<h2 id="user-centric-design-vs-actors">User-centric design vs actors</h2>
+<p>In user experience design, <a href="https://en.wikipedia.org/wiki/Empathy_Map">empathy maps</a> describe users' pains and gains, what they think and say and do and feel.</p>
+<p>Similarly, user experience designers may define fictional characters called <a href="https://en.wikipedia.org/wiki/Persona_(user_experience)">personas</a> that help the designer imagine what to create.</p>
+<p>These are quite a valuable research and design tool. But such empathy maps and personas are not part of Caseum and not quite the same as an actor description.</p>
+<p>From these user-centric designs, distill a more generic (cold, clear, clean, factual) role description for use in the creation of the software architecture. You might link these together with a few statements such as "User {name} has the role {role} while working with {software system}".</p>
+<h2 id="using-color">Using color</h2>
+<p>Draw the actors in blue and their needs in green.</p>
+<p>Draw any non-actors in black.</p>
+<p>Draw any bad actors in red.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../components/c4-code.html" class="btn btn-neutral float-left" title="Component architecture-as-code"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="role-template.html" class="btn btn-neutral float-right" title="Role template">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/lsimons/caseum" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../components/c4-code.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="role-template.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

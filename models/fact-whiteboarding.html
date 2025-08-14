@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Leo Simons" /><link rel="canonical" href="https://lsimons.github.io/caseum/models/fact-whiteboarding.html" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Fact whiteboarding - Caseum</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Fact whiteboarding";
+        var mkdocs_page_input_path = "models/fact-whiteboarding.md";
+        var mkdocs_page_url = "/caseum/models/fact-whiteboarding.html";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Caseum
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/stages.html">Architecture stages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/as-is-to-be.html">As-is and to-be</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/records.html">Recording decisions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/whiteboarding.html">Whiteboarding architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/drawio.html">Draw.io for architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/platforms.html">Designing platforms</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Components using C4</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-whiteboarding.html">Component whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-template.html">Component template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-code.html">Component architecture-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Actors using roles</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../actors/actor-whiteboarding.html">Actor whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../actors/role-template.html">Role template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Stories using Gherkin</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-whiteboarding.html">Story whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-template.html">Story template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/gherkin-code.html">Gherkin specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Events using event storming</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/event-storming.html">Event whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/event-template.html">Event template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/asyncapi-code.html">AsyncAPI specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI using whiteboarding</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-whiteboarding.html">UI whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-template.html">UI template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Models using TLM</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="fact-modeling.html">Fact-based modeling</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Fact whiteboarding</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#draw-just-the-facts">Draw just the facts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#draw-circles-instead-of-boxes">Draw circles instead of boxes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#draw-crows-feet-for-one-to-many-or-many-to-many-relationships">Draw crow's feet for one-to-many or many-to-many relationships</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#draw-arrows-for-inheritance">Draw arrows for inheritance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#draw-the-same-concept-multiple-times">Draw the same concept multiple times</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#write-the-primary-identifier-of-a-type-inside-the-circle">Write the primary identifier of a type inside the circle</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#avoid-specifying-all-facts-on-the-whiteboard">Avoid specifying all facts on the whiteboard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#add-examples-of-facts">Add examples of facts</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="tlm-template.html">TLM template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="tlm-code.html">TLM models-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../CODE_OF_CONDUCT.html">Code of conduct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing to Caseum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LICENSE.txt">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/fonts.html">Caseum fonts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/colors/colors.html">Caseum colors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../presentations/introduction.pdf">Introduction slides (PDF)</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Caseum</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Models using TLM</li>
+      <li class="breadcrumb-item active">Fact whiteboarding</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/lsimons/caseum/edit/main/docs/models/fact-whiteboarding.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="whiteboarding-models">Whiteboarding Models</h1>
+<p><strong>Draw the key facts about the concepts of your business domain on the whiteboard. Focus on types and the links between them, not the underlying structure.</strong></p>
+<p><img alt="Processed photo of a whiteboard containing facts" src="fact-whiteboarding-example.jpg" /></p>
+<h2 id="draw-just-the-facts">Draw just the facts</h2>
+<p>A fact is a piece of information that is true about the business domain. Draw only types that are known to exist in the domain. Draw only relationships that are known to exist in the domain. Draw only types and relationships in the domain that the software needs to know about.</p>
+<h2 id="draw-circles-instead-of-boxes">Draw circles instead of boxes</h2>
+<p>The dominance of ER and UML modeling techniques in creating software designs is a minor tragedy. By drawing boxes of entities (whether tables or classes) and then putting the properties of those entities inside the boxes, you think about the structure of the data too much and too early.</p>
+<p>To avoid this trap, simply draw circles for each type (entity, class, concept) instead. To add a property, relationship, or other detail about the type, draw another circle, and link the circles with a line. By working this way, you do not introduce a hierarchy of types vs properties, and you can iterate on the design on the whiteboard and discover the eventual hierarchy as you go.</p>
+<h2 id="draw-crows-feet-for-one-to-many-or-many-to-many-relationships">Draw crow's feet for one-to-many or many-to-many relationships</h2>
+<p>To show that a link between two types is a one-to-many or many-to-many relationship, draw a crow's foot on the end of the line.</p>
+<h2 id="draw-arrows-for-inheritance">Draw arrows for inheritance</h2>
+<p>If a certain type is a specialization of another type, draw an open-head arrow from the specialized type to the general type.</p>
+<p>Don't use inheritance unless you need it.</p>
+<h2 id="draw-the-same-concept-multiple-times">Draw the same concept multiple times</h2>
+<p>If you are drawing a large model, avoid drawing super-long lines that are hard to trace. Instead, you can draw the same type a couple of times in different places on the whiteboard so that you can show all its relationships.</p>
+<h2 id="write-the-primary-identifier-of-a-type-inside-the-circle">Write the primary identifier of a type inside the circle</h2>
+<p>If a type has a single primary identifier in the business domain, write it inside the circle, right after the type name, in brackets. For example, "Bank Account (IBAN)".</p>
+<h2 id="avoid-specifying-all-facts-on-the-whiteboard">Avoid specifying all facts on the whiteboard</h2>
+<p>The whiteboard is a tool for thinking. It is not necessary to specify all facts on the whiteboard. Instead, focus on the facts that are most important to the software design.</p>
+<p>While you can draw <a href="tlm-template.html">TLM or ORM diagrams</a> on a whiteboard, the addition of formal syntax and semantics makes it harder to contribute for those not trained in the technique. It is often better to stick to simpler diagrams and focus on the conversation of what the key facts are and how the software should support such facts.</p>
+<h2 id="add-examples-of-facts">Add examples of facts</h2>
+<p>A few pieces of concrete example data help a lot to clarify the model. Especially for more complex domain concepts, add some concrete examples, usually as a table of sample data.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="fact-modeling.html" class="btn btn-neutral float-left" title="Fact-based modeling"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="tlm-template.html" class="btn btn-neutral float-right" title="TLM template">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/lsimons/caseum" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="fact-modeling.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="tlm-template.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

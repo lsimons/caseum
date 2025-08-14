@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Leo Simons" /><link rel="canonical" href="https://lsimons.github.io/caseum/events/event-template.html" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Event template - Caseum</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Event template";
+        var mkdocs_page_input_path = "events/event-template.md";
+        var mkdocs_page_url = "/caseum/events/event-template.html";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Caseum
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/stages.html">Architecture stages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/as-is-to-be.html">As-is and to-be</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/records.html">Recording decisions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/whiteboarding.html">Whiteboarding architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/drawio.html">Draw.io for architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/platforms.html">Designing platforms</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Components using C4</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-whiteboarding.html">Component whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-template.html">Component template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-code.html">Component architecture-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Actors using roles</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../actors/actor-whiteboarding.html">Actor whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../actors/role-template.html">Role template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Stories using Gherkin</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-whiteboarding.html">Story whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-template.html">Story template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/gherkin-code.html">Gherkin specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Events using event storming</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="event-storming.html">Event whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Event template</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#event-description-markdown-template">Event description markdown template</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#event-examples">Event examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#event-petownerarrived">Event: PetOwnerArrived</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#event-petownercheckedin">Event: PetOwnerCheckedIn</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#event-appointmentschedulechanged">Event: AppointmentScheduleChanged</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#alternatives">Alternatives</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#visual-organization-of-events-using-eventcatalog">Visual organization of events using EventCatalog</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#more-formal-event-storming-via-event-modeling">More formal event storming via event modeling</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="asyncapi-code.html">AsyncAPI specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI using whiteboarding</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-whiteboarding.html">UI whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-template.html">UI template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Models using TLM</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/fact-modeling.html">Fact-based modeling</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/fact-whiteboarding.html">Fact whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/tlm-template.html">TLM template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/tlm-code.html">TLM models-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../CODE_OF_CONDUCT.html">Code of conduct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing to Caseum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LICENSE.txt">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/fonts.html">Caseum fonts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/colors/colors.html">Caseum colors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../presentations/introduction.pdf">Introduction slides (PDF)</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Caseum</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Events using event storming</li>
+      <li class="breadcrumb-item active">Event template</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/lsimons/caseum/edit/main/docs/events/event-template.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <!--suppress HtmlDeprecatedAttribute, CheckImageSize -->
+<h1 id="describing-events-with-an-event-description">Describing events with an event description</h1>
+<p><strong>Keep a short, clear list of event descriptions.</strong></p>
+<p>Caseum provides a simple template for event descriptions in markdown.</p>
+<h2 id="event-description-markdown-template">Event description markdown template</h2>
+<p>Here's a markdown template for capturing events:</p>
+<pre><code class="language-markdown">### Event: {event name}
+{Short event summary.}
+
+- producers:
+    - {producer #1}
+    - {producer #2}
+- consumers:
+    - {consumer #1}
+    - {consumer #2}
+
+{Detailed event description.}
+</code></pre>
+<p>The summary should be a short sentence that describes the event.</p>
+<p>The producers and components are the actors and components producing and consuming events.</p>
+<p>The optional detailed description gives more information about the event.</p>
+<h2 id="event-examples">Event examples</h2>
+<p>Here are some example event descriptions:</p>
+<h3 id="event-petownerarrived">Event: PetOwnerArrived</h3>
+<p>Pet owner has arrived at the clinic with their pet.</p>
+<ul>
+<li>producers:<ul>
+<li>pet owner</li>
+</ul>
+</li>
+<li>consumers:<ul>
+<li>receptionist</li>
+</ul>
+</li>
+</ul>
+<h3 id="event-petownercheckedin">Event: PetOwnerCheckedIn</h3>
+<p>Pet owner has checked in at the reception desk.</p>
+<ul>
+<li>producers:<ul>
+<li>receptionist</li>
+</ul>
+</li>
+<li>consumers:<ul>
+<li>vet</li>
+</ul>
+</li>
+</ul>
+<h3 id="event-appointmentschedulechanged">Event: AppointmentScheduleChanged</h3>
+<p>Receptionist has adjusted the appointment schedule.</p>
+<ul>
+<li>producers:<ul>
+<li>receptionist</li>
+</ul>
+</li>
+<li>consumers:<ul>
+<li>vet</li>
+<li>pet owner</li>
+</ul>
+</li>
+</ul>
+<h2 id="alternatives">Alternatives</h2>
+<p>While Markdown templates are fine for <a href="../actors/role-template.html">actors</a> or <a href="../stories/story-template.html">stories</a>, they are not ideal for events, where the relationship between events and their producers and consumers are particularly important to see.</p>
+<p>So here are some alternatives to consider:</p>
+<h3 id="visual-organization-of-events-using-eventcatalog">Visual organization of events using EventCatalog</h3>
+<p><a href="https://www.eventcatalog.dev/">EventCatalog</a> is a nice tool for managing event descriptions.</p>
+<p>EventCatalog provides a simple markdown template to start with and also allows embedding formal schemas. It provides an open source downloadable tool to visualize those events in different ways.</p>
+<p><img alt="Screenshot of the EventCatalog Visualizer showing an Order domain" src="eventcatalog-example.png" /></p>
+<p>Unfortunately the EventCatalog Markdown format for events does not render well as plain markdown files: you really need to install and use the tool yourself to use the Markdown format. This is why Caseum provides its own simpler template format.</p>
+<p>But if you can set up and use EventCatalog and make it accessible to everyone on your team, it is a great tool to use instead.</p>
+<h3 id="more-formal-event-storming-via-event-modeling">More formal event storming via event modeling</h3>
+<p>Adam Dymitruk has described an approach to design called <a href="https://eventmodeling.org/">event modeling</a> (<a href="https://eventmodeling.org/posts/what-is-event-modeling/">blog post 1</a>, <a href="https://eventmodeling.org/posts/event-modeling-traditional-systems/">blog post 2</a>), which is conceptually similar to <a href="event-storming.html">event storming</a>, and has a somewhat more structured approach works well digitally. As a method it is very similar to Caseum during stage 2, creating multiple views. It is similar to event storming in that it focuses on the event view.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="event-storming.html" class="btn btn-neutral float-left" title="Event whiteboarding"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="asyncapi-code.html" class="btn btn-neutral float-right" title="AsyncAPI specs-as-code">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/lsimons/caseum" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="event-storming.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="asyncapi-code.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

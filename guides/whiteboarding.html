@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Leo Simons" /><link rel="canonical" href="https://lsimons.github.io/caseum/guides/whiteboarding.html" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Whiteboarding architecture - Caseum</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Whiteboarding architecture";
+        var mkdocs_page_input_path = "guides/whiteboarding.md";
+        var mkdocs_page_url = "/caseum/guides/whiteboarding.html";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Caseum
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="stages.html">Architecture stages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="as-is-to-be.html">As-is and to-be</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="records.html">Recording decisions</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Whiteboarding architecture</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#preparing-for-whiteboarding">Preparing for whiteboarding</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#plan-to-capture-your-whiteboard-outputs">Plan to capture your whiteboard outputs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#have-lots-of-good-materials">Have lots of good materials</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#practicing-whiteboarding">Practicing whiteboarding</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#get-comfortable-writing-on-whiteboards">Get comfortable writing on whiteboards</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get-comfortable-drawing-on-whiteboards">Get comfortable drawing on whiteboards</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#draw-to-take-photos">Draw to take photos</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#draw-with-colors">Draw with colors</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#talking-through-designs-together">Talking through designs together</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#start-with-an-empty-board-and-go-slowly">Start with an empty board and go slowly</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#drawing-together-blue-pen-green-pen-red-pen-no-pen">Drawing together: blue pen, green pen, red pen, no pen</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#alternatives-to-whiteboards">Alternatives to whiteboards</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#digital-whiteboards-are-worse-for-communication">Digital whiteboards are worse for communication</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#blackboards">Blackboards</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#brown-paper-instead-of-a-whiteboard">Brown paper instead of a whiteboard</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="drawio.html">Draw.io for architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="platforms.html">Designing platforms</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Components using C4</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-whiteboarding.html">Component whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-template.html">Component template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-code.html">Component architecture-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Actors using roles</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../actors/actor-whiteboarding.html">Actor whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../actors/role-template.html">Role template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Stories using Gherkin</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-whiteboarding.html">Story whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-template.html">Story template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/gherkin-code.html">Gherkin specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Events using event storming</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/event-storming.html">Event whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/event-template.html">Event template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/asyncapi-code.html">AsyncAPI specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI using whiteboarding</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-whiteboarding.html">UI whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-template.html">UI template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Models using TLM</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/fact-modeling.html">Fact-based modeling</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/fact-whiteboarding.html">Fact whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/tlm-template.html">TLM template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/tlm-code.html">TLM models-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../CODE_OF_CONDUCT.html">Code of conduct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing to Caseum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LICENSE.txt">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/fonts.html">Caseum fonts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/colors/colors.html">Caseum colors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../presentations/introduction.pdf">Introduction slides (PDF)</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Caseum</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Guides</li>
+      <li class="breadcrumb-item active">Whiteboarding architecture</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/lsimons/caseum/edit/main/docs/guides/whiteboarding.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="whiteboarding-guide">Whiteboarding guide</h1>
+<p><strong>The goal of whiteboarding is a dialogue after which everyone has a common understanding of the software architecture, not to draw the best pictures.</strong></p>
+<p><strong>It helps to be serious about whiteboarding. Prepare your whiteboarding sessions, practice your skills.</strong></p>
+<p><img alt="Processed photo of a whiteboard containing architecture diagrams" src="whiteboarding-example.jpg" /></p>
+<h2 id="preparing-for-whiteboarding">Preparing for whiteboarding</h2>
+<p>Like any activity whiteboarding sessions go better when you prepare for them well. So, prepare!</p>
+<h3 id="plan-to-capture-your-whiteboard-outputs">Plan to capture your whiteboard outputs</h3>
+<p>Reserve time at the end of a whiteboarding session to immediately capture all the content you produced in a permanent form and <a href="records.html">record it</a>. Taking photos with your cell phone and uploading them works well.</p>
+<p>There are great free mobile apps that help process whiteboard pictures. Try Microsoft Lens (<a href="https://play.google.com/store/apps/details?id=com.microsoft.office.officelens">Android</a>, <a href="https://apps.apple.com/us/app/office-lens/id975925059">iOS</a>) or Adobe Scan (<a href="https://play.google.com/store/apps/details?id=com.adobe.scan.android">Android</a>, <a href="https://apps.apple.com/us/app/adobe-scan-pdf-ocr-scanner/id1199564834">iOS</a>). Try Post-It (<a href="https://apps.apple.com/us/app/post-it/id920127738">Android</a>, <a href="https://play.google.com/store/apps/details?id=com.mmm.postit">iOS</a>) if you have a whiteboard full of post-it notes. Have such apps on your phone before the session.</p>
+<p>There are also great mobile apps for keeping digital records. If you use Slack, have the Slack app on your phone. If you use SharePoint, have the OneDrive app on your phone. Log into the apps beforehand and try uploading some pictures with them.</p>
+<h3 id="have-lots-of-good-materials">Have lots of good materials</h3>
+<ul>
+<li>It is great to have lots of whiteboards (7 is a good number). Even better is a big room where all the walls are whiteboards. On a budget, you can get whiteboard stickers to put on walls or windows.</li>
+<li>Have enough dry-erase markers in multiple colors (black, blue, green, red), several times more than the number of participants.</li>
+<li>Have several dry-erase wipers.</li>
+<li>Have dry-wipe cloth plus whiteboard cleaning spray to fully clean the whiteboards. Cheap cloths often work better than whiteboard eraser blocks.</li>
+<li>Have enough decent quality sticky notes. The adhesive on old or cheap sticky notes gets worse and then the notes may come down off the board. Have multiple colors (for <a href="../events/event-storming.html">event storming</a>: orange, purple, blue, green).</li>
+</ul>
+<p>Get high-quality materials.</p>
+<h2 id="practicing-whiteboarding">Practicing whiteboarding</h2>
+<p>Drawing is a skill you get better at through practice. So, practice!</p>
+<h3 id="get-comfortable-writing-on-whiteboards">Get comfortable writing on whiteboards</h3>
+<p>Practice your writing on a whiteboard:</p>
+<ul>
+<li>Try to write more slowly, drawing nice letters instead of scribbling ugly ones.</li>
+<li>Try to write in a straight line.</li>
+<li>Try to write vertically.</li>
+<li>Try to write larger and smaller letters.</li>
+<li>Try to estimate how many letters you can fit in an area. Draw smaller and bigger boxes and try to write certain words in them.</li>
+</ul>
+<p>Evaluate your own writing by looking at the board at a distance. Then wipe it out and do better. If there are certain letters you can't write well, practice just those letters.</p>
+<p>Your handwriting does not need to be pretty, but it should be readable.</p>
+<h3 id="get-comfortable-drawing-on-whiteboards">Get comfortable drawing on whiteboards</h3>
+<p>Practice simple drawing on a whiteboard:</p>
+<ul>
+<li>draw lots of rectangles of different sizes.</li>
+<li>draw lots of squares of different sizes.</li>
+<li>draw lots of straight lines of every angle.</li>
+<li>draw lots of ovals and circles.</li>
+<li>draw simple symbols for people.</li>
+</ul>
+<p>You can find a lot of specific drawing exercises online, but you don't need to learn creative drawing. Just do a lot of drawing and actively try to do a good job at it and you will improve.</p>
+<h3 id="draw-to-take-photos">Draw to take photos</h3>
+<p>Practice whiteboarding to capture the result:</p>
+<ul>
+<li>make a simple diagram on a whiteboard with boxes, lines, and text</li>
+<li>take a photo of the diagram with your phone</li>
+<li>look at the photo</li>
+<li>see what does and does not look good in the photo, pick one thing to improve</li>
+<li>wipe the drawing and try to make the same drawing again</li>
+<li>take another photo and see if the result is better</li>
+<li>rinse, repeat</li>
+</ul>
+<p>When you plan to take a photo of a whiteboard later you will often make a nicer drawing.</p>
+<h3 id="draw-with-colors">Draw with colors</h3>
+<p>Practice whiteboarding with colors:</p>
+<ul>
+<li>study the <a href="../design/colors/colors.html">Caseum color scheme</a> and try to make drawings on the whiteboard in the same or a similar color scheme</li>
+<li>practice keeping multiple markers in your hands and switching between them as you draw</li>
+</ul>
+<p>Once you are used to drawing with multiple colors it will help make the output of your brainstorming sessions look better.</p>
+<h2 id="talking-through-designs-together">Talking through designs together</h2>
+<p>The whiteboard is a tool you use to make a design. The design is a tool you use to communicate how to make software. Effective communication is more important than the picture that ends up on the whiteboard.</p>
+<h3 id="start-with-an-empty-board-and-go-slowly">Start with an empty board and go slowly</h3>
+<p>Just like a PowerPoint slide with 20 bullets is overwhelming, a huge whiteboard filled with 20 different boxes and lines between them is overwhelming too. When sharing a design on a whiteboard, start with an empty whiteboard, and take the time to explain each element as you draw it on the board. Make sure your listeners are still following before drawing another box or another line. Go slow, pause, be open for questions and suggestions.</p>
+<h3 id="drawing-together-blue-pen-green-pen-red-pen-no-pen">Drawing together: blue pen, green pen, red pen, no pen</h3>
+<p>When designing together, someone should start and draw <em>something</em>. Drawing the first concept on a blank canvas can be a bit intimidating for some. It is nice to have someone that goes first. Even if the first idea is not fully fledged, at least we got started. This might be someone using a blue pen.</p>
+<p>Others may not start the concept, but once something is on the board they are very good at saying "yes, and..." to add to the initial idea to expand it and make it better. This might be someone using a green pen.</p>
+<p>Still others are very comfortable saying "no, because..." to reduce an idea to the important essence or to challenge the group to come up with a better alternative to the initial idea. This might be someone using a red pen.</p>
+<p>Finally, there are those that may not do any of the drawing themselves, but they can ask the group good open "what about ..." questions to move the design forward. This person doesn't need a pen!</p>
+<p>To draw a good design together as a group, all of these contributions are needed. It is useful to get good at each style of contribution, and to know when which contribution is needed. It can be a good exercise for people in a team to deliberately take one of these roles, even if they would normally take a different one. You can also rotate between these roles in a way similar to <a href="https://www.agilealliance.org/glossary/pairing/">pair programming</a> or <a href="https://www.agilealliance.org/glossary/mob-programming/">mob programming</a>.</p>
+<h2 id="alternatives-to-whiteboards">Alternatives to whiteboards</h2>
+<p>No whiteboard? No problem! Well, actually, a bit of a problem. Can't you go and buy a bunch of whiteboards?</p>
+<h3 id="digital-whiteboards-are-worse-for-communication">Digital whiteboards are worse for communication</h3>
+<p>If you have a fully remote team using physical whiteboards may be impractical. In that case consider drawing on paper and sharing the designs using video conference software. You can also use online digital whiteboard software like <a href="https://excalidraw.com/">excalidraw</a>.</p>
+<p>Be careful of switching to a fancy diagramming or modeling tool just because you are working remotely!</p>
+<p>If you have the option, then physical whiteboarding is more effective because the communication is better.</p>
+<p>In a hybrid team that meets in an office one day a week, you could use a couple of hours of such a day for Caseum-style whiteboarding, then take some whiteboard photos home with you for the rest of the week.</p>
+<p>On a fully remote team you can also skip directly to <a href="stages.html">the next stage</a> and work with digital files.</p>
+<h3 id="blackboards">Blackboards</h3>
+<p>There's nothing about architecture that requires a whiteboard instead of a blackboard. A lecture theatre with lots of large black boards also works great for Caseum. Having only one or two small black boards does not work as well, though: you need a lot of drawing space.</p>
+<h3 id="brown-paper-instead-of-a-whiteboard">Brown paper instead of a whiteboard</h3>
+<p>If you only have 1 or 2 whiteboards, whiteboard stickers are too expensive, or you cannot get them to stick to your walls, you can use a combination of cheap brown paper you tape to a wall, plus sticky notes that you put on the paper.</p>
+<p>Such brownpaper sessions can sometimes work well, especially for work closer to requirements than to design, like when using <a href="../events/event-storming.html">event storming</a>.</p>
+<p>Compared to whiteboards, brownpaper:</p>
+<ul>
+<li>supports more detail (if you write small on normal-size sticky notes)</li>
+<li>is cheaper to scale up for very large groups</li>
+<li>makes it easier to move things around (moving a sticky vs redrawing a box)</li>
+<li>focuses more on things (written on stickies) than the links between them (lines drawn between stickies)</li>
+<li>focuses more on words (written on stickies) than on visuals (shapes drawn by hand)</li>
+</ul>
+<p>This last point is why brownpaper sessions don't work as well for <a href="../ui/ui-whiteboarding.html">ui design</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="records.html" class="btn btn-neutral float-left" title="Recording decisions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="drawio.html" class="btn btn-neutral float-right" title="Draw.io for architecture">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/lsimons/caseum" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="records.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="drawio.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

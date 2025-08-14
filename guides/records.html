@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Leo Simons" /><link rel="canonical" href="https://lsimons.github.io/caseum/guides/records.html" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Recording decisions - Caseum</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Recording decisions";
+        var mkdocs_page_input_path = "guides/records.md";
+        var mkdocs_page_url = "/caseum/guides/records.html";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Caseum
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="stages.html">Architecture stages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="as-is-to-be.html">As-is and to-be</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Recording decisions</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#tooling-advice-for-recording-decisions">Tooling advice for recording decisions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#consider-architecture-decision-records-adrs">Consider Architecture Decision Records (ADRs)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#consider-requests-for-discussions-rfds">Consider Requests For Discussions (RFDs)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#avoid-rfcs-enhancement-proposals-and-detailed-design-documents">Avoid RFCs, Enhancement Proposals, and Detailed Design Documents</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#avoid-uml-archimate-rup-togaf-ieee-1016">Avoid UML, ArchiMate, RUP, TOGAF, IEEE 1016</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="whiteboarding.html">Whiteboarding architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="drawio.html">Draw.io for architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="platforms.html">Designing platforms</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Components using C4</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-whiteboarding.html">Component whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-template.html">Component template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-code.html">Component architecture-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Actors using roles</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../actors/actor-whiteboarding.html">Actor whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../actors/role-template.html">Role template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Stories using Gherkin</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-whiteboarding.html">Story whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-template.html">Story template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/gherkin-code.html">Gherkin specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Events using event storming</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/event-storming.html">Event whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/event-template.html">Event template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/asyncapi-code.html">AsyncAPI specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI using whiteboarding</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-whiteboarding.html">UI whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-template.html">UI template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Models using TLM</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/fact-modeling.html">Fact-based modeling</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/fact-whiteboarding.html">Fact whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/tlm-template.html">TLM template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/tlm-code.html">TLM models-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../CODE_OF_CONDUCT.html">Code of conduct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing to Caseum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LICENSE.txt">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/fonts.html">Caseum fonts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/colors/colors.html">Caseum colors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../presentations/introduction.pdf">Introduction slides (PDF)</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Caseum</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Guides</li>
+      <li class="breadcrumb-item active">Recording decisions</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/lsimons/caseum/edit/main/docs/guides/records.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="recording-decisions">Recording decisions</h1>
+<p><strong>Architecture records the important design decisions for a software system. The records are for communicating with current and future people working on and with the software.</strong></p>
+<p><strong>Architecture is done by thinking together using views and tools that can be used by all the people working on the software.</strong></p>
+<p><img alt="Screenshot of a slack channel being used to record decisions" src="records-slack-example.png" /></p>
+<p>Record the important decisions and why they were made. Change the decisions when needed.</p>
+<p>Architecture should be as simple as possible, as high level as possible, as informal as possible. It's better to have less architecture at a higher level that is kept up-to-date than have detailed information that's wrong. </p>
+<h2 id="tooling-advice-for-recording-decisions">Tooling advice for recording decisions</h2>
+<p>Use tools to help communicate simply and effectively. Using fewer, simpler, and more informal tools works well with Caseum.</p>
+<p>When everyone working on the software is regularly in the same physical place, the walls of that place are a good place for the architecture record. In all other cases, use a digital communication system that everyone can use. The system should keep a permanent record and support images and other files. Use the system already in place if possible. Good systems include chat systems such as Slack or e-mail groups such as Office Teams/SharePoint groups.</p>
+<p>When working on projects for multiple months, create a digital library. Good systems include wikis such as Confluence or online drives such as Office Teams/SharePoint drives. Use the system already in place if possible. When making digital diagrams, another tool can be integrated/linked with the library, such as the draw.io Confluence diagramming plugin.</p>
+<p>When working with models as code or executable specifications, add a source control system like Git for those and link/integrate it with the digital library. </p>
+<h2 id="consider-architecture-decision-records-adrs">Consider Architecture Decision Records (ADRs)</h2>
+<p>Sometimes the approach for recording decisions is a little more formalized, using <a href="https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions">Architecture Decision Records</a>.</p>
+<p>You can combine ADRs with Caseum, but be careful:</p>
+<ul>
+<li>ADR approaches often make things more formal than needed. The people involved in the project may start to expect certain people to be involved in a certain way, to act as owners or approvers or gatekeepers of the architecture.</li>
+<li>ADR approaches often supply detailed templates with a lot of details to capture about the decision, rather than just the decision itself. These details can be a distraction from the most important stuff, leading to people spending time filling out forms instead of thinking together and communicating.</li>
+<li>ADR approaches often advocate keeping all records in technical version control systems like Git. Some people involved in the project (like product managers, key stakeholders, project managers) may not be comfortable using Git.</li>
+</ul>
+<p>If you don't need the formality, keep things simpler. If you don't know if you need the formality, don't introduce it until you do.</p>
+<p>A good sign that you need this kind of structure is if there is too much information that people are actually spending a lot of time looking for decision records, or looking for the right version of a decision record. That is more common on projects that last for more than 9 months, include more than 7 people, or have more than 50 diagrams.</p>
+<h2 id="consider-requests-for-discussions-rfds">Consider Requests For Discussions (RFDs)</h2>
+<p>Sometimes the approach for making decisions is a little more formalized, using <a href="https://oxide.computer/blog/rfd-1-requests-for-discussion">Requests For Discussions (RFDs)</a>.</p>
+<p>You can combine RFDs with Caseum, but be careful: the same formal focus that comes with ADRs can come with RFDs. RFDs work best when your team or organization has established a strong culture of healthy discussion.</p>
+<h2 id="avoid-rfcs-enhancement-proposals-and-detailed-design-documents">Avoid RFCs, Enhancement Proposals, and Detailed Design Documents</h2>
+<p>Large, complex safety-critical systems often use decision records that are more formal, using standardized processes to make the decisions. Do not use Caseum for such systems.</p>
+<p>Such approaches include</p>
+<ul>
+<li>RFCs such as those used to design the internet: <a href="https://www.ietf.org/standards/rfcs/">IETF RFCs</a></li>
+<li>Enhancement Proposals such as those used to design programming languages <a href="https://peps.python.org/pep-0001/">Python</a></li>
+<li>Formal design descriptions such as those used to design military systems: <a href="https://www.standards.doe.gov/standards-documents/3000/3024-astd-2011">DOD System Design Descriptions (SDD)</a> </li>
+<li>Standardized formal design processes such as those used to design space systems: <a href="http://microelectronics.esa.int/vhdl/pss/PSS-05-0.pdf">ESA PSS-05-0</a> and <a href="https://ecss.nl/standard/ecss-e-st-40c-software-general-requirements/">ECSS-E-ST-40C</a></li>
+</ul>
+<h2 id="avoid-uml-archimate-rup-togaf-ieee-1016">Avoid UML, ArchiMate, RUP, TOGAF, IEEE 1016</h2>
+<p>Architecture records can also be kept more formally using enterprise standards. Borrow good ideas from these standards but do not combine them with Caseum.</p>
+<p>Such standards include</p>
+<ul>
+<li>The Universal Modeling Language (UML)</li>
+<li>The Open Group ArchiMate</li>
+<li>The Open Group Architecture Framework (TOGAF)</li>
+<li>The Rational Unified Process (RUP)</li>
+<li>The IEEE 1016 Software Design Description (SDD)</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="as-is-to-be.html" class="btn btn-neutral float-left" title="As-is and to-be"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="whiteboarding.html" class="btn btn-neutral float-right" title="Whiteboarding architecture">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/lsimons/caseum" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="as-is-to-be.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="whiteboarding.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

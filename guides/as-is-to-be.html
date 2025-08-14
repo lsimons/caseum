@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Leo Simons" /><link rel="canonical" href="https://lsimons.github.io/caseum/guides/as-is-to-be.html" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>As-is and to-be - Caseum</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "As-is and to-be";
+        var mkdocs_page_input_path = "guides/as-is-to-be.md";
+        var mkdocs_page_url = "/caseum/guides/as-is-to-be.html";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Caseum
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="stages.html">Architecture stages</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">As-is and to-be</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#finding-facts">Finding facts</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#looking-at-example-data-to-find-facts">Looking at example data to find facts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#event-storming-to-find-facts">Event storming to find facts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#working-backwards">Working backwards</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#from-as-is-to-to-be">From as-is to to-be</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#imagining-big-changes">Imagining big changes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#other-terminology">Other terminology</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="records.html">Recording decisions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="whiteboarding.html">Whiteboarding architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="drawio.html">Draw.io for architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="platforms.html">Designing platforms</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Components using C4</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-whiteboarding.html">Component whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-template.html">Component template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-code.html">Component architecture-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Actors using roles</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../actors/actor-whiteboarding.html">Actor whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../actors/role-template.html">Role template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Stories using Gherkin</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-whiteboarding.html">Story whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-template.html">Story template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/gherkin-code.html">Gherkin specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Events using event storming</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/event-storming.html">Event whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/event-template.html">Event template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/asyncapi-code.html">AsyncAPI specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI using whiteboarding</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-whiteboarding.html">UI whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-template.html">UI template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Models using TLM</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/fact-modeling.html">Fact-based modeling</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/fact-whiteboarding.html">Fact whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/tlm-template.html">TLM template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../models/tlm-code.html">TLM models-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../CODE_OF_CONDUCT.html">Code of conduct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing to Caseum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LICENSE.txt">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/fonts.html">Caseum fonts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/colors/colors.html">Caseum colors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../presentations/introduction.pdf">Introduction slides (PDF)</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Caseum</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Guides</li>
+      <li class="breadcrumb-item active">As-is and to-be</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/lsimons/caseum/edit/main/docs/guides/as-is-to-be.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="as-is-and-to-be-designs">As-is and to-be designs</h1>
+<p><strong>The most important architecture description of the existing system is the one as it currently exists, "as-is".</strong></p>
+<p>Learning, agreeing, and knowing how things actually are is very important. Too many teams focus only on what should be or what could be, "to-be". This is a mistake. When you work with individual assumptions of how things are instead of a shared understanding, you will build the wrong thing the wrong way slowly.</p>
+<h2 id="finding-facts">Finding facts</h2>
+<p>When working with an existing system, it is common for its architecture description to be a little or a lot out of date. Often the only design document is of what teams intended to build, not what they actually built. This means designs cannot be trusted.</p>
+<p>To create a shared as-is understanding of a software architecture, gather all the descriptions available and ask the maintainers of the system whether the descriptions are up-to-date. Descriptions that are out-of-date should be flagged as such. They do not all need to be updated.</p>
+<p>Hold interactive <a href="whiteboarding.html">whiteboarding</a> workshops to draw new pictures of the system as-is. Any box, line, circle, or other element you draw on the whiteboard should be backed up by a fact. Look for evidence in the running system, its source code, or the knowledge of experts. Do not draw things that may be true or are assumed to be true.</p>
+<p>Most systems have only a few of the Caseum views. Drawing the other views helps to find more facts. Capture all the information across different views, iterating and refining the as-is design as you learn more together. When you have a complete set of facts, tell the story of the as-is system to each other several times, finding more facts and information as you do so.</p>
+<h3 id="looking-at-example-data-to-find-facts">Looking at example data to find facts</h3>
+<p>You can understand a lot about existing systems by looking at their data inputs and outputs. Capture UI forms and screens, API requests and responses, reports, and dashboards. It can help to print these out and stick them on the walls next to your whiteboards.</p>
+<p>As you understand more, use <a href="../models/fact-whiteboarding.html">fact-based whiteboarding</a> to draw the data model underlying and supporting the examples. Check each type and each link between types against the examples.</p>
+<h3 id="event-storming-to-find-facts">Event storming to find facts</h3>
+<p>An <a href="../events/event-storming.html">event storming</a> workshop is a great way to find these as-is facts, especially if you have access to business stakeholders. Especially for long-running systems, their current use can be very different from the original intent, and this is important to capture.</p>
+<h3 id="working-backwards">Working backwards</h3>
+<p>The <a href="stages.html">guide on stages of design</a> suggests working iteratively in this order:</p>
+<ol>
+<li>Actors</li>
+<li>Stories</li>
+<li>UI</li>
+<li>Events</li>
+<li>Components</li>
+<li>Models</li>
+</ol>
+<p>Starting with actors, stories, and UI helps to make the rest of the design user-centric. When documenting existing systems, you can work backward instead. First capture all the facts you can find about the system, then start to involve experts and stakeholders to understand how the system is used and why.</p>
+<h2 id="from-as-is-to-to-be">From as-is to to-be</h2>
+<p>Many engineers are inclined to talk about solving problems as they see them. When documenting the as-is architecture, it is natural to want to talk about changing it to fix things. Rather than prevent such thoughts completely, instead capture the ideas about possible changes as you go, and create a backlog of design ideas.</p>
+<p>Most teams spend too much time on to-be designs and not enough on as-is designs. If you don't know where you are, it is difficult to get to where you want to be. Complete the as-is design to a good level of quality and detail.</p>
+<p>Once the as-is description of the system is reasonably complete and everyone on the team can tell the same story about the system from a common shared understanding, it is time to start designing changes to the existing system to end up in a new situation.</p>
+<p>It can be tempting to design the to-be situation based on all the new ideas that were already generated. Instead, stay user-focused. Describe the needs of actors that are not being (fully) met by the existing system and the stories that would meet their needs. Then design just enough changes to the existing system to meet those needs.</p>
+<p>For many existing systems, the unmet needs are those of the maintainers of the existing system. The maintainers spend so much time on keeping the lights on that they cannot make the changes their users need. In this case, it can help to consider these maintainers as users and to <a href="platforms.html">introduce a platform</a> layer to capture their needs.</p>
+<h2 id="imagining-big-changes">Imagining big changes</h2>
+<p>Sometimes when doing design work for an existing system, there is a hope that radical new technology creates a big improvement. The existing system may be using legacy technology. Its maintainers may have moved on. Stakeholders are interested in rebuilding or replatforming such a system in a big bang.</p>
+<p>But such big-bang migrations do not work. Do not promise otherwise.</p>
+<p>In such a situation, the to-be system can be designed as a completely new system following the <a href="stages.html">guide to stages</a>. Such a to-be system can help to convince non-technical stakeholders.</p>
+<p>Once the new to-be system is imagined, design many small step-by-step migrations from the as-is situation to the to-be situation. Keep a sequence of <a href="records.html">records</a> that move the current system incrementally to the new situation. If you cannot design such a sequence, change the to-be design so that the incremental migration becomes possible.</p>
+<p>The larger and older the existing system, the longer the migration path seems, and the higher the temptation becomes to consider a big-bang change...the lower the chance of success of such big-bang change becomes.</p>
+<h2 id="other-terminology">Other terminology</h2>
+<p>'Ist' is the German term for as-is, and 'Soll' is the German term for to-be, so in German you can speak of 'Ist und Soll' to describe the current and future situation.</p>
+<p>The steps to take to go from as-is to to-be architecture are crossing a gap, so you can speak of 'gap analysis' to describe part of the design work of crossing the gap, a popular phrase in business language. Note that beyond just doing the analysis, you should explicitly design the migration path, as described above.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="stages.html" class="btn btn-neutral float-left" title="Architecture stages"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="records.html" class="btn btn-neutral float-right" title="Recording decisions">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/lsimons/caseum" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="stages.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="records.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
