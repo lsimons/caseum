@@ -178,13 +178,13 @@ Alternatively you could update the diagrams periodically, like at the beginning 
 
 ### Time budget for architecture
 
-Creating the initial digital versions of all the architecture views can be a significant a one-off investment, perhaps up to a couple of weeks of effort if you managed to stay in stage 1 for as long as is recommended.
+Creating the initial digital versions of all the architecture views can be a significant one-off investment, perhaps up to a couple of weeks of effort if you managed to stay in stage 1 for as long as is recommended.
 
 After that initial investment, maintaining the digital views will also take some time on an ongoing basis. It shouldn't take more than about 20% of your time, and 10% would be better.
 
 If you find you do not have time for maintaining the diagrams, as a first step, clearly label the diagrams out-of-date. If the lack of up-to-date diagrams starts to cause you issues, then decide what to do. A good approach may be to only maintain the higher-level designs. Because those may change less frequently, this will be less effort.
 
-If you have many stories, events, components or models, it may become more efficient to maintain them as code instead of as visual diagrams. That efficiency is the main reason to switch to Caseum stage 3.
+If you have many stories, events, components, or models, it may become more efficient to maintain them as code instead of as visual diagrams. That efficiency is the main reason to switch to Caseum stage 3.
 
 ### Handling non-functional requirements
 
@@ -198,7 +198,7 @@ During stage 3 you define and maintain your Caseum architecture not using inform
 
 ### Actively try to avoid stage 3
 
-Many engineers like the idea of models-as-code in theory. It appeals to them because they like coding, so then coding the architecture also makes sense. There is also a promise of higher consistency. But such a technical approach can have serious downsides too:
+Many engineers like the idea of models-as-code in theory. It appeals to them because they like coding, so coding the architecture also makes sense. There is also a promise of higher consistency. But such a technical approach can have serious downsides too:
 
 * Requiring coding skills to work on the architecture, excluding some team members
 * Rigid inflexible technical tools making it hard to flexibly express the architecture of the system in the most clear way
@@ -206,7 +206,7 @@ Many engineers like the idea of models-as-code in theory. It appeals to them bec
 
 The larger and more complex a software system, the more likely there is value in adopting models as code. As a rule of thumb, it makes sense to start to evaluate using such tools when you have one system with over 50 components, over 100 models, and/or over 50 people working on it.
 
-Note that if you created a great software design, you can end up with many independent small systems maintained by small teams that have limited interaction. In that case even for very large software landscapes, you still do not ever need stage 3!
+Note that if you created a great software design, you can end up with many independent small systems maintained by small teams that have limited interaction. In that case, even for very large software landscapes, you still do not ever need stage 3!
 
 ### Experiment!
 
@@ -217,13 +217,13 @@ Rather than just switch from stage 2 to stage 3, do some experiments. Create som
 1. **Stories**:
    * Start writing your stories in Gherkin format.
    * You can consider using BDD and automate testing using the Gherkin stories, which is a great benefit of Gherkin, which is why Stories are a good view to start Caseum stage 3 with.
-   * You can use the [gherkin coding guide](../stories/gherkin-code.md).
+   * You can use the [Gherkin coding guide](../stories/gherkin-code.md).
 2. **Components**:
    * C4 has a great textual format in Structurizr that is worth using if you have a lot of components.
    * You can use the [C4 coding guide](../components/c4-code.md).
 3. **Models**:
-   * If you use advanced fact-based modeling there are good bidirectional mappings between software systems and textual specifications, and you should consider them.
-   * For example, if you adopted TLM, you can use the [tlm coding guide](../models/tlm-template.md).
+   * If you use advanced fact-based modeling, there are good bidirectional mappings between software systems and textual specifications, and you should consider them.
+   * For example, if you adopted TLM, you can use the [TLM coding guide](../models/tlm-template.md).
    * On the other hand, if you use UML or other object-oriented modeling techniques, do not use automated bidirectional mapping tools, because they produce low-quality code. In this case it is better to work "code first": write source code and then generate the model definitions from your code.
 4. **Events**:
    * You can consider using a formal standard for defining and maintaining event definitions.
@@ -233,7 +233,7 @@ Rather than just switch from stage 2 to stage 3, do some experiments. Create som
    * There's no executable specification for actors. Maintain the role descriptions as text, like in phase 2.
 6. **UI**:
    * There's no executable specification for UI.
-   * If you have a large team working on a large software system that includes UI then you probably have dedicated UI designers. Let them maintain the UI views and link to it from your architecture documentation.
+   * If you have a large team working on a large software system that includes UI, then you probably have dedicated UI designers. Let them maintain the UI views and link to it from your architecture documentation.
 
 ## Beyond stage 3
 
@@ -245,4 +245,4 @@ If you have many developer teams you may consider a platform team that focuses o
 
 ### Formal (enterprise) standards
 
-If you are building very large systems you may consider a more formal architecture approach. Do not use Caseum to design space shuttles or nuclear power plants.
+If you are building very large systems, you may consider a more formal architecture approach. Do not use Caseum to design space shuttles or nuclear power plants.

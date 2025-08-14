@@ -14,7 +14,7 @@ Caseum uses the following color scheme:
 * Dark colors: special/focus
 * Light colors: accent/background/selection/grouping
 
-### Colors numbers
+### Color numbers
 * main
   * Blue: #29467F — (41,70,128)
   * Green: #3C6320 — (60.99,32)
@@ -32,9 +32,9 @@ Caseum uses the following color scheme:
   * Light Brown: #B29F8B — (178,159,139)
 * grayscale
   * Black: #000000 — (0,0,0)
-  * Dark Grey: #595959 - (89,89,89)
-  * Grey: #808080 - (128,128,128)
-  * Light Grey: #B2B2B2 - (178,178,178)
+  * Dark Grey: #595959 — (89,89,89)
+  * Grey: #808080 — (128,128,128)
+  * Light Grey: #B2B2B2 — (178,178,178)
   * White: #FFFFFF — (255,255,255)
 
 ### Background

@@ -14,9 +14,9 @@ Architecture should be as simple as possible, as high level as possible, as info
 
 Use tools to help communicate simply and effectively. Using fewer, simpler, and more informal tools works well with Caseum.
 
-When everyone working on the software is regularly in the same physical place, the walls of that place are a good place for the architecture record. In all other cases, use a digital communication system, that everyone can use. The system should keep a permanent record and support images and other files. Use the system already in place if possible. Good systems include chat systems such as Slack or e-mail groups such as Office Teams/SharePoint groups.
+When everyone working on the software is regularly in the same physical place, the walls of that place are a good place for the architecture record. In all other cases, use a digital communication system that everyone can use. The system should keep a permanent record and support images and other files. Use the system already in place if possible. Good systems include chat systems such as Slack or e-mail groups such as Office Teams/SharePoint groups.
 
-When working on projects for multiple months, create a digital library. Good systems include wikis such as Confluence or online drives such as Office Teams/SharePoint drives. Use the system already in place if possible When making digital diagrams another tool can be integrated/linked with the library, such as the draw.io Confluence diagramming plugin.
+When working on projects for multiple months, create a digital library. Good systems include wikis such as Confluence or online drives such as Office Teams/SharePoint drives. Use the system already in place if possible. When making digital diagrams, another tool can be integrated/linked with the library, such as the draw.io Confluence diagramming plugin.
 
 When working with models as code or executable specifications, add a source control system like Git for those and link/integrate it with the digital library. 
 
@@ -26,9 +26,9 @@ Sometimes the approach for recording decisions is a little more formalized, usin
 
 You can combine ADRs with Caseum, but be careful:
 
-* ADR approaches often make things more formal than needed. The people involved in the project may start to expect certain people to be involved in certain way, to act as owners or approvers or gatekeepers of the architecture.
+* ADR approaches often make things more formal than needed. The people involved in the project may start to expect certain people to be involved in a certain way, to act as owners or approvers or gatekeepers of the architecture.
 * ADR approaches often supply detailed templates with a lot of details to capture about the decision, rather than just the decision itself. These details can be a distraction from the most important stuff, leading to people spending time filling out forms instead of thinking together and communicating.
-* ADR approaches often advocate keeping all records in technical version control systems like Git. Some people involved in the project (like product managers, key stakeholders, project managers) may not be comfortable using git.
+* ADR approaches often advocate keeping all records in technical version control systems like Git. Some people involved in the project (like product managers, key stakeholders, project managers) may not be comfortable using Git.
 
 If you don't need the formality, keep things simpler. If you don't know if you need the formality, don't introduce it until you do.
 
@@ -38,11 +38,11 @@ A good sign that you need this kind of structure is if there is too much informa
 
 Sometimes the approach for making decisions is a little more formalized, using [Requests For Discussions (RFDs)](https://oxide.computer/blog/rfd-1-requests-for-discussion).
 
-You can combine RFDs with Caseum, but be careful: the same formal focus that comes with ADRs can come with RFDSs. RFDs work best when your team or organization has established a strong culture of healthy discussion.
+You can combine RFDs with Caseum, but be careful: the same formal focus that comes with ADRs can come with RFDs. RFDs work best when your team or organization has established a strong culture of healthy discussion.
 
 ## Avoid RFCs, Enhancement Proposals, and Detailed Design Documents
 
-Large, complex safety critical systems often use decision records that are more formal, using standardized processes to make the decisions. Do not use Caseum for such systems.
+Large, complex safety-critical systems often use decision records that are more formal, using standardized processes to make the decisions. Do not use Caseum for such systems.
 
 Such approaches include
 

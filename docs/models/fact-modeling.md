@@ -14,7 +14,7 @@ Because it works really well! The original [ORM whitepaper](http://orm.net/pdf/O
 
 ## Why should I use FBM with Caseum?
 
-Caseum is a quite _practical_ architecture tool for building software. The main purpose of architecture when making software is to help you to design and to _think_ about the software. Caseum picks the best available tools for thinking, and modeling using facts is a great way to think!
+Caseum is quite a _practical_ architecture tool for building software. The main purpose of architecture when making software is to help you to design and to _think_ about the software. Caseum picks the best available tools for thinking, and modeling using facts is a great way to think!
 
 ## What is a fact?
 

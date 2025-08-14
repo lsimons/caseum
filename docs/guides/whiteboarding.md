@@ -20,7 +20,7 @@ There are also great mobile apps for keeping digital records. If you use Slack, 
 
 ### Have lots of good materials
 
-* It is great to have lots of whiteboards (7 is a good number). Even better is a big room where all the walls are whiteboards. On a budget you can get whiteboard stickers to put on walls or windows.
+* It is great to have lots of whiteboards (7 is a good number). Even better is a big room where all the walls are whiteboards. On a budget, you can get whiteboard stickers to put on walls or windows.
 * Have enough dry-erase markers in multiple colors (black, blue, green, red), several times more than the number of participants.
 * Have several dry-erase wipers.
 * Have dry-wipe cloth plus whiteboard cleaning spray to fully clean the whiteboards. Cheap cloths often work better than whiteboard eraser blocks.
@@ -58,8 +58,8 @@ You can find a lot of specific drawing exercises online, but you don't need to l
 
 ### Draw to take photos
 
-Practices whiteboarding to capture the result:
-* make a simple diagram on a whiteboard with boxes, lines and text
+Practice whiteboarding to capture the result:
+* make a simple diagram on a whiteboard with boxes, lines, and text
 * take a photo of the diagram with your phone
 * look at the photo
 * see what does and does not look good in the photo, pick one thing to improve

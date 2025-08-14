@@ -11,7 +11,7 @@
 
 The context diagram is the highest-level diagram in C4. It shows the software system in context of its environment.
 
-Do not skip the context diagram when drawing architecture on the whiteboard. The context diagram grounds the architecture story in the business context. It connects the [actors](../actors/actor-whiteboarding.md) and [stories](../stories/story-whiteboarding.md) to the component architeture.
+Do not skip the context diagram when drawing architecture on the whiteboard. The context diagram grounds the architecture story in the business context. It connects the [actors](../actors/actor-whiteboarding.md) and [stories](../stories/story-whiteboarding.md) to the component architecture.
 
 If you don't know where to start, follow this process:
 * First, draw the actors, at the top of the whiteboard.
@@ -51,4 +51,4 @@ C4 originally defined only Context, Container, Component, and Class Diagrams (wi
 
 ## Don't focus too much on components
 
-Many users of C4 use the component-based view as their only or at least their dominant view. Caseum recommends to also use all the other views. Some designs are best detailed using [events](../events/event-storming.md), while others are best modelled using [facts](../models/fact-modeling.md).
+Many users of C4 use the component-based view as their only or at least their dominant view. Caseum recommends also using all the other views. Some designs are best detailed using [events](../events/event-storming.md), while others are best modelled using [facts](../models/fact-modeling.md).

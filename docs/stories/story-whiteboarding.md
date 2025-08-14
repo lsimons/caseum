@@ -10,7 +10,7 @@ Talk through stories from the perspective of each [actor's needs](../actors/acto
 
 ## Limit the level of detail if you can
 
-Sometimes, users or domain experts will insist in going on a lot of detail about a particular story because they consider those details particularly vital to the system. When this happens, capture the details using a [Given/When/Then Gherkin-style story](story-template.md), but you do not need to this for all stories.
+Sometimes, users or domain experts will insist on going into a lot of detail about a particular story because they consider those details particularly vital to the system. When this happens, capture the details using a [Given/When/Then Gherkin-style story](story-template.md), but you do not need to do this for all stories.
 
 If it is difficult to group stories into coarse-grained epics, simply switch to [event storming](../events/event-storming.md) to capture multiple stories in a flow consisting of domain events, and return back to the story list later.
 
