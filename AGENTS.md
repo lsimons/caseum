@@ -1,5 +1,7 @@
 # Agent Instructions for caseum
 
+> This file (`AGENTS.md`) is the canonical agent configuration. `CLAUDE.md` is a symlink to this file.
+
 Documentation for the Caseum software architecture methodology. Combines C4, Actors, Stories, Events, UI, and Models views.
 
 ## Quick Reference
