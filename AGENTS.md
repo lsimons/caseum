@@ -31,23 +31,30 @@ Follow [Conventional Commits](https://conventionalcommits.org/):
 
 ## Session Completion
 
-Work is NOT complete until CI passes on the pushed commit.
+Work is NOT complete until every change is committed, pushed, and CI passes.
 
 1. **Quality gates** (if docs changed):
    ```bash
    uv run mkdocs build
    ```
 
-2. **Push**:
+2. **Commit**: stage and commit every change from this session. Do not leave the working tree dirty.
+   ```bash
+   git status              # review untracked and unstaged files
+   git add <files>
+   git commit -m "<type>(<scope>): <description>"
+   ```
+
+3. **Push**:
    ```bash
    git pull --rebase && git push
    git status  # must show "up to date with origin"
    ```
 
-3. **Verify CI**:
+4. **Verify CI**:
    ```bash
    mise run ci-watch
    ```
-   On failure, inspect with `gh run view --log-failed`, fix, push, and re-watch.
+   On failure, inspect with `gh run view --log-failed`, fix, commit, push, and re-watch.
 
-Never stop before CI is green. If push or CI fails, resolve and retry.
+Never stop before CI is green. If anything fails, resolve and retry.
