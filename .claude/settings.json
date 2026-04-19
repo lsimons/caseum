@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mise run install)",
+      "Bash(mise run build)",
+      "Bash(mise run deploy)",
+      "Bash(mise run install *)",
+      "Bash(mise run build *)",
+      "Bash(mise run deploy *)",
+      "Bash(uv run mkdocs build*)",
+      "Bash(uv run mkdocs serve*)"
+    ]
+  }
+}
