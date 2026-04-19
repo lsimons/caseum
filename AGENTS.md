@@ -31,7 +31,7 @@ Follow [Conventional Commits](https://conventionalcommits.org/):
 
 ## Session Completion
 
-Work is NOT complete until `git push` succeeds.
+Work is NOT complete until CI passes on the pushed commit.
 
 1. **Quality gates** (if docs changed):
    ```bash
@@ -44,4 +44,10 @@ Work is NOT complete until `git push` succeeds.
    git status  # must show "up to date with origin"
    ```
 
-Never stop before pushing. If push fails, resolve and retry.
+3. **Verify CI**:
+   ```bash
+   mise run ci-watch
+   ```
+   On failure, inspect with `gh run view --log-failed`, fix, push, and re-watch.
+
+Never stop before CI is green. If push or CI fails, resolve and retry.
