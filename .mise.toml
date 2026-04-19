@@ -1,0 +1,21 @@
+# mise: https://mise.jdx.dev/
+# pyproject.toml's `requires-python` stays authoritative.
+
+[tools]
+python = "3.14"
+uv = "latest"
+
+[env]
+_.file = { path = ".env", optional = true }
+
+[tasks.install]
+description = "uv sync"
+run = "uv sync"
+
+[tasks.build]
+description = "Build mkdocs site (publish_index.py + mkdocs build)"
+run = ["uv run publish_index.py", "uv run mkdocs build"]
+
+[tasks.deploy]
+description = "Deploy to gh-pages (mkdocs gh-deploy --force)"
+run = ["uv run publish_index.py", "uv run mkdocs gh-deploy --force"]
