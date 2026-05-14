@@ -132,3 +132,4 @@ docs/CODE_OF_CONDUCT.md
 docs/CONTRIBUTING.md
 docs/LICENSE.txt
 site/
+.claude/settings.local.json
