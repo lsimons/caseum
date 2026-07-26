@@ -1,8 +1,10 @@
 # Whiteboarding Models
 
-**Draw the key facts about the concepts of your business domain on the whiteboard. Focus on types and the links between them, not the underlying structure.**
+**Together with the people who know the domain, draw the key facts about its concepts on the whiteboard. Focus on types and the links between them, not the underlying structure.**
 
 ![Processed photo of a whiteboard containing facts](fact-whiteboarding-example.jpg)
+
+The whiteboard is where you discover and agree the facts, in the room with the domain experts. Keep it informal so anyone can contribute: no software, no formal notation, just circles, lines, sticky notes, and the conversation.
 
 ## Draw just the facts
 
@@ -36,8 +38,8 @@ If a type has a single primary identifier in the business domain, write it insid
 
 The whiteboard is a tool for thinking. It is not necessary to specify all facts on the whiteboard. Instead, focus on the facts that are most important to the software design.
 
-While you can draw [TLM or ORM diagrams](tlm-template.md) on a whiteboard, the addition of formal syntax and semantics makes it harder to contribute for those not trained in the technique. It is often better to stick to simpler diagrams and focus on the conversation of what the key facts are and how the software should support such facts.
+While you can draw [formal ORM diagrams](tlm-template.md) on a whiteboard, the added syntax and semantics make it harder to contribute for those not trained in the technique — the expert who happily corrects a sentence will hesitate to touch a diagram symbol. It is often better to stick to simpler diagrams and focus on the conversation about what the key facts are and how the software should support them.
 
 ## Add examples of facts
 
-A few pieces of concrete example data help a lot to clarify the model. Especially for more complex domain concepts, add some concrete examples, usually as a table of sample data.
+A few pieces of concrete example data help a lot to clarify the model. Especially for more complex domain concepts, add some concrete examples, usually as a table of sample data. Examples do double duty: they help you discover a fact and they test it. If a domain expert can't fill in the example table, the fact is wrong.
