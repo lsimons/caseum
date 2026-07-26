@@ -36,8 +36,8 @@ nav:
   - Models using facts:
       - Fact-based modeling: models/fact-modeling.md
       - Fact whiteboarding: models/fact-whiteboarding.md
-      - Model diagrams: models/tlm-template.md
-      - LinkML models-as-code: models/tlm-code.md
+      - Model diagrams: models/model-diagrams.md
+      - LinkML models-as-code: models/linkml-code.md
   - Misc:
       - Code of conduct: CODE_OF_CONDUCT.md
       - Contributing to Caseum: CONTRIBUTING.md

@@ -38,7 +38,7 @@ If a type has a single primary identifier in the business domain, write it insid
 
 The whiteboard is a tool for thinking. It is not necessary to specify all facts on the whiteboard. Instead, focus on the facts that are most important to the software design.
 
-While you can draw [formal ORM diagrams](tlm-template.md) on a whiteboard, the added syntax and semantics make it harder to contribute for those not trained in the technique — the expert who happily corrects a sentence will hesitate to touch a diagram symbol. It is often better to stick to simpler diagrams and focus on the conversation about what the key facts are and how the software should support them.
+While you can draw [formal ORM diagrams](model-diagrams.md) on a whiteboard, the added syntax and semantics make it harder to contribute for those not trained in the technique — the expert who happily corrects a sentence will hesitate to touch a diagram symbol. It is often better to stick to simpler diagrams and focus on the conversation about what the key facts are and how the software should support them.
 
 ## Add examples of facts
 

@@ -20,7 +20,7 @@ Caseum combines these views:
 * **S**tories using Gherkin
 * **E**vents using event storming
 * **U**I using wireframes
-* **M**odels using TLM
+* **M**odels using facts
 
 <img src="docs/guides/stages-example.png" width="200" align="right" style="margin-left: 10px" alt="Several screenshots of architecture views">
 
@@ -50,14 +50,14 @@ See the [guide on recording decisions](docs/guides/records.md).
 
 ## Tools
 
-<img src="docs/models/tlm-model-example.png" width="200" align="right" style="margin-left: 10px" alt="Partial Type-Link-Model diagram">
+<img src="docs/models/model-example.png" width="200" align="right" style="margin-left: 10px" alt="Partial fact-based model diagram">
 
 The primary tools used by Caseum are:
 
 * Whiteboards, markers, and sticky notes
 * Draw.io for digital diagrams
 * Markdown text files for decision records
-* Model specification in structured text formats (Structurizr C4, Gherkin, TLMD and AsyncAPI JSON)
+* Model specification in structured text formats (Structurizr C4, Gherkin, LinkML and AsyncAPI JSON)
 
 See the guides on [whiteboarding architecture](docs/guides/whiteboarding.md) and on [using draw.io for architecture](docs/guides/drawio.md).
 
@@ -70,7 +70,7 @@ Different tools are available per view per stage:
 | **Stories**    | [Goals & epics](docs/stories/story-whiteboarding.md) | [User Story Markdown Template](docs/stories/story-template.md) | [Gherkin](docs/stories/gherkin-code.md)        |
 | **Events**     | [Event Storming](docs/events/event-storming.md)      | [ES Draw.io Library](docs/events/event-template.md)            | [AsyncAPI](docs/events/asyncapi-code.md) |
 | **UI**         | [Boxes & lines](docs/ui/ui-whiteboarding.md)         | [Wireframes Draw.io Library](docs/ui/ui-template.md)           | -                                              |
-| **Models**     | [Circles & lines](docs/models/fact-whiteboarding.md) | [TLM Draw.io Library](docs/models/tlm-template.md)             | [TLMD](docs/models/tlm-code.md)                |
+| **Models**     | [Circles & lines](docs/models/fact-whiteboarding.md) | [Model diagrams](docs/models/model-diagrams.md)             | [LinkML](docs/models/linkml-code.md)                |
 
 ## License
 

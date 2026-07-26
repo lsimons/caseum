@@ -2,13 +2,13 @@
 
 **Draw the agreed facts of the domain model as a tidy diagram.**
 
-![Diagram of a fact-based domain model](tlm-model-example.png)
+![Diagram of a fact-based domain model](model-example.png)
 
 Once you have talked through the facts on the whiteboard ([stage 1](fact-whiteboarding.md)), stage 2 is about producing cleaner diagrams to communicate and review the model. You have two good options.
 
 ## Generate diagrams from a LinkML schema
 
-If you are going to capture the model as code anyway, write the [LinkML](https://linkml.io/) schema first (see [models-as-code](tlm-code.md)) and let it generate the diagram for you:
+If you are going to capture the model as code anyway, write the [LinkML](https://linkml.io/) schema first (see [models-as-code](linkml-code.md)) and let it generate the diagram for you:
 
 * `gen-erdiagram hr.yaml` produces a [Mermaid](https://mermaid.js.org/) ER diagram.
 * `gen-plantuml hr.yaml` produces a [PlantUML](https://plantuml.com/) class diagram.

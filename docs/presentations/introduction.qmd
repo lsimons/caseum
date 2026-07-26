@@ -138,7 +138,7 @@ During caseum stage 1 you draw your design in several ways. You talk about it to
 :::
 
 ::: {.column}
-![](../models/tlm-model-example.png)
+![](../models/model-example.png)
 :::
 ::::
 
@@ -184,7 +184,7 @@ For really large projects maintaining the digital diagrams becomes a real hassle
 * **S**tories using Gherkin
 * **E**vents using event storming
 * **U**I using wireframes
-* **M**odels using TLM
+* **M**odels using facts
 :::
 
 ::: {.column}

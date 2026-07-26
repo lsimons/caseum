@@ -18,7 +18,7 @@ classes:
         range: Department
 ```
 
-Once the facts are agreed on the whiteboard ([stage 1](fact-whiteboarding.md)) and drawn ([stage 2](tlm-template.md)), stage 3 lands them in code. Keeping one schema file and generating the rest — API schema, database schema, docs — stops those artifacts from drifting out of sync.
+Once the facts are agreed on the whiteboard ([stage 1](fact-whiteboarding.md)) and drawn ([stage 2](model-diagrams.md)), stage 3 lands them in code. Keeping one schema file and generating the rest — API schema, database schema, docs — stops those artifacts from drifting out of sync.
 
 [LinkML](https://linkml.io/) is a YAML-based schema language with a good set of [generators](https://linkml.io/linkml/generators/). It is maintained by Lawrence Berkeley National Laboratory and actively released.
 
