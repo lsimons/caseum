@@ -157,7 +157,7 @@ After you complete the first version of the digital views, review them. You may 
     * Do _not_ directly create digital versions of your model diagrams.
     * Instead, create your model diagrams based on the model definitions in your software systems (like your domain model or your SQL database definition scripts).
     * Object-oriented or table-oriented modeling is more common than the fact-based modeling that Caseum recommends. You can [read why fact-based modeling is great](../models/fact-modeling.md) and decide to try it, or, you can use a modeling approach you already know.
-    * If you decide to use fact-based modeling, you can use the [tlm template](../models/tlm-template.md).
+    * If you decide to use fact-based modeling, you can use the [model diagrams guide](../models/tlm-template.md).
 6. **UI**:
     * Maintaining digital UI designs is relatively a lot of effort that may not be worth it for you just for your architecture.
     * If you are using a modern design tool like Figma already, you can use those designs instead.
@@ -225,7 +225,7 @@ Rather than just switch from stage 2 to stage 3, do some experiments. Create som
     * You can use the [C4 coding guide](../components/c4-code.md).
 3. **Models**:
     * If you use advanced fact-based modeling, there are good bidirectional mappings between software systems and textual specifications, and you should consider them.
-    * For example, if you adopted TLM, you can use the [TLM coding guide](../models/tlm-template.md).
+    * For example, if you adopt LinkML, you can use the [LinkML models-as-code guide](../models/tlm-code.md).
     * On the other hand, if you use UML or other object-oriented modeling techniques, do not use automated bidirectional mapping tools, because they produce low-quality code. In this case it is better to work "code first": write source code and then generate the model definitions from your code.
 4. **Events**:
     * You can consider using a formal standard for defining and maintaining event definitions.

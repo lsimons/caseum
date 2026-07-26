@@ -33,11 +33,11 @@ nav:
   - UI using whiteboarding:
       - UI whiteboarding: ui/ui-whiteboarding.md
       - UI template: ui/ui-template.md
-  - Models using TLM:
+  - Models using facts:
       - Fact-based modeling: models/fact-modeling.md
       - Fact whiteboarding: models/fact-whiteboarding.md
-      - TLM template: models/tlm-template.md
-      - TLM models-as-code: models/tlm-code.md
+      - Model diagrams: models/tlm-template.md
+      - LinkML models-as-code: models/tlm-code.md
   - Misc:
       - Code of conduct: CODE_OF_CONDUCT.md
       - Contributing to Caseum: CONTRIBUTING.md
