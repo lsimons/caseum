@@ -1,25 +1,26 @@
-# Describing Models using Type-Link Modeling and draw.io
+# Diagramming Models
 
-**Draw the facts of the domain model using a formal syntax.**
+**Draw the agreed facts of the domain model as a tidy diagram.**
 
-[Type-Link-Model (TLM)](https://type.link.model.tools/) is a fact-based modeling technique inspired by but simpler than [Object-Role Modeling (ORM)](http://orm.net/). Using a formal syntax and semantics based on types and the links between them, TLM allows capturing most domain models precisely.
+![Diagram of a fact-based domain model](tlm-model-example.png)
 
-![Diagram of a Type-Link Model](tlm-model-example.png)
+Once you have talked through the facts on the whiteboard ([stage 1](fact-whiteboarding.md)), stage 2 is about producing cleaner diagrams to communicate and review the model. You have two good options.
 
-TLM provides draw.io stencils and examples that you can use with Caseum [stage 2](../guides/stages.md).
+## Generate diagrams from a LinkML schema
 
-## Consider ORM instead of TLM
+If you are going to capture the model as code anyway, write the [LinkML](https://linkml.io/) schema first (see [models-as-code](tlm-code.md)) and let it generate the diagram for you:
 
-[ORM](http://orm.net/) is the work of scientist [Terry Halpin](https://en.wikipedia.org/wiki/Terry_Halpin) who has written a seminal book on logical database design, [Information Modeling and Relational Databases](https://www.amazon.com/Information-Modeling-Relational-Databases-Conceptual-ebook/dp/B006OLTQ2W/).
+* `gen-erdiagram hr.yaml` produces a [Mermaid](https://mermaid.js.org/) ER diagram.
+* `gen-plantuml hr.yaml` produces a [PlantUML](https://plantuml.com/) class diagram.
 
-ORM2 is a complete superset of modern UML class diagrams and allows clear expression of any relational model plus the associated business rules that you could capture using UML its Object Constraint Language (OCL). If you need such modeling rigor ORM is the only choice.
+Generated diagrams never drift from the model, because the model is their source.
 
-But the vast majority of projects have simpler needs and so can make do with a small compatible subset of ORM that is easier to learn, which is what TLM provides.
+## Draw diagrams by hand in draw.io
 
-## Consider other Fact-Based Modeling techniques
+If you are not ready to write a schema, draw the diagram by hand in [draw.io](https://www.drawio.com/) using generic shapes — circles or boxes for the types, lines for the facts between them, crow's feet for one-to-many links. See the [guide on using draw.io](../guides/drawio.md).
 
-Alternative fact-based modeling techniques include [NIAM](https://en.wikipedia.org/wiki/NIAM), and [FCO-IM](https://en.wikipedia.org/wiki/FCO-IM). Most such techniques were created to provide additional power and rigor beyond ORM so are most suited to advanced needs.
+Keep the notation simple. Formal fact-based notation (such as full [ORM](https://en.wikipedia.org/wiki/Object-role_modeling) diagrams) adds precision but raises the barrier for contributors who are not trained in it, which works against the whole point of getting the domain experts to check the model.
 
 ## Why not UML class diagrams or ER?
 
-See [Fact-Based Modeling](fact-modeling.md) for a description of the advantages of fact-based modeling techniques over more well-known approaches such as UML class diagrams.
+See [Fact-Based Modeling](fact-modeling.md) for a description of the advantages of fact-oriented modeling over more well-known approaches such as UML class diagrams.

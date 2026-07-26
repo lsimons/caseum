@@ -22,7 +22,7 @@ A fact is a piece of information that is true about the business domain. Facts a
 
 ## What is fact-based modeling?
 
-Fact-based modeling is a modeling technique that focuses on facts and their relationships. It is a family of techniques that includes [Object-Role Modeling (ORM)](http://orm.net/), [Type-Link Modeling (TLM)](https://type.link.model.tools/), [NIAM](https://en.wikipedia.org/wiki/NIAM), and [FCO-IM](https://en.wikipedia.org/wiki/FCO-IM).
+Fact-based modeling is a modeling technique that focuses on facts and their relationships. It is a family of techniques that includes [Object-Role Modeling (ORM)](http://orm.net/), [Type-Link Modeling (TLM)](https://leosimons.com/2026/07/26/fact-based-modelling-and-linkml/), [NIAM](https://en.wikipedia.org/wiki/NIAM), and [FCO-IM](https://en.wikipedia.org/wiki/FCO-IM).
 
 ## Can I use Caseum without using fact-based modeling?
 
