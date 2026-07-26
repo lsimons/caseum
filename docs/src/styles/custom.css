@@ -35,6 +35,16 @@
 	--sl-color-black: #faf1f3; /* page bg (snow) */
 }
 
+/* Keep the main content column white in light mode so the many docs images
+   that have a white background blend in, while the header and the left/right
+   sidebars keep the off-white theme surface. `.main-pane` is only the content
+   column - the left sidebar and the right table-of-contents live in separate
+   panes - so this doesn't touch the menus. Dark mode keeps its warm-dark
+   content background. */
+:root[data-theme='light'] .main-pane {
+	background-color: #ffffff;
+}
+
 /* Fonts: Merriweather Sans for on-screen/UI (Starlight's global --sl-font, so
    nav/header/sidebar/labels), Merriweather for long-form prose (the rendered
    markdown body), and a system-first monospace stack for code - matching the
