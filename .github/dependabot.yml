@@ -9,10 +9,6 @@ updates:
       interval: "weekly"
     cooldown:
       default-days: 7
-    open-pull-requests-limit: 5
-    commit-message:
-      # match the repo's conventional-commits convention
-      prefix: "build"
     groups:
       astro:
         patterns:
@@ -30,6 +26,3 @@ updates:
       interval: "weekly"
     cooldown:
       default-days: 7
-    open-pull-requests-limit: 5
-    commit-message:
-      prefix: "ci"
