@@ -10,11 +10,13 @@ repo = "https://github.com/pre-commit/pre-commit-hooks"
 rev = "v6.0.0"
 hooks = [
   { id = "trailing-whitespace", exclude = '\.mdx?$' },
-  { id = "end-of-file-fixer" },
+  { id = "end-of-file-fixer", exclude = '\.(svg|qmd)$' },
   { id = "check-yaml" },
   { id = "check-toml" },
   { id = "check-merge-conflict" },
-  { id = "check-added-large-files", args = ["--maxkb=1024"] },
+  # rendered slide decks (public/presentations/*.html|pdf) can be large; the
+  # source .qmd is small, so allow the generated artifacts through.
+  { id = "check-added-large-files", args = ["--maxkb=10240"] },
 ]
 
 # Markdown formatting
