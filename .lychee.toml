@@ -1,0 +1,31 @@
+# Lychee link checker configuration
+# https://lychee.cli.rs/usage/config/
+
+# Root-relative internal links (/guides/stages/, /foo.png) resolve against our
+# published site, so they land under the excluded lsimons.github.io domain
+# below. The Astro build and the build-time link audit validate them for real.
+base_url = "https://lsimons.github.io/caseum/"
+
+# 429 (rate limited) and 403 (bot-protected) are not broken links; accept them
+# so the pre-commit hook does not flake on external hosts.
+accept = ["100..=299", "403", "429"]
+
+# - Our own published URL: the deploy workflow proves it, and checking it is a
+#   chicken-and-egg problem on the first deploy (and internal links resolve
+#   against it, see base_url above).
+# - localhost: dev-server URLs are not reachable in CI.
+# - caseum.org: parked/redirected vanity domain, unreliable for link checks.
+# - app / play stores and linkedin: bot-protected, return 403/999 to checkers.
+# - `[{}]` / `%7B`: JSX expressions in .mdx that lychee mis-parses as URLs.
+exclude = [
+  '^https?://lsimons\.github\.io/',
+  '^http://localhost',
+  '^https?://(www\.)?caseum\.org',
+  '^https://apps\.apple\.com',
+  '^https://play\.google\.com',
+  '^https://www\.linkedin\.com',
+  # slow ESA gov host, frequently times out link checkers
+  '^http://microelectronics\.esa\.int',
+  '[{}]',
+  '%7[BD]',
+]

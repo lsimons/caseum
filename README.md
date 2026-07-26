@@ -1,28 +1,33 @@
 <!--suppress HtmlDeprecatedAttribute, CheckImageSize -->
-<img src="docs/design/logo/logo.png" width="250" align="right" style="margin-left: 10px" alt="Caseum logo">
+
+<img src="docs/public/design/logo/logo.png" width="250" align="right" style="margin-left: 10px" alt="Caseum logo">
 
 # Caseum
 
-[Caseum](http://lsimons.github.io/caseum/) is a simple approach to software architecture that combines multiple views to boost understanding and empathy across roles. 
+[Caseum](http://lsimons.github.io/caseum/) is a simple approach to software architecture that combines multiple views to boost understanding and empathy across roles.
 
 ## Video introduction
 
+<!-- markdownlint-disable MD034 -- bare URL renders as a video embed on GitHub -->
+
 https://github.com/lsimons/caseum/assets/47133/890185f5-cc6f-42d5-887b-34939f8070c0
 
-([watch on YouTube](https://youtu.be/0s1qPY-W1ew), [slides](docs/presentations/introduction.pdf))
+<!-- markdownlint-enable MD034 -->
+
+([watch on YouTube](https://youtu.be/0s1qPY-W1ew), [slides](docs/public/presentations/introduction.pdf))
 
 ## Multiple views
 
 Caseum combines these views:
 
-* **C**omponents using C4
-* **A**ctors using roles
-* **S**tories using Gherkin
-* **E**vents using event storming
-* **U**I using wireframes
-* **M**odels using facts
+- **C**omponents using C4
+- **A**ctors using roles
+- **S**tories using Gherkin
+- **E**vents using event storming
+- **U**I using wireframes
+- **M**odels using facts
 
-<img src="docs/guides/stages-example.png" width="200" align="right" style="margin-left: 10px" alt="Several screenshots of architecture views">
+<img src="docs/public/guides/stages-example.png" width="200" align="right" style="margin-left: 10px" alt="Several screenshots of architecture views">
 
 Together these views fully describe a software system.
 
@@ -38,39 +43,39 @@ Caseum is for doing just enough architecture. It has three stages:
 
 Not all projects need all stages.
 
-See the [guide on stages of architecture](docs/guides/stages.md). See the [guide on as-is and to-be designs](docs/guides/as-is-to-be.md) for working on existing projects.
+See the [guide on stages of architecture](https://lsimons.github.io/caseum/guides/stages/). See the [guide on as-is and to-be designs](https://lsimons.github.io/caseum/guides/as-is-to-be/) for working on existing projects.
 
 ## Recording decisions
 
-<img src="docs/guides/records-slack-example.png" width="200" align="right" style="margin-left: 10px" alt="Screenshot of a slack channel being used to record decisions">
+<img src="docs/public/guides/records-slack-example.png" width="200" align="right" style="margin-left: 10px" alt="Screenshot of a slack channel being used to record decisions">
 
 Architecture records the important design decisions for a system. The records are for communicating with current and future people working on and with the software.
 
-See the [guide on recording decisions](docs/guides/records.md).
+See the [guide on recording decisions](https://lsimons.github.io/caseum/guides/records/).
 
 ## Tools
 
-<img src="docs/models/model-example.png" width="200" align="right" style="margin-left: 10px" alt="Partial fact-based model diagram">
+<img src="docs/public/models/model-example.png" width="200" align="right" style="margin-left: 10px" alt="Partial fact-based model diagram">
 
 The primary tools used by Caseum are:
 
-* Whiteboards, markers, and sticky notes
-* Draw.io for digital diagrams
-* Markdown text files for decision records
-* Model specification in structured text formats (Structurizr C4, Gherkin, LinkML and AsyncAPI JSON)
+- Whiteboards, markers, and sticky notes
+- Draw.io for digital diagrams
+- Markdown text files for decision records
+- Model specification in structured text formats (Structurizr C4, Gherkin, LinkML and AsyncAPI JSON)
 
-See the guides on [whiteboarding architecture](docs/guides/whiteboarding.md) and on [using draw.io for architecture](docs/guides/drawio.md).
+See the guides on [whiteboarding architecture](https://lsimons.github.io/caseum/guides/whiteboarding/) and on [using draw.io for architecture](https://lsimons.github.io/caseum/guides/drawio/).
 
 Different tools are available per view per stage:
 
-|                | **Whiteboarding &<br/> Dialogue**                         | **Diagrams &<br/> Decision Records**                                | **Models &<br/> Executable Specifications**         |
-|----------------|------------------------------------------------------|----------------------------------------------------------------|------------------------------------------------|
-| **Components** | [Boxes & lines](docs/components/c4-whiteboarding.md) | [C4 Draw.io Library](docs/components/c4-template.md)           | [C4 as Code](docs/components/c4-code.md)       |
-| **Actors**     | [Roles & needs](docs/actors/actor-whiteboarding.md)  | [Role Markdown Template](docs/actors/role-template.md)         | -                                              |
-| **Stories**    | [Goals & epics](docs/stories/story-whiteboarding.md) | [User Story Markdown Template](docs/stories/story-template.md) | [Gherkin](docs/stories/gherkin-code.md)        |
-| **Events**     | [Event Storming](docs/events/event-storming.md)      | [ES Draw.io Library](docs/events/event-template.md)            | [AsyncAPI](docs/events/asyncapi-code.md) |
-| **UI**         | [Boxes & lines](docs/ui/ui-whiteboarding.md)         | [Wireframes Draw.io Library](docs/ui/ui-template.md)           | -                                              |
-| **Models**     | [Circles & lines](docs/models/fact-whiteboarding.md) | [Model diagrams](docs/models/model-diagrams.md)             | [LinkML](docs/models/linkml-code.md)                |
+|                | **Whiteboarding &<br/> Dialogue**                                              | **Diagrams &<br/> Decision Records**                                                     | **Models &<br/> Executable Specifications**                        |
+| -------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| **Components** | [Boxes & lines](https://lsimons.github.io/caseum/components/c4-whiteboarding/) | [C4 Draw.io Library](https://lsimons.github.io/caseum/components/c4-template/)           | [C4 as Code](https://lsimons.github.io/caseum/components/c4-code/) |
+| **Actors**     | [Roles & needs](https://lsimons.github.io/caseum/actors/actor-whiteboarding/)  | [Role Markdown Template](https://lsimons.github.io/caseum/actors/role-template/)         | -                                                                  |
+| **Stories**    | [Goals & epics](https://lsimons.github.io/caseum/stories/story-whiteboarding/) | [User Story Markdown Template](https://lsimons.github.io/caseum/stories/story-template/) | [Gherkin](https://lsimons.github.io/caseum/stories/gherkin-code/)  |
+| **Events**     | [Event Storming](https://lsimons.github.io/caseum/events/event-storming/)      | [ES Draw.io Library](https://lsimons.github.io/caseum/events/event-template/)            | [AsyncAPI](https://lsimons.github.io/caseum/events/asyncapi-code/) |
+| **UI**         | [Boxes & lines](https://lsimons.github.io/caseum/ui/ui-whiteboarding/)         | [Wireframes Draw.io Library](https://lsimons.github.io/caseum/ui/ui-template/)           | -                                                                  |
+| **Models**     | [Circles & lines](https://lsimons.github.io/caseum/models/fact-whiteboarding/) | [Model diagrams](https://lsimons.github.io/caseum/models/model-diagrams/)                | [LinkML](https://lsimons.github.io/caseum/models/linkml-code/)     |
 
 ## License
 
@@ -85,3 +90,22 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to Caseu
 ## Code of conduct
 
 See [Code of Conduct](CODE_OF_CONDUCT.md) for details on how to participate in the Caseum community.
+
+## Building the site
+
+The documentation site is built with [Astro Starlight](https://starlight.astro.build/)
+and published to GitHub Pages at <https://lsimons.github.io/caseum/>. Tools are
+pinned in `mise.toml`; run `mise install` once, then:
+
+```bash
+just docs-install   # install site dependencies (bun)
+just docs-dev       # dev server at http://localhost:4321/caseum/
+just docs-build     # build the static site into docs/dist
+```
+
+Content lives in `docs/src/content/docs/`; assets and downloads in
+`docs/public/`. A push to `main` builds and deploys via GitHub Actions.
+
+The favicon (`docs/public/favicon.svg` + `apple-touch-icon.png`) is a honeycomb
+generated from the logo's color palette; regenerate it with
+`docs/scripts/gen-favicon.mjs` if the palette changes.

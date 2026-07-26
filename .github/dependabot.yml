@@ -1,14 +1,31 @@
+# Dependabot version updates - generates PRs for outdated dependencies.
+# https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configure-version-updates
 version: 2
 updates:
-  - package-ecosystem: "pip"
-    directory: "/"
+  # Astro Starlight site dependencies (bun lockfile in docs/)
+  - package-ecosystem: "bun"
+    directory: "/docs"
     schedule:
       interval: "weekly"
-    cooldown:
-      default-days: 7
+    open-pull-requests-limit: 5
+    commit-message:
+      # match the repo's conventional-commits convention
+      prefix: "build"
+    groups:
+      astro:
+        patterns:
+          - "astro"
+          - "@astrojs/*"
+    ignore:
+      # stay on typescript 6.x: @astrojs/check requires ^5 || ^6
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
+
+  # GitHub Actions used in .github/workflows/
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
-    cooldown:
-      default-days: 7
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "ci"
