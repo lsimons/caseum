@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Leo Simons" /><link rel="canonical" href="https://lsimons.github.io/caseum/models/fact-modeling.html" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Fact-based modeling - Caseum</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Fact-based modeling";
+        var mkdocs_page_input_path = "models/fact-modeling.md";
+        var mkdocs_page_url = "/caseum/models/fact-modeling.html";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Caseum
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Guides</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/stages.html">Architecture stages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/as-is-to-be.html">As-is and to-be</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/records.html">Recording decisions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/whiteboarding.html">Whiteboarding architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/drawio.html">Draw.io for architecture</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../guides/platforms.html">Designing platforms</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Components using C4</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-whiteboarding.html">Component whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-template.html">Component template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../components/c4-code.html">Component architecture-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Actors using roles</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../actors/actor-whiteboarding.html">Actor whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../actors/role-template.html">Role template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Stories using Gherkin</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-whiteboarding.html">Story whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/story-template.html">Story template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../stories/gherkin-code.html">Gherkin specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Events using event storming</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/event-storming.html">Event whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/event-template.html">Event template</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../events/asyncapi-code.html">AsyncAPI specs-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">UI using whiteboarding</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-whiteboarding.html">UI whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ui/ui-template.html">UI template</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Models using facts</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Fact-based modeling</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-a-fact">What is a fact?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-fact-based-modeling">What is fact-based modeling?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#why-model-in-facts">Why model in facts?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#why-use-it-with-caseum">Why use it with Caseum?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-do-i-actually-do-it">How do I actually do it?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#which-tool-should-i-use">Which tool should I use?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#why-not-uml-class-diagrams-or-er">Why not UML class diagrams or ER?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#why-doesnt-everyone-know-about-it">Why doesn't everyone know about it?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#can-i-use-caseum-without-it">Can I use Caseum without it?</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="fact-whiteboarding.html">Fact whiteboarding</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="model-diagrams.html">Model diagrams</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="linkml-code.html">LinkML models-as-code</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Misc</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../CODE_OF_CONDUCT.html">Code of conduct</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CONTRIBUTING.html">Contributing to Caseum</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../LICENSE.txt">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/fonts.html">Caseum fonts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../design/colors/colors.html">Caseum colors</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Introduction slides</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../presentations/introduction.pdf">PDF</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../presentations/introduction.html">HTML</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../presentations/introduction.qmd">Quarto source</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../presentations/introduction.pptx">PowerPoint</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Caseum</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Models using facts</li>
+      <li class="breadcrumb-item active">Fact-based modeling</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/lsimons/caseum/edit/main/docs/models/fact-modeling.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="fact-based-modeling">Fact-Based Modeling</h1>
+<p>Fact-oriented descriptions of information models are more stable, durable, and expressive than UML or ER, and easier for non-technical stakeholders to check. The durable idea is simple: <strong>model just the facts.</strong></p>
+<h2 id="what-is-a-fact">What is a fact?</h2>
+<p>A fact is a piece of information that is true about the business domain, small enough to state as a single sentence you can read aloud:</p>
+<blockquote>
+<p>A Team has at least one lead, who is a Person.</p>
+</blockquote>
+<p>Facts are the building blocks of an information model.</p>
+<h2 id="what-is-fact-based-modeling">What is fact-based modeling?</h2>
+<p>Fact-based modeling builds a model up from elementary facts and the links between them, instead of starting from tables or classes. You find the facts by talking with the people who know the domain — using concrete examples, plain language, and simple drawings — and you write each one as a sentence they can confirm or reject.</p>
+<p>It is a family of techniques. The best known is <a href="https://en.wikipedia.org/wiki/Object-role_modeling">Object-Role Modeling (ORM)</a>, the work of <a href="https://en.wikipedia.org/wiki/Terry_Halpin">Terry Halpin</a>. Others include <a href="https://en.wikipedia.org/wiki/NIAM">NIAM</a> and <a href="https://en.wikipedia.org/wiki/FCO-IM">FCO-IM</a>. They differ in notation and rigor, but share the same core: a domain is a set of facts, and every fact reads out as a sentence.</p>
+<h2 id="why-model-in-facts">Why model in facts?</h2>
+<p>Because a sentence is something a domain expert can check. A product manager can read "A Team has at least one lead" and tell you it's wrong — "teams go without a lead for months during reorgs" — which is cheap feedback at a whiteboard and expensive feedback after you ship a <code>NOT NULL</code> constraint.</p>
+<p>Examples do double duty: a small table of concrete data helps you discover a fact and, at the same time, tests it. If the expert can't fill in your example, the fact is wrong.</p>
+<p>The original <a href="http://orm.net/pdf/ORMwhitePaper.pdf">ORM whitepaper</a> remains a good practical description of the wider advantages.</p>
+<h2 id="why-use-it-with-caseum">Why use it with Caseum?</h2>
+<p>Caseum is a practical tool for building software, and the point of architecture is to help you design and <em>think</em>. Modeling in facts is a good way to think — and, more importantly, a good way to communicate across roles, which is Caseum's reason to exist.</p>
+<h2 id="how-do-i-actually-do-it">How do I actually do it?</h2>
+<p>Three stages, from loose to formal:</p>
+<ol>
+<li><a href="fact-whiteboarding.html">Whiteboard the facts</a> together with the domain experts.</li>
+<li><a href="model-diagrams.html">Draw a tidy diagram</a> if you need to communicate or review the model.</li>
+<li><a href="linkml-code.html">Land the facts in code with LinkML</a> if you need generated JSON Schema, SQL, or docs.</li>
+</ol>
+<p>You can stop at any stage. For many domains a whiteboard photo plus the agreed sentences is the whole model, and stopping there is fine.</p>
+<h2 id="which-tool-should-i-use">Which tool should I use?</h2>
+<p>Hold this part lightly. The conviction is <em>model just the facts</em>; the tool is whatever fits your context today.</p>
+<p>Right now I'd suggest <a href="https://linkml.io/">LinkML</a> when you need models-as-code — even though it is not itself fact-based. The dedicated fact-based tooling has withered, while LinkML is maintained and ships the generators you want. That is a contextual call, not doctrine, and it comes with real tradeoffs; the article <a href="https://leosimons.com/2026/07/26/fact-based-modelling-and-linkml/">Fact-based modelling and LinkML</a> walks through them honestly. If the tooling landscape shifts, the recommendation can shift with it. The facts-first habit is the durable part.</p>
+<h2 id="why-not-uml-class-diagrams-or-er">Why not UML class diagrams or ER?</h2>
+<p>They pull you into the structure of the data — tables, classes, hierarchies — before you and the stakeholders have agreed what is actually true in the domain. Fact sentences keep that conversation in language everyone shares.</p>
+<p>None of this makes UML or ER bad; they are useful, just the wrong place to <em>start</em>. If your team already knows one well, you can model with it — try to agree the facts first.</p>
+<h2 id="why-doesnt-everyone-know-about-it">Why doesn't everyone know about it?</h2>
+<p>Fact-based modeling has been around for decades but stayed niche. The industry poured its energy into model-driven development — CASE tools, MDA, no-code platforms — aimed at generating code from models, and favored notations close to objects and tables. Being older and less fashionable doesn't make it worse. It is easy to learn and it works well.</p>
+<h2 id="can-i-use-caseum-without-it">Can I use Caseum without it?</h2>
+<p>Sure. For bigger systems, swap in whatever structured modeling approach your team already knows, such as ER or UML class diagrams. For smaller systems, informal boxes-and-lines-and-sticky-notes whiteboarding is plenty. The facts-first habit helps even when the notation doesn't.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../ui/ui-template.html" class="btn btn-neutral float-left" title="UI template"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="fact-whiteboarding.html" class="btn btn-neutral float-right" title="Fact whiteboarding">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/lsimons/caseum" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../ui/ui-template.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="fact-whiteboarding.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

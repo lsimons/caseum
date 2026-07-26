@@ -1,0 +1,20 @@
+/*-- scss:defaults --*/
+
+// Include theme-specific fonts
+
+@import url(https://fonts.googleapis.com/css?display=fallback&family=Merriweather:regular,i,b,bi|Merriweather%20Sans:regular,i,b,bi|Cascadia%20Code:regular,i,b,bi);
+
+
+// Override theme settings
+
+$font-family-sans-serif: "Merriweather", sans-serif !default;
+$font-family-monospace: "Cascadia Code", Menlo, Monaco, Consolas, "Courier New", monospace !default;
+
+$body-color: #000 !default;
+$body-bg: #fff !default;
+
+$presentation-heading-font-weight: 700 !default;
+$presentation-heading-color: #29467F !default;
+$link-color: #29467F !default;
+
+$presentation-font-size-root: 28px !default;
