@@ -1,8 +1,12 @@
+---
+title: "Contributing to Caseum"
+---
+
 Thank you for investing your time in contributing to our project!
 
-Any contributions you make are governed by our [License](LICENSE.txt).
+Any contributions you make are governed by our [License](/LICENSE.txt).
 
-Please follow our [Code of Conduct](CODE_OF_CONDUCT.md) to keep our community approachable and respectable.
+Please follow our [Code of Conduct](/code-of-conduct/) to keep our community approachable and respectable.
 
 You could read the [open source contribution guide](https://opensource.guide/how-to-contribute/) for general advice on how to contribute.
 
@@ -10,7 +14,7 @@ Since this is a small hobby project, your contribution may not be noticed for a 
 
 ## Quarto
 
-The [introduction presentation](docs/public/presentations/introduction.qmd) is built with [Quarto](https://quarto.org/).
+The [introduction presentation](/presentations/introduction.qmd) is built with [Quarto](https://quarto.org/).
 
 Run `quarto render docs/public/presentations/introduction.qmd` to render.
 

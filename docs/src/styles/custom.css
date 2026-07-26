@@ -1,0 +1,37 @@
+/* Caseum brand accent, based on the primary blue (#29467F) from the color
+   scheme (docs/src/content/docs/design/colors/colors.md). Starlight derives
+   link, sidebar-active, and focus colors from these accent tokens. */
+:root {
+	--sl-color-accent-low: #14203a;
+	--sl-color-accent: #29467f;
+	--sl-color-accent-high: #b8c3dc;
+}
+
+/* Light theme wants a darker accent for text/links to keep contrast high. */
+:root[data-theme='light'] {
+	--sl-color-accent-low: #cdd6e8;
+	--sl-color-accent: #29467f;
+	--sl-color-accent-high: #16233f;
+}
+
+/* The docs lean on floated `align="right"` images (kept from the original
+   MkDocs source). Cap their size and give the wrapped text some breathing
+   room on wide screens; drop the float on narrow ones. */
+.sl-markdown-content img[align='right'] {
+	max-width: min(45%, 320px);
+	height: auto;
+	margin: 0.25rem 0 1rem 1.5rem;
+}
+.sl-markdown-content img[align='left'] {
+	max-width: min(45%, 320px);
+	height: auto;
+	margin: 0.25rem 1.5rem 1rem 0;
+}
+@media (max-width: 50rem) {
+	.sl-markdown-content img[align='right'],
+	.sl-markdown-content img[align='left'] {
+		float: none;
+		display: block;
+		margin: 1rem auto;
+	}
+}

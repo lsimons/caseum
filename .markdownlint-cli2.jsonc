@@ -1,0 +1,18 @@
+{
+  "config": {
+    "MD013": false,
+    "MD024": false,
+    "MD033": false,
+    // Starlight pages carry their title in frontmatter, so the body has no
+    // leading H1.
+    "MD041": false,
+    "MD026": false,
+    "MD028": false,
+    "MD036": false,
+    "MD040": false,
+    // mdformat is the formatter of record and emits `*emphasis*` / `**strong**`;
+    // don't let markdownlint fight it over underscore-vs-asterisk style.
+    "MD049": false,
+    "MD050": false
+  }
+}

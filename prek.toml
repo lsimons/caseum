@@ -1,0 +1,78 @@
+# Configuration file for `prek`, a git hook framework written in Rust.
+# See https://prek.j178.dev for more information.
+#:schema https://www.schemastore.org/prek.json
+
+minimum_prek_version = "0.3.0"
+default_stages = ["pre-commit"]
+
+[[repos]]
+repo = "https://github.com/pre-commit/pre-commit-hooks"
+rev = "v6.0.0"
+hooks = [
+  { id = "trailing-whitespace", exclude = '\.mdx?$' },
+  { id = "end-of-file-fixer" },
+  { id = "check-yaml" },
+  { id = "check-toml" },
+  { id = "check-merge-conflict" },
+  { id = "check-added-large-files", args = ["--maxkb=1024"] },
+]
+
+# Markdown formatting
+[[repos]]
+repo = "https://github.com/hukkin/mdformat"
+rev = "1.0.0"
+hooks = [
+  {
+    id = "mdformat",
+    additional_dependencies = ["mdformat-gfm", "mdformat-frontmatter"],
+    # .mdx uses JSX-flavoured markdown that mdformat mangles; skip it.
+    exclude = '\.mdx$'
+  }
+]
+
+# Markdown linting
+[[repos]]
+repo = "https://github.com/DavidAnson/markdownlint-cli2"
+rev = "v0.22.0"
+hooks = [{ id = "markdownlint-cli2", exclude = '\.mdx$' }]
+
+# Broken link checking (uses locally installed lychee)
+[[repos]]
+repo = "local"
+hooks = [
+  {
+    id = "lychee",
+    name = "lychee (broken link check)",
+    entry = "bash -c 'lychee --no-progress --config .lychee.toml \"$@\"' --",
+    language = "system",
+    types_or = ["markdown", "mdx"],
+  }
+]
+
+# Secret detection
+[[repos]]
+repo = "local"
+hooks = [
+  {
+    id = "gitleaks",
+    name = "gitleaks (secret detection)",
+    entry = "gitleaks detect --no-banner --verbose",
+    language = "system",
+    pass_filenames = false
+  }
+]
+
+# Commit message linting
+[[repos]]
+repo = "https://github.com/alessandrojcm/commitlint-pre-commit-hook"
+rev = "v9.24.0"
+hooks = [
+  {
+    id = "commitlint",
+    stages = ["commit-msg"],
+    additional_dependencies = [
+      "@commitlint/cli",
+      "@commitlint/config-conventional"
+    ]
+  }
+]
