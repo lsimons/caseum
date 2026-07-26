@@ -49,4 +49,3 @@ nav:
         - HTML: presentations/introduction.html
         - Quarto source: presentations/introduction.qmd
         - PowerPoint: presentations/introduction.pptx
-        - Keynote: presentations/introduction.key
