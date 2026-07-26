@@ -45,6 +45,15 @@ export default defineConfig({
 	markdown: {
 		rehypePlugins: [rehypeBaseLinks],
 	},
+	// The reveal.js deck is a static file at /presentations/introduction.html.
+	// Starlight strips the `.html` from the sidebar link (rendering
+	// /presentations/introduction), so redirect that extensionless URL to the
+	// real file. Works in dev, preview, and on GitHub Pages.
+	// Astro applies `base` to the redirect source but not the target, so the
+	// target carries `${base}` explicitly.
+	redirects: {
+		'/presentations/introduction': `${base}/presentations/introduction.html`,
+	},
 	integrations: [
 		starlight({
 			title: 'Caseum',
@@ -141,7 +150,7 @@ export default defineConfig({
 							label: 'Introduction slides',
 							items: [
 								{ label: 'PDF', link: '/presentations/introduction.pdf', attrs: { target: '_blank' } },
-								{ label: 'HTML', link: '/presentations/introduction/', attrs: { target: '_blank' } },
+								{ label: 'HTML', link: '/presentations/introduction.html', attrs: { target: '_blank' } },
 								{ label: 'Quarto source', link: '/presentations/introduction.qmd', attrs: { target: '_blank' } },
 								{ label: 'PowerPoint', link: '/presentations/introduction.pptx', attrs: { target: '_blank' } },
 							],
