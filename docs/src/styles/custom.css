@@ -1,17 +1,53 @@
-/* Caseum brand accent, based on the primary blue (#29467F) from the color
-   scheme (docs/src/content/docs/design/colors/colors.md). Starlight derives
-   link, sidebar-active, and focus colors from these accent tokens. */
+/* LSD Warm theme, mapped onto Starlight's design tokens. Ported from
+   lsimons.github.io (palette source:
+   ~/git/lsimons/lsimons-dotfiles/colors/lsd-colors.json). Starlight derives all
+   surfaces/text/borders from an accent ramp (low/accent/high), a gray ramp
+   (1=lightest .. 6/7=darkest in dark mode, inverted in light) and black/white,
+   so overriding those restyles the whole site. Dark mode is `:root`; light mode
+   is `:root[data-theme='light']`. */
 :root {
-	--sl-color-accent-low: #14203a;
-	--sl-color-accent: #29467f;
-	--sl-color-accent-high: #b8c3dc;
+	/* LSD Warm Dark */
+	--sl-color-accent-low: #4a2f08;
+	--sl-color-accent: #c17a23;
+	--sl-color-accent-high: #eabb79;
+	--sl-color-white: #ffebd2; /* headings */
+	--sl-color-gray-1: #f0dcc4;
+	--sl-color-gray-2: #dfcab2; /* body text (fg) */
+	--sl-color-gray-3: #8a7761; /* muted */
+	--sl-color-gray-4: #6b5b44; /* dim */
+	--sl-color-gray-5: #3a2b16; /* borders / hairlines */
+	--sl-color-gray-6: #1f1000; /* nav & sidebar bg */
+	--sl-color-black: #1a0c00; /* page bg */
+}
+:root[data-theme='light'] {
+	/* LSD Warm Light */
+	--sl-color-accent-low: #f6e4c4;
+	--sl-color-accent: #c17a23;
+	--sl-color-accent-high: #8f5610; /* darkened for link contrast on snow */
+	--sl-color-white: #241100; /* headings (fg) */
+	--sl-color-gray-1: #3e290f;
+	--sl-color-gray-2: #4a3418; /* body text */
+	--sl-color-gray-3: #594329; /* dim */
+	--sl-color-gray-4: #765e44; /* faint */
+	--sl-color-gray-5: #dbcbb9; /* borders */
+	--sl-color-gray-6: #f0dfc9;
+	--sl-color-gray-7: #f7e9d6;
+	--sl-color-black: #faf1f3; /* page bg (snow) */
 }
 
-/* Light theme wants a darker accent for text/links to keep contrast high. */
-:root[data-theme='light'] {
-	--sl-color-accent-low: #cdd6e8;
-	--sl-color-accent: #29467f;
-	--sl-color-accent-high: #16233f;
+/* Fonts: Merriweather Sans for on-screen/UI (Starlight's global --sl-font, so
+   nav/header/sidebar/labels), Merriweather for long-form prose (the rendered
+   markdown body), and a system-first monospace stack for code - matching the
+   Caseum font choices (see the "Caseum fonts" page). Font choice doesn't vary
+   by theme, so these live at :root. Webfonts loaded in astro.config.mjs's
+   `head`. */
+:root {
+	--sl-font: 'Merriweather Sans', sans-serif;
+	--sl-font-mono: ui-monospace, 'Cascadia Code', 'JetBrains Mono', 'SF Mono', Menlo, Consolas,
+		monospace;
+}
+.sl-markdown-content {
+	font-family: 'Merriweather', Georgia, serif;
 }
 
 /* The docs lean on floated `align="right"` images (kept from the original
