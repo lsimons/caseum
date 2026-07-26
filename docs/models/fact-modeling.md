@@ -33,8 +33,8 @@ Caseum is a practical tool for building software, and the point of architecture 
 Three stages, from loose to formal:
 
 1. [Whiteboard the facts](fact-whiteboarding.md) together with the domain experts.
-2. [Draw a tidy diagram](tlm-template.md) if you need to communicate or review the model.
-3. [Land the facts in code with LinkML](tlm-code.md) if you need generated JSON Schema, SQL, or docs.
+2. [Draw a tidy diagram](model-diagrams.md) if you need to communicate or review the model.
+3. [Land the facts in code with LinkML](linkml-code.md) if you need generated JSON Schema, SQL, or docs.
 
 You can stop at any stage. For many domains a whiteboard photo plus the agreed sentences is the whole model, and stopping there is fine.
 

@@ -18,7 +18,7 @@ Documentation for the Caseum software architecture methodology. Combines C4, Act
   - `stories/` - User stories and Gherkin
   - `events/` - Event storming
   - `ui/` - Wireframes
-  - `models/` - TLM diagrams
+  - `models/` - Fact-based model diagrams
   - `guides/` - Usage guides
 
 ## Commit Message Convention

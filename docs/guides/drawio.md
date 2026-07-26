@@ -17,7 +17,7 @@ The following Caseum templates are available for draw.io:
 | **Stories**    | _use markdown_                                     |
 | **Events**     | [ES Draw.io Library](../events/event-template.md)  |
 | **UI**         | [Wireframes Draw.io Library](../ui/ui-template.md) |
-| **Models**     | [Model diagrams](../models/tlm-template.md)       |
+| **Models**     | [Model diagrams](../models/model-diagrams.md)       |
 
 ## Storing draw.io diagrams
 
