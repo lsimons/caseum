@@ -91,6 +91,7 @@ export default defineConfig({
 			editLink: { baseUrl: 'https://github.com/lsimons/caseum/edit/main/docs/' },
 			customCss: ['./src/styles/custom.css'],
 			sidebar: [
+				{ label: 'Overview', link: '/' },
 				{
 					label: 'Guides',
 					items: [
