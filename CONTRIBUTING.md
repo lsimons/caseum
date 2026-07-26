@@ -22,6 +22,6 @@ This site is built with [Astro Starlight](https://starlight.astro.build/).
 
 Tools are pinned in `mise.toml`; run `mise install` once. Then:
 
-- `just docs-install` - Install the site dependencies (bun).
-- `just docs-dev` - Start the live-reloading docs server.
-- `just docs-build` - Build the documentation site into `docs/dist`.
+- `mise run docs-install` - Install the site dependencies (bun).
+- `mise run docs-dev` - Start the live-reloading docs server.
+- `mise run docs-build` - Build the documentation site into `docs/dist`.

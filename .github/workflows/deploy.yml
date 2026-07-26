@@ -36,10 +36,10 @@ jobs:
           restore-keys: ${{ runner.os }}-bun-
 
       - name: Install
-        run: just docs-install
+        run: mise run docs-install
 
       - name: Build
-        run: just docs-build
+        run: mise run docs-build
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5

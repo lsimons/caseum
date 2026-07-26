@@ -31,10 +31,10 @@ jobs:
           restore-keys: ${{ runner.os }}-bun-
 
       - name: Install
-        run: just docs-install
+        run: mise run docs-install
 
       - name: Check (Astro type/content check)
-        run: just docs-check
+        run: mise run docs-check
 
       - name: Build
-        run: just docs-build
+        run: mise run docs-build

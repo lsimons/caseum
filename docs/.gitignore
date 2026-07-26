@@ -19,5 +19,5 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
-# Playwright screenshot output (see `just docs-screenshot`)
+# Playwright screenshot output (see `mise run docs-screenshot`)
 out.png

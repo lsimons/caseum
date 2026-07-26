@@ -98,9 +98,9 @@ and published to GitHub Pages at <https://lsimons.github.io/caseum/>. Tools are
 pinned in `mise.toml`; run `mise install` once, then:
 
 ```bash
-just docs-install   # install site dependencies (bun)
-just docs-dev       # dev server at http://localhost:4321/caseum/
-just docs-build     # build the static site into docs/dist
+mise run docs-install   # install site dependencies (bun)
+mise run docs-dev       # dev server at http://localhost:4321/caseum/
+mise run docs-build     # build the static site into docs/dist
 ```
 
 Content lives in `docs/src/content/docs/`; assets and downloads in

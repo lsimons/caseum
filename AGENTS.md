@@ -6,13 +6,13 @@ Documentation for the Caseum software architecture methodology. Combines C4, Act
 
 ## Quick Reference
 
-Tooling is pinned in `mise.toml` (bun, just, prek, lychee, gitleaks); run `mise install` once. Then:
+Tooling is pinned in `mise.toml` (bun, prek, lychee, gitleaks); run `mise install` once. Then:
 
-- **Install**: `just docs-install`
-- **Serve locally**: `just docs-dev` -> <http://localhost:4321/caseum/>
-- **Build**: `just docs-build`
-- **Type/content check**: `just docs-check`
-- **Screenshot a page**: `just docs-browser` once, then `just docs-screenshot out.png /caseum/guides/stages/`
+- **Install**: `mise run docs-install`
+- **Serve locally**: `mise run docs-dev` -> <http://localhost:4321/caseum/>
+- **Build**: `mise run docs-build`
+- **Type/content check**: `mise run docs-check`
+- **Screenshot a page**: `mise run docs-browser` once, then `mise run docs-screenshot out.png /caseum/guides/stages/`
 
 ## Structure
 
@@ -37,7 +37,7 @@ hardcoded `/caseum/...` src because that plugin does not visit raw HTML nodes.
   - `astro.config.mjs` - site/base, the sidebar, and the rehype base-link
     plugin. `src/styles/custom.css` - brand accent color and floated-image
     styling.
-- `mise.toml`, `justfile` - pinned tools and dev tasks.
+- `mise.toml` - pinned tools and dev tasks (run with `mise run <task>`).
 - `prek.toml` - git hooks (mdformat, markdownlint, lychee, gitleaks,
   commitlint); `prek install -t pre-commit -t commit-msg` once per clone.
 - `.github/workflows/ci.yml` builds + astro-checks on push/PR;
@@ -59,7 +59,7 @@ Work is NOT complete until every change is committed, pushed, and CI passes.
 1. **Quality gates** (if docs changed):
 
    ```bash
-   just docs-build && just docs-check
+   mise run docs-build && mise run docs-check
    ```
 
 2. **Commit**: stage and commit every change from this session. Do not leave the working tree dirty.

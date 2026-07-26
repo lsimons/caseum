@@ -1,9 +1,60 @@
 [tools]
 bun = "1.3"
 gitleaks = "8.30"
-just = "1.56"
 lychee = "0.24"
 prek = "0.4"
+
+[tasks.docs-install]
+description = "Install the site dependencies (bun)"
+dir = "docs"
+run = "bun install"
+
+[tasks.docs-dev]
+description = "Start the live-reloading dev server"
+dir = "docs"
+run = "bun run dev"
+
+[tasks.docs-build]
+description = "Build the static site into docs/dist"
+dir = "docs"
+run = "bun run build"
+
+[tasks.docs-preview]
+description = "Preview the production build"
+dir = "docs"
+run = "bun run preview"
+
+[tasks.docs-check]
+description = "Astro type/content check"
+dir = "docs"
+run = "bunx astro check"
+
+[tasks.docs-favicon]
+description = "Regenerate the honeycomb favicon + apple-touch-icon from the palette"
+dir = "docs"
+run = "bun run scripts/gen-favicon.mjs"
+
+[tasks.docs-clean]
+description = "Remove build artifacts"
+run = "rm -rf docs/dist docs/.astro"
+
+[tasks.docs-browser]
+description = "Install the Chromium browser Playwright uses for screenshots"
+dir = "docs"
+run = "bunx playwright install chromium"
+
+[tasks.docs-screenshot]
+description = "Build, serve, and screenshot a page (args: [out] [path]). Needs `mise run docs-browser` once."
+dir = "docs"
+run = """
+out="{{arg(name='out', default='out.png')}}"
+path="{{arg(name='path', default='/caseum/')}}"
+bun run build
+bun run preview --port 4321 > /tmp/astro-preview.log 2>&1 &
+sleep 4
+bunx playwright screenshot --viewport-size=1280,800 "http://localhost:4321${path}" "$out"
+status=$?; pkill -f "astro preview" || true; exit $status
+"""
 
 [tasks.ci-watch]
 description = "Watch GitHub Actions CI for the current branch; exits non-zero on failure"
