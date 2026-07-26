@@ -6,7 +6,7 @@ Documentation for the Caseum software architecture methodology. Combines C4, Act
 
 ## Quick Reference
 
-Tooling is pinned in `mise.toml` (bun, prek, lychee, gitleaks); run `mise install` once. Then:
+Tooling is pinned in `.mise.toml` (bun, prek, lychee, gitleaks); run `mise install` once. Then:
 
 - **Install**: `mise run docs-install`
 - **Serve locally**: `mise run docs-dev` -> <http://localhost:4321/caseum/>
@@ -37,7 +37,7 @@ hardcoded `/caseum/...` src because that plugin does not visit raw HTML nodes.
   - `astro.config.mjs` - site/base, the sidebar, and the rehype base-link
     plugin. `src/styles/custom.css` - brand accent color and floated-image
     styling.
-- `mise.toml` - pinned tools and dev tasks (run with `mise run <task>`).
+- `.mise.toml` - pinned tools and dev tasks (run with `mise run <task>`).
 - `prek.toml` - git hooks (mdformat, markdownlint, lychee, gitleaks,
   commitlint); `prek install -t pre-commit -t commit-msg` once per clone.
 - `.github/workflows/ci.yml` builds + astro-checks on push/PR;

@@ -1,3 +1,5 @@
+# mise: https://mise.jdx.dev/
+
 [tools]
 bun = "1.3"
 gitleaks = "8.30"
@@ -60,7 +62,9 @@ status=$?; pkill -f "astro preview" || true; exit $status
 description = "Watch GitHub Actions CI for the current branch; exits non-zero on failure"
 run = """
 sleep 5
-run_id=$(gh run list --branch "$(git branch --show-current)" --limit 1 --json databaseId --jq '.[0].databaseId')
-if [ -z "$run_id" ]; then echo "No run found for current branch" >&2; exit 1; fi
-gh run watch --exit-status "$run_id"
+remote_url=$(git remote get-url upstream 2>/dev/null || git remote get-url origin)
+repo=$(echo "$remote_url" | sed -E 's|^.*github\\.com[:/]||; s|\\.git$||')
+run_id=$(gh run list --repo "$repo" --branch "$(git branch --show-current)" --limit 1 --json databaseId --jq '.[0].databaseId')
+if [ -z "$run_id" ]; then echo "No run found for current branch on $repo" >&2; exit 1; fi
+gh run watch --repo "$repo" --exit-status "$run_id"
 """

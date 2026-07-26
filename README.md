@@ -95,7 +95,7 @@ See [Code of Conduct](CODE_OF_CONDUCT.md) for details on how to participate in t
 
 The documentation site is built with [Astro Starlight](https://starlight.astro.build/)
 and published to GitHub Pages at <https://lsimons.github.io/caseum/>. Tools are
-pinned in `mise.toml`; run `mise install` once, then:
+pinned in `.mise.toml`; run `mise install` once, then:
 
 ```bash
 mise run docs-install   # install site dependencies (bun)
