@@ -1,10 +1,19 @@
 # mise: https://mise.jdx.dev/
 
+# Tools are exact-pinned on purpose. A partial pin like "1.3" resolves to
+# whatever is newest at install time, so an upstream compromise could arrive by
+# auto-download on any machine or CI runner. Bumps are deliberate commits.
 [tools]
-bun = "1.3"
-gitleaks = "8.30"
-lychee = "0.24"
-prek = "0.4"
+actionlint = "1.7.12"
+bun = "1.3.14"
+gitleaks = "8.30.1"
+lychee = "0.24.2"
+prek = "0.4.12"
+# Load-bearing, not cosmetic: actionlint exits 0 without ever inspecting a
+# `run:` block if shellcheck is not on PATH, so dropping this pin would silently
+# turn half of `mise run audit` into a no-op.
+shellcheck = "0.11.0"
+zizmor = "1.29.0"
 
 [tasks.docs-install]
 description = "Install the site dependencies (bun)"
@@ -36,6 +45,11 @@ description = "Regenerate the honeycomb favicon + apple-touch-icon from the pale
 dir = "docs"
 run = "bun run scripts/gen-favicon.mjs"
 
+[tasks.docs-verify]
+description = "Assert the deploy base path was applied to the built site's content links"
+dir = "docs"
+run = "./scripts/verify-base-path.sh"
+
 [tasks.docs-clean]
 description = "Remove build artifacts"
 run = "rm -rf docs/dist docs/.astro"
@@ -57,6 +71,52 @@ sleep 4
 bunx playwright screenshot --viewport-size=1280,800 "http://localhost:4321${path}" "$out"
 status=$?; pkill -f "astro preview" || true; exit $status
 """
+
+[tasks.docs-presentation]
+description = "Render the reveal.js introduction deck from its Quarto source"
+# Quarto is scoped to this task rather than declared in `[tools]` on purpose: it
+# is a large download, the rendered outputs are committed, and the deck changes
+# perhaps once a year. A task-scoped tool is provisioned on first `mise run` and
+# is invisible to `mise install`, so neither CI nor a new contributor pays for a
+# toolchain they will not use. Verified: `mise ls --current` does not list it and
+# `mise install` does not fetch it.
+tools = { "aqua:quarto-dev/quarto-cli" = "1.10.18" }
+run = "quarto render docs/public/presentations/introduction.qmd"
+
+[tasks.lint]
+description = "Run the prek hooks over all files (formatting, markdown lint, secrets)"
+# lychee is skipped here and split into `mise run lint-links`. prek shards files
+# across parallel hook invocations, and eight concurrent lychee processes hammer
+# the same external hosts hard enough to produce spurious TLS handshake failures
+# — observed on a URL that returns 200 when checked on its own. A blocking CI
+# gate must not depend on other people's rate limiters.
+run = "SKIP=lychee prek run --all-files"
+
+[tasks.lint-links]
+description = "Check every Markdown link, including external ones (needs network)"
+# Driven from `git ls-files`, not a `**/*.md` glob: the glob also matches the
+# ~520 dependency READMEs under `docs/node_modules`, which turns a 30-second
+# check of 33 tracked files into a ten-minute crawl of other people's links.
+# One lychee process, rather than prek's parallel shards — see `lint` above.
+run = "git ls-files -z '*.md' '*.mdx' | xargs -0 lychee --no-progress --config .lychee.toml"
+
+[tasks.audit]
+description = "Audit the GitHub Actions workflows (zizmor, then actionlint+shellcheck)"
+run = ["zizmor .", "actionlint"]
+
+[tasks.ci]
+description = "Run the same gates CI runs, in the same order"
+# Deliberately a `run` list of explicit `mise run` calls rather than `depends`:
+# mise may run `depends` entries in parallel, and these are strictly ordered
+# (nothing can be checked or built before the site dependencies are installed).
+run = [
+  "mise run docs-install",
+  "mise run docs-check",
+  "mise run docs-build",
+  "mise run docs-verify",
+  "mise run lint",
+  "mise run audit",
+]
 
 [tasks.ci-watch]
 description = "Watch GitHub Actions CI for the current branch; exits non-zero on failure"
