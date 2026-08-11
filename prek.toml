@@ -51,6 +51,21 @@ hooks = [
   }
 ]
 
+# Shell script linting (uses locally installed shellcheck).
+# `mise run audit` only reaches the `run:` blocks inside workflows, via
+# actionlint; standalone scripts need their own pass.
+[[repos]]
+repo = "local"
+hooks = [
+  {
+    id = "shellcheck",
+    name = "shellcheck (shell script lint)",
+    entry = "shellcheck",
+    language = "system",
+    types = ["shell"],
+  }
+]
+
 # Secret detection
 [[repos]]
 repo = "local"
