@@ -32,8 +32,11 @@ Then:
 - `mise run docs-build` - Build the documentation site into `docs/dist`.
 - `mise run docs-check` - Run the Astro type and content check.
 - `mise run lint` - Run the formatting, Markdown and secret-scanning hooks.
-- `mise run lint-links` - Check every Markdown link (needs network).
-- `mise run ci` - Run the same checks, in the same order, as CI.
+- `mise run lint-links` - Check **external** Markdown links (needs network). Not a
+  pull-request check; it runs weekly instead, so that a third-party host being
+  slow cannot block a merge.
+- `mise run ci` - Run the same checks, in the same order, as CI. This includes the
+  internal link check, which does gate pull requests.
 
 Commit messages follow [Conventional Commits](https://conventionalcommits.org/)
 (`type(scope): description`) and are checked by a commit-msg hook.
