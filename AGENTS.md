@@ -6,13 +6,42 @@ Documentation for the Caseum software architecture methodology. Combines C4, Act
 
 ## Quick Reference
 
-Tooling is pinned in `.mise.toml` (bun, prek, lychee, gitleaks); run `mise install` once. Then:
+Tooling is exact-pinned in `.mise.toml` (actionlint, bun, gitleaks, lychee, prek,
+shellcheck, zizmor); run `mise install` once. Then:
 
+- **Everything CI runs**: `mise run ci`
 - **Install**: `mise run docs-install`
 - **Serve locally**: `mise run docs-dev` -> <http://localhost:4321/caseum/>
-- **Build**: `mise run docs-build`
+- **Build**: `mise run docs-build` (into `docs/dist`)
+- **Preview the built site**: `mise run docs-preview`
 - **Type/content check**: `mise run docs-check`
+- **Lint** (prek hooks: formatting, markdown, secrets): `mise run lint`
+- **Link check** (network): `mise run lint-links`
+- **Audit workflows** (zizmor + actionlint): `mise run audit`
+- **Remove build artifacts**: `mise run docs-clean`
+- **Regenerate the favicon**: `mise run docs-favicon`
 - **Screenshot a page**: `mise run docs-browser` once, then `mise run docs-screenshot out.png /caseum/guides/stages/`
+- **Watch CI for this branch**: `mise run ci-watch`
+
+`mise run lint` deliberately skips the lychee link check and `mise run lint-links`
+runs it on its own; the comment in `.mise.toml` explains why.
+
+## Agent skills
+
+### Git remote
+
+Use GitHub with the `gh` CLI. The remote is <https://github.com/lsimons/caseum>.
+
+### Issue tracker
+
+Use GitHub issues via `gh`. See `docs/agents/issue-tracker.md` — note the Issues
+tab is currently disabled on this repository, so `gh issue` will fail until it is
+turned on.
+
+### Triage labels
+
+Use needs-triage, needs-info, ready-for-agent, ready-for-human, wontfix. See
+`docs/agents/issue-tracker.md`.
 
 ## Structure
 
@@ -37,12 +66,26 @@ hardcoded `/caseum/...` src because that plugin does not visit raw HTML nodes.
   - `astro.config.mjs` - site/base, the sidebar, and the rehype base-link
     plugin. `src/styles/custom.css` - brand accent color and floated-image
     styling.
+  - `scripts/verify-base-path.sh` - guards the base-link plugin above. The
+    plugin is wired in via `markdown.rehypePlugins`, which **Astro 7 has
+    deprecated** in favour of passing plugins to `unified({...})` from
+    `@astrojs/markdown-remark`. When that option is removed the plugin stops
+    running, the build still succeeds, and every in-content link becomes a 404
+    under `/caseum/`. Confirmed by disabling the plugin: the build reported
+    "Complete!" while 117 links lost their prefix. `mise run docs-verify` fails
+    on exactly that, and runs in both CI and the deploy workflow. **Migrating
+    off the deprecated option is still to do.**
 - `.mise.toml` - pinned tools and dev tasks (run with `mise run <task>`).
 - `prek.toml` - git hooks (mdformat, markdownlint, lychee, gitleaks,
   commitlint); `prek install -t pre-commit -t commit-msg` once per clone.
-- `.github/workflows/ci.yml` builds + astro-checks on push/PR;
-  `deploy.yml` publishes `docs/dist` to GitHub Pages on push to `main`. The
-  Pages source must be set to "GitHub Actions" (not "Deploy from a branch").
+- `docs/agents/` - repository documentation for agents. It sits outside
+  `docs/src/content/docs/`, so Astro does not publish it.
+- `.github/workflows/ci.yml` runs four jobs on push/PR - build (install, astro
+  check, build), lint (the prek hooks plus actionlint), links (lychee), and
+  zizmor. `deploy.yml` publishes `docs/dist` to GitHub Pages on push to `main`
+  and deliberately runs only the build, so a third-party link outage cannot
+  block a deploy. The Pages source must be set to "GitHub Actions" (not "Deploy
+  from a branch").
 
 ## Commit Message Convention
 
@@ -56,11 +99,15 @@ Follow [Conventional Commits](https://conventionalcommits.org/):
 
 Work is NOT complete until every change is committed, pushed, and CI passes.
 
-1. **Quality gates** (if docs changed):
+1. **Quality gates**:
 
    ```bash
-   mise run docs-build && mise run docs-check
+   mise run ci
    ```
+
+   This is the same set of checks, in the same order, that `.github/workflows/ci.yml`
+   runs. It does not include `mise run lint-links`; run that too if you changed
+   any links.
 
 2. **Commit**: stage and commit every change from this session. Do not leave the working tree dirty.
 
