@@ -41,6 +41,64 @@ jobs:
       - name: Build
         run: mise run docs-build
 
+      - name: Verify the deploy base path survived the build
+        run: mise run docs-verify
+
+  # The prek hooks (formatting, markdown lint, secret scan) previously ran only
+  # on the machines of contributors who had run `prek install`. Anything arriving
+  # by web edit, by dependabot, or from a fresh clone bypassed them entirely.
+  lint:
+    name: Lint (prek hooks, actionlint, shellcheck)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up mise
+        uses: jdx/mise-action@7e36c90d9ab29c415a2384db3006f3ec8a8cc654 # v4.2.4
+        with:
+          install: true
+          cache: true
+
+      # prek provisions its own hook toolchains (a Python for mdformat, a Node
+      # for markdownlint-cli2) on first use; without this they are re-downloaded
+      # on every run.
+      - name: Cache prek hook environments
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.cache/prek
+          key: ${{ runner.os }}-prek-${{ hashFiles('prek.toml') }}
+          restore-keys: ${{ runner.os }}-prek-
+
+      - name: Lint (prek hooks)
+        run: mise run lint
+
+      - name: Audit workflows (zizmor + actionlint)
+        run: mise run audit
+
+  # Kept as its own job rather than a step in `lint`: link checking reaches out
+  # to third-party hosts, so when it goes red it should be unambiguous that the
+  # cause is external and not the build. `deploy.yml` does not depend on it.
+  links:
+    name: Link check (lychee)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up mise
+        uses: jdx/mise-action@7e36c90d9ab29c415a2384db3006f3ec8a8cc654 # v4.2.4
+        with:
+          install: true
+          cache: true
+
+      - name: Check Markdown links
+        run: mise run lint-links
+
   zizmor:
     name: Zizmor (GitHub Actions audit)
     runs-on: ubuntu-latest
@@ -54,4 +112,9 @@ jobs:
       - name: Audit GitHub Actions workflows (zizmor)
         uses: zizmorcore/zizmor-action@3dc1ecc9bcb9e94e9b2c709687979e1298497054 # v0.6.2
         with:
+          # Pinned to the same version `.mise.toml` installs, so the local
+          # `mise run audit` and this job cannot silently diverge. The action
+          # validates this string against a list baked into its own release:
+          # 1.29.0 requires zizmor-action >= v0.6.2, which is the SHA above.
+          version: "1.29.0"
           advanced-security: false
