@@ -101,7 +101,11 @@ pinned in `.mise.toml`; run `mise install` once, then:
 mise run docs-install   # install site dependencies (bun)
 mise run docs-dev       # dev server at http://localhost:4321/caseum/
 mise run docs-build     # build the static site into docs/dist
+mise run ci             # the same checks, in the same order, that CI runs
 ```
+
+`mise tasks` lists them all; [CONTRIBUTING.md](CONTRIBUTING.md) covers the git
+hooks and the rest of the development setup.
 
 Content lives in `docs/src/content/docs/`; assets and downloads in
 `docs/public/`. A push to `main` builds and deploys via GitHub Actions.
