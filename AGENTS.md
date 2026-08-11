@@ -16,7 +16,7 @@ shellcheck, zizmor); run `mise install` once. Then:
 - **Preview the built site**: `mise run docs-preview`
 - **Type/content check**: `mise run docs-check`
 - **Lint** (prek hooks: formatting, markdown, secrets): `mise run lint`
-- **Link check** (network): `mise run lint-links`
+- **External link check** (network, not a PR gate): `mise run lint-links`
 - **Audit workflows** (zizmor + actionlint): `mise run audit`
 - **Remove build artifacts**: `mise run docs-clean`
 - **Regenerate the favicon**: `mise run docs-favicon`
@@ -25,6 +25,10 @@ shellcheck, zizmor); run `mise install` once. Then:
 
 `mise run lint` deliberately skips the lychee link check and `mise run lint-links`
 runs it on its own; the comment in `.mise.toml` explains why.
+
+Internal links are checked by `mise run docs-verify` and gate every PR.
+**External** links are checked only by `mise run lint-links`, which runs weekly
+via `.github/workflows/links.yml` and on demand - never on a PR.
 
 ## Agent skills
 
@@ -73,6 +77,14 @@ hardcoded `/caseum/...` src because that plugin does not visit raw HTML nodes.
     "Complete!" while 117 links lost their prefix. `mise run docs-verify` fails
     on exactly that, and runs in both CI and the deploy workflow. **Migrating
     off the deprecated option is still to do.**
+  - `scripts/verify-internal-links.sh` - resolves every internal link in the
+    built site against the built site. Until this existed, a broken internal
+    link was caught by **nothing**: `astro build` and `astro check` both pass
+    (Astro 7 does not validate Markdown links and `starlight-links-validator` is
+    not installed), `verify-base-path.sh` passes (a link to a missing page still
+    gets its prefix), and lychee never requests internal links because
+    `.lychee.toml` resolves them against the published domain and then excludes
+    it. Also runs under `mise run docs-verify`.
 - `.mise.toml` - pinned tools and dev tasks (run with `mise run <task>`).
 - `prek.toml` - git hooks (mdformat, markdownlint, lychee, shellcheck, gitleaks,
   commitlint); `prek install -t pre-commit -t commit-msg` once per clone.
@@ -80,17 +92,25 @@ hardcoded `/caseum/...` src because that plugin does not visit raw HTML nodes.
   **locally only** - CI runs the pre-commit hooks, not this one.
 - `docs/agents/` - repository documentation for agents. It sits outside
   `docs/src/content/docs/`, so Astro does not publish it.
-- `.github/workflows/ci.yml` runs four jobs on push/PR - build (install, astro
-  check, build, base-path check), lint (the pre-commit prek hooks plus
-  `mise run audit`), links (lychee), and zizmor. Note zizmor therefore runs
-  **twice** per CI run: once as the pinned local binary inside `mise run audit`,
-  once as `zizmorcore/zizmor-action`. That is deliberate - the two cross-check
-  each other, which is exactly the failure mode where the action's `version:`
-  input and the pinned binary drift apart. Do not "tidy" one away.
-  `deploy.yml` publishes `docs/dist` to GitHub Pages on push to `main`; it runs
-  the build **and the base-path check**, and deliberately does not run the link
-  check, so a third-party link outage cannot block a deploy. A base-path
-  regression *does* block it, on purpose. The Pages source must be set to
+- `.github/workflows/ci.yml` runs three jobs on push/PR - build (install, astro
+  check, build, then `mise run docs-verify` = base-path check + internal-link
+  check), lint (the pre-commit prek hooks plus `mise run audit`), and zizmor.
+  Note zizmor therefore runs **twice** per CI run: once as the pinned local
+  binary inside `mise run audit`, once as `zizmorcore/zizmor-action`. That is
+  deliberate - the two cross-check each other, which is exactly the failure mode
+  where the action's `version:` input and the pinned binary drift apart. Do not
+  "tidy" one away.
+- `.github/workflows/links.yml` runs the **external** link check (lychee) weekly
+  and on demand, **not** on pull requests. It was a PR gate and had to stop being
+  one: it blocked PR #23 on four `agilealliance.org` links that time out from
+  GitHub runner IPs while returning 301 in ~1.2s from anywhere else. A merge
+  should not depend on a third party's rate limiter. Everything a change in this
+  repository can actually break is still gated, by `docs-verify`.
+- `deploy.yml` publishes `docs/dist` to GitHub Pages on push to `main`; it runs
+  the build **and `docs-verify`**, and deliberately does not run the external
+  link check, so a third-party outage cannot block a deploy. A base-path or
+  internal-link regression *does* block it, on purpose - both are offline,
+  deterministic, and about this repository's own content. The Pages source must be set to
   "GitHub Actions" (not "Deploy
   from a branch").
 
@@ -113,8 +133,8 @@ Work is NOT complete until every change is committed, pushed, and CI passes.
    ```
 
    This is the same set of checks, in the same order, that `.github/workflows/ci.yml`
-   runs. It does not include `mise run lint-links`; run that too if you changed
-   any links.
+   runs. It does not include `mise run lint-links` (external links, weekly job);
+   run that too if you added or changed an external link.
 
 2. **Commit**: stage and commit every change from this session. Do not leave the working tree dirty.
 

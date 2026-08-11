@@ -81,23 +81,13 @@ jobs:
   # Kept as its own job rather than a step in `lint`: link checking reaches out
   # to third-party hosts, so when it goes red it should be unambiguous that the
   # cause is external and not the build. `deploy.yml` does not depend on it.
-  links:
-    name: Link check (lychee)
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
-
-      - name: Set up mise
-        uses: jdx/mise-action@7e36c90d9ab29c415a2384db3006f3ec8a8cc654 # v4.2.4
-        with:
-          install: true
-          cache: true
-
-      - name: Check Markdown links
-        run: mise run lint-links
+  # External link checking is deliberately NOT a PR gate. It lives in
+  # `links.yml`, on a schedule. See that file for the reasoning.
+  #
+  # What still gates a PR is `mise run docs-verify` in the build job above:
+  # the base-path check and the internal-link check, both offline and
+  # deterministic. Those cover the links a change in *this* repository can
+  # actually break.
 
   zizmor:
     name: Zizmor (GitHub Actions audit)

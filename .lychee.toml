@@ -2,8 +2,20 @@
 # https://lychee.cli.rs/usage/config/
 
 # Root-relative internal links (/guides/stages/, /foo.png) resolve against our
-# published site, so they land under the excluded lsimons.github.io domain
-# below. The Astro build and the build-time link audit validate them for real.
+# published site, so they land under the excluded lsimons.github.io domain below
+# and lychee never actually requests them.
+#
+# This file used to claim "the Astro build and the build-time link audit validate
+# them for real". That was false, and was measured rather than argued: a
+# deliberately broken `[nope](/guides/this-page-does-not-exist/)` produced
+# `astro build` "Complete!", `astro check` 0 errors, and lychee 0 errors. Astro 7
+# does not validate Markdown links and `starlight-links-validator` is not
+# installed; Starlight validates sidebar `slug:` entries only.
+#
+# Internal links are now genuinely validated, by
+# `docs/scripts/verify-internal-links.sh` (`mise run docs-verify`), which
+# resolves every internal link in the built output against the built output. That
+# script - not the Astro build - is what makes this exclusion safe.
 base_url = "https://lsimons.github.io/caseum/"
 
 # 429 (rate limited) and 403 (bot-protected) are not broken links; accept them
@@ -26,6 +38,12 @@ exclude = [
   '^https://www\.linkedin\.com',
   # slow ESA gov host, frequently times out link checkers
   '^http://microelectronics\.esa\.int',
+  # Times out from GitHub runner IPs, four links across two guides (PR #23).
+  # Not slow and not broken: from a normal client both probed URLs return 301 in
+  # ~1.2s, and lychee's default 3 retries did not get through, so this is an
+  # IP-level block or tarpit rather than latency. Same judgement as the ESA host
+  # above; a timeout that only happens from CI is not a broken link.
+  '^https://(www\.)?agilealliance\.org',
   '[{}]',
   '%7[BD]',
 ]
