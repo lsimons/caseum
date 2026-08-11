@@ -1,6 +1,6 @@
 Thank you for investing your time in contributing to our project!
 
-Any contributions you make are governed by our [License](LICENSE.txt).
+Any contributions you make are governed by our [License](LICENSE).
 
 Please follow our [Code of Conduct](CODE_OF_CONDUCT.md) to keep our community approachable and respectable.
 
