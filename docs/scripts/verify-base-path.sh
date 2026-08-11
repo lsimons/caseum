@@ -33,33 +33,52 @@ if [ ! -d "$dist" ]; then
 	exit 1
 fi
 
-# The top-level content sections, i.e. the directories under
-# `src/content/docs/`. A root-relative link into any of these must come out
-# base-prefixed.
-sections='guides|actors|stories|events|ui|models|components|design'
-
-# Only Astro-rendered pages. `public/` also contains hand-written `*.html`
-# redirect stubs that already hardcode `/caseum/...` and are copied verbatim.
+# The top-level content sections are the directories under `src/content/docs/`.
+# A root-relative link into any of them must come out base-prefixed.
 #
+# Derived at runtime rather than hardcoded. A hardcoded list silently stops
+# guarding any section added later, which is the one way this check could quietly
+# become weaker over time rather than louder.
+content_src="${2:-src/content/docs}"
+
+if [ ! -d "$content_src" ]; then
+	echo "verify-base-path: '$content_src' not found; cannot determine the content sections." >&2
+	exit 1
+fi
+
+sections=$(find "$content_src" -mindepth 1 -maxdepth 1 -type d -exec basename {} \; | sort | paste -sd '|' -)
+
+if [ -z "$sections" ]; then
+	echo "verify-base-path: no content sections found under '$content_src'." >&2
+	exit 1
+fi
+
+# Only Astro-rendered pages: `index.html` for every route, plus the generated
+# `404.html`. `public/` also contains hand-written `*.html` redirect stubs that
+# already hardcode `/caseum/...` and are copied verbatim, so a blanket `*.html`
+# would scan files this check has no business judging.
+pages=(--include=index.html --include=404.html)
+
 # `|| true` on each grep is load-bearing: grep exits 1 when it matches nothing,
 # and under `set -o pipefail` that aborts the script. For `bare`, matching
 # nothing is exactly the success case, so without this the check can only ever
 # fail or crash.
-prefixed=$({ grep -rhoE "href=\"/caseum/($sections)/" --include=index.html "$dist" || true; } | wc -l | tr -d ' ')
-bare=$({ grep -rhoE "(href|src)=\"/($sections)/" --include=index.html "$dist" || true; } | wc -l | tr -d ' ')
+prefixed=$({ grep -rhoE "href=\"/caseum/($sections)/" "${pages[@]}" "$dist" || true; } | wc -l | tr -d ' ')
+bare=$({ grep -rhoE "(href|src)=\"/($sections)/" "${pages[@]}" "$dist" || true; } | wc -l | tr -d ' ')
 
 if [ "$bare" -ne 0 ]; then
 	echo "verify-base-path: FAIL - found $bare content link(s) missing the /caseum base path." >&2
 	echo "The rehypeBaseLinks plugin in docs/astro.config.mjs is probably no longer running." >&2
 	echo "Examples:" >&2
-	grep -rnoE "(href|src)=\"/($sections)/[^\"]*\"" --include=index.html "$dist" | head -10 >&2
+	grep -rnoE "(href|src)=\"/($sections)/[^\"]*\"" "${pages[@]}" "$dist" | head -10 >&2
 	exit 1
 fi
 
 if [ "$prefixed" -eq 0 ]; then
 	echo "verify-base-path: FAIL - found no base-prefixed content links at all." >&2
-	echo "Either the build produced nothing, or the section list in this script is stale." >&2
+	echo "Either the build produced nothing, or every content section is now empty." >&2
 	exit 1
 fi
 
 echo "verify-base-path: OK - $prefixed base-prefixed content links, 0 unprefixed."
+echo "verify-base-path: sections guarded: ${sections//|/, }"

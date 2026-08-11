@@ -34,14 +34,12 @@ Use GitHub with the `gh` CLI. The remote is <https://github.com/lsimons/caseum>.
 
 ### Issue tracker
 
-Use GitHub issues via `gh`. See `docs/agents/issue-tracker.md` — note the Issues
-tab is currently disabled on this repository, so `gh issue` will fail until it is
-turned on.
+Use GitHub issues via `gh`. See `docs/agents/issue-tracker.md`.
 
 ### Triage labels
 
-Use needs-triage, needs-info, ready-for-agent, ready-for-human, wontfix. See
-`docs/agents/issue-tracker.md`.
+Use needs-triage, needs-info, ready-for-agent, ready-for-human. See
+`docs/agents/issue-tracker.md`, which also covers `wontfix` as a closing label.
 
 ## Structure
 
@@ -76,15 +74,24 @@ hardcoded `/caseum/...` src because that plugin does not visit raw HTML nodes.
     on exactly that, and runs in both CI and the deploy workflow. **Migrating
     off the deprecated option is still to do.**
 - `.mise.toml` - pinned tools and dev tasks (run with `mise run <task>`).
-- `prek.toml` - git hooks (mdformat, markdownlint, lychee, gitleaks,
+- `prek.toml` - git hooks (mdformat, markdownlint, lychee, shellcheck, gitleaks,
   commitlint); `prek install -t pre-commit -t commit-msg` once per clone.
+  `commitlint` is a `commit-msg` hook, so conventional-commit messages are gated
+  **locally only** - CI runs the pre-commit hooks, not this one.
 - `docs/agents/` - repository documentation for agents. It sits outside
   `docs/src/content/docs/`, so Astro does not publish it.
 - `.github/workflows/ci.yml` runs four jobs on push/PR - build (install, astro
-  check, build), lint (the prek hooks plus actionlint), links (lychee), and
-  zizmor. `deploy.yml` publishes `docs/dist` to GitHub Pages on push to `main`
-  and deliberately runs only the build, so a third-party link outage cannot
-  block a deploy. The Pages source must be set to "GitHub Actions" (not "Deploy
+  check, build, base-path check), lint (the pre-commit prek hooks plus
+  `mise run audit`), links (lychee), and zizmor. Note zizmor therefore runs
+  **twice** per CI run: once as the pinned local binary inside `mise run audit`,
+  once as `zizmorcore/zizmor-action`. That is deliberate - the two cross-check
+  each other, which is exactly the failure mode where the action's `version:`
+  input and the pinned binary drift apart. Do not "tidy" one away.
+  `deploy.yml` publishes `docs/dist` to GitHub Pages on push to `main`; it runs
+  the build **and the base-path check**, and deliberately does not run the link
+  check, so a third-party link outage cannot block a deploy. A base-path
+  regression *does* block it, on purpose. The Pages source must be set to
+  "GitHub Actions" (not "Deploy
   from a branch").
 
 ## Commit Message Convention
