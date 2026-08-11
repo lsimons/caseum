@@ -5,19 +5,6 @@ source code (<https://github.com/lsimons/caseum>).
 
 Use the `gh` CLI for all operations. `gh issue --help` describes the commands.
 
-> **The Issues tab is currently turned off for this repository.**
-> `gh api repos/lsimons/caseum --jq .has_issues` returns `false`, so
-> `gh issue list` and `gh issue create` will fail until the owner turns it back
-> on. This looks deliberate — `caseum` and `lsimons.github.io`, the two published
-> GitHub Pages sites, are the only repositories in this fleet with issues
-> disabled. The labels below already exist and apply to pull requests regardless.
->
-> To enable the Issues tab:
->
-> ```bash
-> gh api -X PATCH repos/lsimons/caseum -F has_issues=true
-> ```
-
 This file lives outside `docs/src/content/docs/`, so it is repository
 documentation for agents and is not published to the Caseum site.
 

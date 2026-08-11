@@ -48,7 +48,11 @@ run = "bun run scripts/gen-favicon.mjs"
 [tasks.docs-verify]
 description = "Assert the deploy base path was applied to the built site's content links"
 dir = "docs"
-run = "./scripts/verify-base-path.sh"
+# Invoked as `bash <script>` rather than `./<script>`: this runs on the path that
+# gates a production deploy, and an executable bit is easy to lose to a web edit,
+# a zip round-trip or a `core.fileMode=false` clone. The mode bit is committed as
+# 100755 anyway; this just stops it from being load-bearing.
+run = "bash scripts/verify-base-path.sh"
 
 [tasks.docs-clean]
 description = "Remove build artifacts"
