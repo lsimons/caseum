@@ -46,13 +46,20 @@ dir = "docs"
 run = "bun run scripts/gen-favicon.mjs"
 
 [tasks.docs-verify]
-description = "Assert the deploy base path was applied to the built site's content links"
+description = "Check the built site: base path applied, and every internal link resolves"
 dir = "docs"
 # Invoked as `bash <script>` rather than `./<script>`: this runs on the path that
 # gates a production deploy, and an executable bit is easy to lose to a web edit,
 # a zip round-trip or a `core.fileMode=false` clone. The mode bit is committed as
 # 100755 anyway; this just stops it from being load-bearing.
-run = "bash scripts/verify-base-path.sh"
+#
+# These two are the whole of the link checking that gates a PR, and both are
+# offline and deterministic. External link checking is deliberately not here -
+# see `lint-links` and `.github/workflows/links.yml`.
+run = [
+  "bash scripts/verify-base-path.sh",
+  "bash scripts/verify-internal-links.sh",
+]
 
 [tasks.docs-clean]
 description = "Remove build artifacts"
