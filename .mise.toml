@@ -9,15 +9,15 @@ lockfile = true
 # auto-download on any machine or CI runner. Bumps are deliberate commits.
 [tools]
 actionlint = "1.7.12"
-bun = "1.3.14"
+bun = "1.4.2"
 gitleaks = "8.30.1"
 lychee = "0.24.2"
-prek = "0.4.12"
+prek = "0.5.2"
 # Load-bearing, not cosmetic: actionlint exits 0 without ever inspecting a
 # `run:` block if shellcheck is not on PATH, so dropping this pin would silently
 # turn half of `mise run audit` into a no-op.
 shellcheck = "0.11.0"
-zizmor = "1.29.0"
+zizmor = "1.30.1"
 
 [tasks.docs-install]
 description = "Install the site dependencies (bun)"
