@@ -35,7 +35,7 @@ hooks = [
 # Markdown linting
 [[repos]]
 repo = "https://github.com/DavidAnson/markdownlint-cli2"
-rev = "v0.22.0"
+rev = "v0.24.0"
 hooks = [{ id = "markdownlint-cli2", exclude = '\.mdx$' }]
 
 # Broken link checking (uses locally installed lychee)
@@ -82,7 +82,7 @@ hooks = [
 # Commit message linting
 [[repos]]
 repo = "https://github.com/alessandrojcm/commitlint-pre-commit-hook"
-rev = "v9.24.0"
+rev = "v9.27.0"
 hooks = [
   {
     id = "commitlint",
