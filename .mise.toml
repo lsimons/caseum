@@ -18,6 +18,24 @@ prek = "0.5.7"
 # turn half of `mise run audit` into a no-op.
 shellcheck = "0.11.0"
 zizmor = "1.31.1"
+# Used by `mise run vuln`. Unlike zizmor there is no second version to keep in
+# step: the CI job runs `mise run vuln` through mise-action, so this pin is the
+# single source of truth for local and CI alike.
+#
+# The SLSA signer is declared here because the aqua registry entry for
+# google/osv-scanner carries no signer identity, so without these options mise
+# 2026.10.x skips SLSA verification and refuses to re-lock (it would drop the
+# `provenance.slsa` entries in mise.lock). The `slsa_signer_identity` /
+# `slsa_signer_issuer` aqua tool options were added in mise 2026.10.0 for
+# https://github.com/jdx/mise/issues/13850.
+#
+# The identity is the slsa-github-generator generic generator workflow that
+# google/osv-scanner's .github/workflows/goreleaser.yml calls, at the tag that
+# workflow pins (v2.1.0 as of osv-scanner v2.7.0). When osv-scanner moves to a
+# new generator tag, `mise lock` fails loudly with "lock-time provenance
+# verification failed": re-check goreleaser.yml at the new release tag and
+# update the identity here, rather than dropping it.
+osv-scanner = { version = "2.7.0", slsa_signer_identity = "https://github.com/slsa-framework/slsa-github-generator/.github/workflows/generator_generic_slsa3.yml@refs/tags/v2.1.0", slsa_signer_issuer = "https://token.actions.githubusercontent.com" }
 
 [tasks.docs-install]
 description = "Install the site dependencies (bun)"
@@ -118,6 +136,44 @@ run = "git ls-files -z '*.md' '*.mdx' | xargs -0 lychee --no-progress --config .
 [tasks.audit]
 description = "Audit the GitHub Actions workflows (zizmor, then actionlint+shellcheck)"
 run = ["zizmor .", "actionlint"]
+
+# Scans `docs/bun.lock` against the OSV database. Kept out of `ci` because it
+# needs network access to the OSV database; CI runs it in its own `vuln` job.
+#
+# `-r` is load-bearing, and its absence is silent: `osv-scanner scan source` is
+# NOT recursive by default, and the only lockfile here sits in `docs/`, so
+# without it the scan would open nothing and still print "No issues found".
+#
+# Because that failure mode is silent, the scan is not trusted on its own: the
+# loop below re-derives the lockfile list from git and fails if the scanner did
+# not report opening every one. Adding a second package manager then gives a red
+# run rather than a quietly narrower scan - add its lockfile to the glob list.
+# The directory walk respects `.gitignore`, so `docs/node_modules` stays out.
+[tasks.vuln]
+description = "osv-scanner audit of every committed lockfile against the OSV database"
+run = '''
+set -eu
+status=0
+out=$(osv-scanner scan source -r . 2>&1) || status=$?
+echo "$out"
+
+missing=0
+for lock in $(git ls-files -- '*bun.lock' '*package-lock.json' '*pnpm-lock.yaml' '*yarn.lock' '*uv.lock' '*requirements*.txt'); do
+  case "$out" in
+    *"/$lock file and found"*) ;;
+    *)
+      echo "osv-scanner never opened $lock - its dependencies went unscanned." >&2
+      missing=1
+      ;;
+  esac
+done
+if [ "$missing" -ne 0 ]; then
+  echo "Every committed lockfile must be scanned. Check that osv-scanner" >&2
+  echo "supports its format, and that the -r flag is still present." >&2
+  exit 1
+fi
+exit "$status"
+'''
 
 [tasks.ci]
 description = "Run the same gates CI runs, in the same order"
