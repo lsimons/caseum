@@ -6,8 +6,8 @@ Documentation for the Caseum software architecture methodology. Combines C4, Act
 
 ## Quick Reference
 
-Tooling is exact-pinned in `.mise.toml` (actionlint, bun, gitleaks, lychee, prek,
-shellcheck, zizmor); run `mise install` once. Then:
+Tooling is exact-pinned in `.mise.toml` (actionlint, bun, gitleaks, lychee,
+osv-scanner, prek, shellcheck, zizmor); run `mise install` once. Then:
 
 - **Everything CI runs**: `mise run ci`
 - **Install**: `mise run docs-install`
@@ -18,6 +18,7 @@ shellcheck, zizmor); run `mise install` once. Then:
 - **Lint** (prek hooks: formatting, markdown, secrets): `mise run lint`
 - **External link check** (network, not a PR gate): `mise run lint-links`
 - **Audit workflows** (zizmor + actionlint): `mise run audit`
+- **Dependency vulnerability scan** (osv-scanner over `docs/bun.lock`, network): `mise run vuln`
 - **Remove build artifacts**: `mise run docs-clean`
 - **Regenerate the favicon**: `mise run docs-favicon`
 - **Screenshot a page**: `mise run docs-browser` once, then `mise run docs-screenshot out.png /caseum/guides/stages/`
@@ -92,9 +93,10 @@ hardcoded `/caseum/...` src because that plugin does not visit raw HTML nodes.
   **locally only** - CI runs the pre-commit hooks, not this one.
 - `docs/agents/` - repository documentation for agents. It sits outside
   `docs/src/content/docs/`, so Astro does not publish it.
-- `.github/workflows/ci.yml` runs three jobs on push/PR - build (install, astro
+- `.github/workflows/ci.yml` runs four jobs on push/PR - build (install, astro
   check, build, then `mise run docs-verify` = base-path check + internal-link
-  check), lint (the pre-commit prek hooks plus `mise run audit`), and zizmor.
+  check), lint (the pre-commit prek hooks plus `mise run audit`), vuln
+  (`mise run vuln`, osv-scanner over every committed lockfile), and zizmor.
   Note zizmor therefore runs **twice** per CI run: once as the pinned local
   binary inside `mise run audit`, once as `zizmorcore/zizmor-action`. That is
   deliberate - the two cross-check each other, which is exactly the failure mode
