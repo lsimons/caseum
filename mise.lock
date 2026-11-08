@@ -201,38 +201,38 @@ url_api = "https://api.github.com/repos/google/osv-scanner/releases/assets/63225
 url = "https://github.com/google/osv-scanner/releases/download/v2.7.0/multiple.intoto.jsonl"
 
 [[tools.prek]]
-version = "0.5.7"
+version = "0.5.9"
 backend = "aqua:j178/prek"
-specifiers = ["0.5.7"]
+specifiers = ["0.5.9"]
 
 [tools.prek."platforms.linux-x64"]
-checksum = "sha256:e238e5a6b4e384e8d18f33d3c3b1a329be0e1237f77ac6e021e641ddd3a2bab6"
-url = "https://github.com/j178/prek/releases/download/v0.5.7/prek-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/j178/prek/releases/assets/660929556"
+checksum = "sha256:2fee13923018dd517c19dba032ddcae8010cadfb81bc47e742ad5e8981a3f126"
+url = "https://github.com/j178/prek/releases/download/v0.5.9/prek-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/j178/prek/releases/assets/691760524"
 provenance = "github-attestations"
 
 [tools.prek."platforms.linux-x64-baseline"]
-checksum = "sha256:e238e5a6b4e384e8d18f33d3c3b1a329be0e1237f77ac6e021e641ddd3a2bab6"
-url = "https://github.com/j178/prek/releases/download/v0.5.7/prek-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/j178/prek/releases/assets/660929556"
+checksum = "sha256:2fee13923018dd517c19dba032ddcae8010cadfb81bc47e742ad5e8981a3f126"
+url = "https://github.com/j178/prek/releases/download/v0.5.9/prek-x86_64-unknown-linux-gnu.tar.gz"
+url_api = "https://api.github.com/repos/j178/prek/releases/assets/691760524"
 provenance = "github-attestations"
 
 [tools.prek."platforms.linux-x64-musl"]
-checksum = "sha256:25d6a0316125127aed3ad7010128884d7e7243c4ac06f084218b98dc20020ca9"
-url = "https://github.com/j178/prek/releases/download/v0.5.7/prek-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/j178/prek/releases/assets/660929599"
+checksum = "sha256:7b00ac6a6e4cbb5d1711cb759c1fc279281d1446317ebede513a4d03bf7a7e2c"
+url = "https://github.com/j178/prek/releases/download/v0.5.9/prek-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/j178/prek/releases/assets/691760529"
 provenance = "github-attestations"
 
 [tools.prek."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:25d6a0316125127aed3ad7010128884d7e7243c4ac06f084218b98dc20020ca9"
-url = "https://github.com/j178/prek/releases/download/v0.5.7/prek-x86_64-unknown-linux-musl.tar.gz"
-url_api = "https://api.github.com/repos/j178/prek/releases/assets/660929599"
+checksum = "sha256:7b00ac6a6e4cbb5d1711cb759c1fc279281d1446317ebede513a4d03bf7a7e2c"
+url = "https://github.com/j178/prek/releases/download/v0.5.9/prek-x86_64-unknown-linux-musl.tar.gz"
+url_api = "https://api.github.com/repos/j178/prek/releases/assets/691760529"
 provenance = "github-attestations"
 
 [tools.prek."platforms.macos-arm64"]
-checksum = "sha256:800c5b9c8239045bbdf4201957dd4175135e216e838c40a6ec1904ff18ebaf2c"
-url = "https://github.com/j178/prek/releases/download/v0.5.7/prek-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/j178/prek/releases/assets/660929480"
+checksum = "sha256:cc9020726b7c86cce420b75d70f48b9ffa161bb5095a99678c0a87218f48d493"
+url = "https://github.com/j178/prek/releases/download/v0.5.9/prek-aarch64-apple-darwin.tar.gz"
+url_api = "https://api.github.com/repos/j178/prek/releases/assets/691760404"
 provenance = "github-attestations"
 
 [[tools.shellcheck]]
