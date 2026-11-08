@@ -38,37 +38,39 @@ url_api = "https://api.github.com/repos/rhysd/actionlint/releases/assets/3849248
 provenance = "github-attestations"
 
 [[tools."aqua:quarto-dev/quarto-cli"]]
-version = "1.10.18"
+version = "1.11.9"
 backend = "aqua:quarto-dev/quarto-cli"
-specifiers = ["1.10.18"]
+specifiers = ["1.11.9"]
 
 [tools."aqua:quarto-dev/quarto-cli"."platforms.linux-x64"]
-checksum = "sha256:afad071b5bd22c02f2d300695743189d3650e0537a53073e654b630cff2b0c73"
-url = "https://github.com/quarto-dev/quarto-cli/releases/download/v1.10.18/quarto-1.10.18-linux-amd64.tar.gz"
-url_api = "https://api.github.com/repos/quarto-dev/quarto-cli/releases/assets/488455948"
+checksum = "sha256:9d037baa3b38ffac7217edca1d2e53760b0fab4d5749220740a32056e03a1530"
+checksum_source = "mise-versions"
+url = "https://github.com/quarto-dev/quarto-cli/releases/download/v1.11.9/quarto-1.11.9-linux-amd64.tar.gz"
+url_api = "https://api.github.com/repos/quarto-dev/quarto-cli/releases/assets/692632716"
 
 [tools."aqua:quarto-dev/quarto-cli"."platforms.linux-x64-baseline"]
-checksum = "sha256:afad071b5bd22c02f2d300695743189d3650e0537a53073e654b630cff2b0c73"
+checksum = "sha256:9d037baa3b38ffac7217edca1d2e53760b0fab4d5749220740a32056e03a1530"
 checksum_source = "mise-versions"
-url = "https://github.com/quarto-dev/quarto-cli/releases/download/v1.10.18/quarto-1.10.18-linux-amd64.tar.gz"
-url_api = "https://api.github.com/repos/quarto-dev/quarto-cli/releases/assets/488455948"
+url = "https://github.com/quarto-dev/quarto-cli/releases/download/v1.11.9/quarto-1.11.9-linux-amd64.tar.gz"
+url_api = "https://api.github.com/repos/quarto-dev/quarto-cli/releases/assets/692632716"
 
 [tools."aqua:quarto-dev/quarto-cli"."platforms.linux-x64-musl"]
-checksum = "sha256:afad071b5bd22c02f2d300695743189d3650e0537a53073e654b630cff2b0c73"
+checksum = "sha256:9d037baa3b38ffac7217edca1d2e53760b0fab4d5749220740a32056e03a1530"
 checksum_source = "mise-versions"
-url = "https://github.com/quarto-dev/quarto-cli/releases/download/v1.10.18/quarto-1.10.18-linux-amd64.tar.gz"
-url_api = "https://api.github.com/repos/quarto-dev/quarto-cli/releases/assets/488455948"
+url = "https://github.com/quarto-dev/quarto-cli/releases/download/v1.11.9/quarto-1.11.9-linux-amd64.tar.gz"
+url_api = "https://api.github.com/repos/quarto-dev/quarto-cli/releases/assets/692632716"
 
 [tools."aqua:quarto-dev/quarto-cli"."platforms.linux-x64-musl-baseline"]
-checksum = "sha256:afad071b5bd22c02f2d300695743189d3650e0537a53073e654b630cff2b0c73"
+checksum = "sha256:9d037baa3b38ffac7217edca1d2e53760b0fab4d5749220740a32056e03a1530"
 checksum_source = "mise-versions"
-url = "https://github.com/quarto-dev/quarto-cli/releases/download/v1.10.18/quarto-1.10.18-linux-amd64.tar.gz"
-url_api = "https://api.github.com/repos/quarto-dev/quarto-cli/releases/assets/488455948"
+url = "https://github.com/quarto-dev/quarto-cli/releases/download/v1.11.9/quarto-1.11.9-linux-amd64.tar.gz"
+url_api = "https://api.github.com/repos/quarto-dev/quarto-cli/releases/assets/692632716"
 
 [tools."aqua:quarto-dev/quarto-cli"."platforms.macos-arm64"]
-checksum = "sha256:ddd6a71a9e0448ab15fb655bc589e11cb6589a248ec35ccd7f7f44137531688e"
-url = "https://github.com/quarto-dev/quarto-cli/releases/download/v1.10.18/quarto-1.10.18-macos.tar.gz"
-url_api = "https://api.github.com/repos/quarto-dev/quarto-cli/releases/assets/488455959"
+checksum = "sha256:9fc24881f637612d80edbf16d62f01001fc7945a9a0c6ac247199002901e0a6d"
+checksum_source = "mise-versions"
+url = "https://github.com/quarto-dev/quarto-cli/releases/download/v1.11.9/quarto-1.11.9-macos.tar.gz"
+url_api = "https://api.github.com/repos/quarto-dev/quarto-cli/releases/assets/692632717"
 
 [[tools.bun]]
 version = "1.4.4"
