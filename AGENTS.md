@@ -91,6 +91,12 @@ hardcoded `/caseum/...` src because that plugin does not visit raw HTML nodes.
   commitlint); `prek install -t pre-commit -t commit-msg` once per clone.
   `commitlint` is a `commit-msg` hook, so conventional-commit messages are gated
   **locally only** - CI runs the pre-commit hooks, not this one.
+- `renovate.json` - dependency updates through Renovate, using the shared
+  preset in [lsimons/.github](https://github.com/lsimons/.github).
+  It covers `docs/package.json`/`bun.lock`, the workflow actions, every
+  `.mise.toml` tool pin (including the task-scoped quarto) with `mise.lock`, and
+  the `prek.toml` hook revs. It does not cover the hooks'
+  `additional_dependencies`, which are unpinned names resolved at hook install.
 - `docs/agents/` - repository documentation for agents. It sits outside
   `docs/src/content/docs/`, so Astro does not publish it.
 - `.github/workflows/ci.yml` runs four jobs on push/PR - build (install, astro

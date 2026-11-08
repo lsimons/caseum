@@ -6,7 +6,9 @@ lockfile = true
 
 # Tools are exact-pinned on purpose. A partial pin like "1.3" resolves to
 # whatever is newest at install time, so an upstream compromise could arrive by
-# auto-download on any machine or CI runner. Bumps are deliberate commits.
+# auto-download on any machine or CI runner. Bumps arrive as Renovate PRs: its
+# `mise` manager covers these pins, mise.lock and the task-scoped quarto pin
+# below, after its 7-day minimumReleaseAge and only through green CI.
 [tools]
 actionlint = "1.7.12"
 bun = "1.4.4"

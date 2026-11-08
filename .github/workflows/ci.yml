@@ -46,7 +46,8 @@ jobs:
 
   # The prek hooks (formatting, markdown lint, secret scan) previously ran only
   # on the machines of contributors who had run `prek install`. Anything arriving
-  # by web edit, by dependabot, or from a fresh clone bypassed them entirely.
+  # by web edit, from a dependency bot, or from a fresh clone bypassed them
+  # entirely.
   lint:
     name: Lint (prek hooks, actionlint, shellcheck)
     runs-on: ubuntu-latest
