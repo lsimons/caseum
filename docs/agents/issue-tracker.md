@@ -41,9 +41,9 @@ ready-for-agent   Fully specified, ready for an autonomous agent #e6e6fa
 ready-for-human   Requires human implementation                  #e6e6fa
 ```
 
-Dependabot also maintains `dependencies` (#0366d6), `github_actions` (#000000)
-and `javascript` (#168700). Those are applied automatically to its pull
-requests; do not apply them by hand.
+Renovate applies `dependencies` (#0366d6) automatically to its pull requests;
+do not apply it by hand. `github_actions` (#000000) and `javascript` (#168700)
+are left over from Dependabot and are no longer applied.
 
 ## Security reports
 

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["local>lsimons/.github:renovate-config"],
+  "packageRules": [
+    {
+      "description": "Ported from dependabot.yml's `astro` group: astro and @astrojs/* majors move together, because the @astrojs packages track astro's major. Non-major updates are already in the preset's single group.",
+      "matchPackageNames": ["astro", "@astrojs/**"],
+      "matchUpdateTypes": ["major"],
+      "groupName": "astro major"
+    }
+  ]
+}
