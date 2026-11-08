@@ -113,7 +113,7 @@ description = "Render the reveal.js introduction deck from its Quarto source"
 # is invisible to `mise install`, so neither CI nor a new contributor pays for a
 # toolchain they will not use. Verified: `mise ls --current` does not list it and
 # `mise install` does not fetch it.
-tools = { "aqua:quarto-dev/quarto-cli" = "1.10.18" }
+tools = { "aqua:quarto-dev/quarto-cli" = "1.11.9" }
 run = "quarto render docs/public/presentations/introduction.qmd"
 
 [tasks.lint]
