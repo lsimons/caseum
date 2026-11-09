@@ -36,7 +36,7 @@ workspace {
 }
 ```
 
-Here's an example C4 model you can paste into the [Structurizr DSL](https://structurizr.com/dsl) to get started:
+Here's an example C4 model you can paste into the [Structurizr playground](https://playground.structurizr.com/) (see the [DSL docs](https://docs.structurizr.com/dsl)) to get started:
 
 ```c4
 workspace {
